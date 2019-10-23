@@ -6,7 +6,6 @@ package edu.cs3500.spreadsheets.model;
 public class CompareCell extends FormulaCell {
 
   private BasicCell[] args;
-  private Coord coord;
 
   /**
    * Default constructor.
@@ -15,11 +14,13 @@ public class CompareCell extends FormulaCell {
    * @param args
    */
   public CompareCell(Coord coord, BasicCell[] args) {
-    super(coord, args);
+    super(coord);
 
-    if (args.length < 2){
+    if (args.length == 2) {
+      this.args = args;
+    } else if (args.length < 2){
       throw new IllegalArgumentException("CompareCell: not enough args");
-    } else if (args.length > 2){
+    } else {
       throw new IllegalArgumentException("CompareCell: too many enough args");
     }
   }

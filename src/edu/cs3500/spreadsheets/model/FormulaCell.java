@@ -5,17 +5,14 @@ package edu.cs3500.spreadsheets.model;
  */
 public abstract class FormulaCell implements BasicCell {
 
-  private BasicCell[] args;
   private Coord coord;
 
   /**
    * Default constructor.
    *
    * @param coord
-   * @param args
    */
-  FormulaCell(Coord coord, BasicCell[] args) {
-    this.args = args;
+  FormulaCell(Coord coord) {
     this.coord = coord;
   }
 

@@ -6,7 +6,6 @@ package edu.cs3500.spreadsheets.model;
 public class ConcatCell extends FormulaCell {
 
   private BasicCell[] args;
-  private Coord coord;
 
   /**
    * Default constructor.
@@ -15,7 +14,8 @@ public class ConcatCell extends FormulaCell {
    * @param args
    */
   public ConcatCell(Coord coord, BasicCell[] args) {
-    super(coord, args);
+    super(coord);
+    this.args = args;
   }
 
 

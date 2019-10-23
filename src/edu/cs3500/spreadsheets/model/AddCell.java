@@ -6,7 +6,6 @@ package edu.cs3500.spreadsheets.model;
 public class AddCell extends FormulaCell {
 
   private BasicCell[] args;
-  private Coord coord;
 
   /**
    * Default constructor.
@@ -15,7 +14,8 @@ public class AddCell extends FormulaCell {
    * @param args
    */
   public AddCell(Coord coord, BasicCell[] args) {
-    super(coord, args);
+    super(coord);
+    this.args = args;
   }
 
   /**
