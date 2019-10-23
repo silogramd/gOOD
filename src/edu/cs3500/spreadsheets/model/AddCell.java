@@ -2,7 +2,7 @@ package edu.cs3500.spreadsheets.model;
 
 public class AddCell extends FormulaCell<Double> {
 
-  AddCell(Cell... args) {
+  public AddCell(Cell... args) {
     super(args);
   }
 

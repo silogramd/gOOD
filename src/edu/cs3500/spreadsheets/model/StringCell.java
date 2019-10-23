@@ -17,6 +17,11 @@ public class StringCell implements Cell<String> {
   }
 
   @Override
+  public String stringValue() {
+    return contents;
+  }
+
+  @Override
   public String rawValue() {
     return rawInput;
   }

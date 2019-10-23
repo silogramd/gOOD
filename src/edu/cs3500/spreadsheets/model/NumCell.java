@@ -6,7 +6,7 @@ public class NumCell implements Cell<Double> {
 
   private String rawInput;
 
-  NumCell(String rawInput) {
+  public NumCell(String rawInput) {
     this.rawInput = rawInput;
     try {
       this.contents = Double.valueOf(this.rawInput);
@@ -18,6 +18,11 @@ public class NumCell implements Cell<Double> {
   @Override
   public Double evaluate() {
     return this.contents;
+  }
+
+  @Override
+  public String stringValue() {
+    return Double.toString(this.contents);
   }
 
   @Override

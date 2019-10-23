@@ -5,7 +5,7 @@ public class BoolCell implements Cell<Boolean> {
   Boolean contents;
   String rawInput;
 
-  BoolCell(String rawInput) {
+  public BoolCell(String rawInput) {
     this.rawInput = rawInput;
     if (this.rawInput == "true") {
       this.contents = true;
@@ -19,6 +19,11 @@ public class BoolCell implements Cell<Boolean> {
   @Override
   public Boolean evaluate() {
     return this.contents;
+  }
+
+  @Override
+  public String stringValue() {
+    return Boolean.toString(this.contents);
   }
 
   @Override
