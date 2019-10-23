@@ -1,9 +1,9 @@
 package edu.cs3500.spreadsheets.model;
 
 /**
- * Represents a cell that will map add all the cells it contains.
+ * Represents a cell that will map concat all the cells it contains.
  */
-public class AddCell extends FormulaCell {
+public class ConcatCell extends FormulaCell {
 
   private BasicCell[] args;
   private Coord coord;
@@ -14,29 +14,26 @@ public class AddCell extends FormulaCell {
    * @param coord
    * @param args
    */
-  public AddCell(Coord coord, BasicCell[] args) {
+  public ConcatCell(Coord coord, BasicCell[] args) {
     super(coord, args);
   }
 
+
   /**
-   * Map adds and returns the value as a string.
+   * Map multiplies and returns the value as a string.
    *
-   * @return String value of add multiply
+   * @return String value of map multiply
    * @throws IllegalArgumentException if cannot convert a string val to a double
    */
   @Override
   public String getValue() {
-    double acc = 0;
+    String acc = "";
 
     for (BasicCell cell : args) {
-      try {
-        acc += Double.valueOf(cell.getValue());
-      } catch (NumberFormatException ex) {
-        throw new IllegalArgumentException("AddCell: could not convert value to double");
-      }
+      acc += cell.getValue();
     }
 
-    return String.valueOf(acc);
+    return acc;
   }
 
   /**
@@ -46,7 +43,7 @@ public class AddCell extends FormulaCell {
    */
   @Override
   public String getRawValue() {
-    String rawVal = "(Add";
+    String rawVal = "(CONCAT";
 
     for (BasicCell cell : args) {
       if (cell instanceof FormulaCell) {

@@ -3,16 +3,32 @@ package edu.cs3500.spreadsheets.model;
 import edu.cs3500.spreadsheets.sexp.Sexp;
 
 /**
- *  Interface for the model of spreadsheets
+ *  Interface for the model of spreadsheets.
  */
-public interface SpreadsheetModel {
+public interface SpreadsheetModel<k> {
 
-  public String getCellAt(Coord coord);
+  /**
+   * Gets the cell value at the given coordinate.
+   *
+   * @param coord the coordinates of the desired cell
+   * @return String value of the requested cell
+   */
+  String getCellAt(Coord coord);
 
-  public String handleFunction(Coord cord, String cur);
+  /**
+   * Gets the raw cell value at the given coordinate.
+   *
+   * @param coord the coordinates of the desired cell
+   * @return raw string value of the requested cell
+   */
+  String getRawCellAt(Coord coord);
 
-  public String getRawCellAt(Coord coord);
-
-  public void editCell(Coord coord, String string);
+  /**
+   * Updates or adds a cell at the desired coordinates.
+   *
+   * @param coord spot to add or update the cell.
+   * @param string new value of the cell.
+   */
+  void editCell(Coord coord, String string);
 
 }

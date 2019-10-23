@@ -1,9 +1,9 @@
 package edu.cs3500.spreadsheets.model;
 
 /**
- * Represents a cell that will compare the values of its two cell arguments.
+ * Represents a cell that will map multiply all the cells it contains.
  */
-public class CompareCell extends FormulaCell {
+public class ProductCell extends FormulaCell {
 
   private BasicCell[] args;
   private Coord coord;
@@ -14,34 +14,30 @@ public class CompareCell extends FormulaCell {
    * @param coord
    * @param args
    */
-  public CompareCell(Coord coord, BasicCell[] args) {
+  public ProductCell(Coord coord, BasicCell[] args) {
     super(coord, args);
-
-    if (args.length < 2){
-      throw new IllegalArgumentException("CompareCell: not enough args");
-    } else if (args.length > 2){
-      throw new IllegalArgumentException("CompareCell: too many enough args");
-    }
   }
 
 
   /**
-   * Compares the first arg to the second arg, determines if arg1 < arg2.
+   * Map multiplies and returns the value as a string.
    *
-   * @return arg1 < arg2
+   * @return String value of map multiply
    * @throws IllegalArgumentException if cannot convert a string val to a double
    */
   @Override
   public String getValue() {
-    boolean bool;
+    double acc = 0;
 
+    for (BasicCell cell : args) {
       try {
-        bool = Double.valueOf(args[0].getValue()) < Double.valueOf(args[1].getValue());
+        acc = acc * Double.valueOf(cell.getValue());
       } catch (NumberFormatException ex) {
-        throw new IllegalArgumentException("CompareCell: could not convert value to double");
+        throw new IllegalArgumentException("ProductCell: could not convert value to double");
       }
+    }
 
-    return String.valueOf(bool);
+    return String.valueOf(acc);
   }
 
   /**
@@ -51,7 +47,7 @@ public class CompareCell extends FormulaCell {
    */
   @Override
   public String getRawValue() {
-    String rawVal = "(<";
+    String rawVal = "(PRODUCT";
 
     for (BasicCell cell : args) {
       if (cell instanceof FormulaCell) {
