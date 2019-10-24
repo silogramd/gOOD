@@ -2,7 +2,7 @@ package edu.cs3500.spreadsheets.model;
 
 import java.util.Objects;
 
-//hi
+
 /**
  * A value type representing coordinates in a {@link Worksheet}.
  */
