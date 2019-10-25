@@ -3,7 +3,7 @@ package edu.cs3500.spreadsheets.model;
 import java.util.ArrayList;
 
 public class Function implements Formula {
-
+  //TODO: DO YOU EVEN NEED OPERATIONS? WHAT ARE THEY SUPPOSED TO DO?
   private Operation operation;
 
   private ArrayList<Formula> rest;
@@ -13,12 +13,36 @@ public class Function implements Formula {
     this.rest = rest;
   }
 
+  private ArrayList<CellValue> flatten() {
+    ArrayList<CellValue> values = new ArrayList<>();
+    for (Formula f: this.rest) {
+      f.flattenHelp(values);
+    }
+    return values;
+  }
+
+  private CellValue calculate(ArrayList<CellValue> cells) {
+    CellValue outpt = new CVDouble(0);
+    for (CellValue cv: cells) {
+      cv.combine(outpt,this.operation);
+    }
+    return outpt;
+  }
+
+  @Override
+  public void flattenHelp(ArrayList<CellValue> acc) {
+    for (Formula form: this.rest) {
+      form.flattenHelp(acc);
+    }
+  }
+
+
   @Override
   public CellValue getValue() {
     //TODO: FIGURE THIS OUT
     //This should traverse through the list of Formulas, flatten the list down to just CellValues,
     //and then apply the function to all the CellValues. THE VISITOR PATTERN SHOULD BE USED HERE.
-    return null;
+    return this.calculate(this.flatten());
   }
 
   @Override
