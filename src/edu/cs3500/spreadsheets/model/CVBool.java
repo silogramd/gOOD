@@ -7,4 +7,8 @@ public class CVBool implements CellValue {
     this.content = b;
   }
 
+  @Override
+  public CellValue getValue() {
+    return this;
+  }
 }

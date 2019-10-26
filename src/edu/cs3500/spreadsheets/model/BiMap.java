@@ -34,4 +34,7 @@ public class BiMap<K,V> {
     return this.map.containsKey(key);
   }
 
+  public boolean containsVal(V val) {
+    return this.invertedMap.containsKey(val);
+  }
 }
