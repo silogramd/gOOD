@@ -22,10 +22,7 @@ public class BasicSpreadsheetModel implements SpreadsheetModel<ICell> {
     return null;
   }
 
-  @Override
-  public String getRawCellAt(Coord coord) {
-    return null;
-  }
+
 
   @Override
   public void editCell(Coord coord, String string) {

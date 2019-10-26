@@ -7,6 +7,8 @@ import java.util.ArrayList;
  */
 public interface Formula extends CellContents {
 
+  public CellValue getValue();
+
   public CellValue accept(FormulaVisitor fv);
 
   public void flattenHelp(ArrayList<CellValue> acc);

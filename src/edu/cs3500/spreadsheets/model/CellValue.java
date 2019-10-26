@@ -3,7 +3,9 @@ package edu.cs3500.spreadsheets.model;
 /***
  * Interface for CellContents that are solely values.
  */
-public interface CellValue extends CellContents {
+public abstract class CellValue implements Formula {
 
-  void combine(CellValue acc, Operation o);
+  public void combine(CellValue acc, Operation o) {
+    acc = o.apply(acc, this);
+  }
 }
