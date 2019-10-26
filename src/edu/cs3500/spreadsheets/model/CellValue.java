@@ -5,5 +5,5 @@ package edu.cs3500.spreadsheets.model;
  */
 public interface CellValue extends CellContents {
 
-
+  void combine(CellValue acc, Operation o);
 }
