@@ -22,11 +22,23 @@ public class ContentsBuilder implements SexpVisitor<CellContents> {
   @Override
   public CellContents visitSList(List<Sexp> l) {
     //TODO: FIGURE OUT WHAT TO DO HERE
+
+    for (Sexp sp : l) {
+      sp.accept(this);
+    }
+
+
+    return null;
   }
 
   @Override
   public CellContents visitSymbol(String s) {
     //TODO: THIS IS NOT RIGHT
+    switch (s) {
+
+    }
+
+
     return new CVString(s);
   }
 

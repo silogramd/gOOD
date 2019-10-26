@@ -11,4 +11,9 @@ public class CVBool implements CellValue {
   public CellValue getValue() {
     return this;
   }
+
+  @Override
+  public void combine(CellValue acc, Operation o) {
+
+  }
 }

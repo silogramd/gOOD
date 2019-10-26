@@ -7,4 +7,14 @@ public class CVDouble implements CellValue {
   public CVDouble(double d) {
     this.contents = d;
   }
+
+  @Override
+  public void combine(CellValue acc, Operation o) {
+
+  }
+
+  @Override
+  public CellValue getValue() {
+    return null;
+  }
 }

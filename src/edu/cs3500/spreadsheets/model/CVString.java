@@ -7,4 +7,14 @@ public class CVString implements CellValue {
   public CVString(String s) {
     this.contents = s;
   }
+
+  @Override
+  public void combine(CellValue acc, Operation o) {
+
+  }
+
+  @Override
+  public CellValue getValue() {
+    return null;
+  }
 }

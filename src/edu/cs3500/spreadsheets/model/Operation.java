@@ -8,6 +8,4 @@ public interface Operation {
 
   <R> R apply(Reference r);
 
-
-
 }

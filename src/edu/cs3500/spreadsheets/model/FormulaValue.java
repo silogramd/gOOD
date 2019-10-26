@@ -12,7 +12,6 @@ public class FormulaValue implements Formula {
     return null;
   }
 
-  @Override
   public ArrayList<CellValue> flatten() {
     return null;
   }
