@@ -79,8 +79,10 @@ public final class WorksheetReader {
         scan.nextLine();
         scan.skip("\\s*");
       }
-      String contents = scan.nextLine();
-      builder = builder.createCell(col, row, contents);
+      String contents = scan.next();
+      //debuging purposes
+      System.out.println("Reader: " + new Coord(col, row).toString() +  " = " + contents);
+      builder = builder.createCell(row, col, contents);
     }
 
     return builder.createWorksheet();

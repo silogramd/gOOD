@@ -18,6 +18,28 @@ public class Coord {
     this.col = col;
   }
 
+  public Coord(String s) {
+    StringBuilder sbNums = new StringBuilder();
+    StringBuilder sbLetters = new StringBuilder();
+    boolean seenDigit = false;
+
+    for (Character c : s.toCharArray()) {
+      if (Character.isDigit(c)) {
+        seenDigit = true;
+        sbNums.append(c);
+      } else if (seenDigit && Character.isAlphabetic(c)) {
+        throw new IllegalArgumentException("Malformed input.");
+      } else {
+        sbLetters.append(c);
+      }
+    }
+
+    this.row = Integer.valueOf(sbNums.toString());
+
+    this.col = Coord.colNameToIndex(sbLetters.toString());
+  }
+
+
   /**
    * Converts from the A-Z column naming system to a 1-indexed numeric value.
    * @param name the column name

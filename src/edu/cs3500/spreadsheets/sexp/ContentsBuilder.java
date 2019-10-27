@@ -37,12 +37,14 @@ public class ContentsBuilder implements SexpVisitor<Formula> {
   public Formula visitSymbol(String s) {
     checkValidReference(s);
 
+    System.out.println("ContentsBuilding: " + s);
+
     if (!s.contains(":")) {
-      return new Reference(getCoord(s));
+      return new Reference(new Coord(s));
     } else {
       int colonIndex = s.indexOf(":");
-      return new Reference(getCoord(s.substring(0, colonIndex)),
-          getCoord(s.substring(colonIndex + 1)));
+      return new Reference(new Coord(s.substring(0, colonIndex)),
+          new Coord(s.substring(colonIndex + 1)));
     }
   }
 
@@ -87,23 +89,4 @@ public class ContentsBuilder implements SexpVisitor<Formula> {
     }
   }
 
-  private Coord getCoord(String s) {
-    StringBuilder sbNums = new StringBuilder();
-    StringBuilder sbLetters = new StringBuilder();
-    boolean seenDigit = false;
-
-    for (Character c : s.toCharArray()) {
-      if (Character.isDigit(c)) {
-        seenDigit = true;
-        sbNums.append(c);
-      }
-      if (seenDigit && Character.isAlphabetic(c)) {
-        throw new IllegalArgumentException("Malformed input.");
-      }
-      sbLetters.append(c);
-    }
-
-    return new Coord(Coord.colNameToIndex(sbLetters.toString()),
-        Integer.valueOf(sbNums.toString()));
-  }
 }

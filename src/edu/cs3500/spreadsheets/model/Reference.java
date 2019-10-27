@@ -13,6 +13,8 @@ public class Reference implements Formula {
 
   public Reference(Coord c) {
 
+    this.reference = new ArrayList<>();
+    reference.add(c);
   }
 
   //TODO: Getting the value of all the cells referenced? Is that a different interface?
@@ -35,5 +37,10 @@ public class Reference implements Formula {
     for (Coord c: reference) {
       acc.add(model.coordMap.get(c).getValue());
     }
+  }
+
+  @Override
+  public String toString() {
+    return getValue().toString();
   }
 }

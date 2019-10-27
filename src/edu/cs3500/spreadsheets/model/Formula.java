@@ -12,4 +12,5 @@ public interface Formula extends CellContents {
   public CellValue accept(FormulaVisitor fv);
 
   public void flattenHelp(ArrayList<CellValue> acc);
+
 }

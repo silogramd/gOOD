@@ -23,4 +23,9 @@ public class CVBool extends CellValue {
   public void flattenHelp(ArrayList<CellValue> acc) {
     acc.add(this);
   }
+
+  @Override
+  public String toString() {
+    return String.valueOf(this.content);
+  }
 }

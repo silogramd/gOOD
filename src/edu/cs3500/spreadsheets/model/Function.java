@@ -54,4 +54,9 @@ public class Function implements Formula {
     //THIS IS PART OF AFOREMENTIONED VISITOR PATTERN.
     return null;
   }
+
+  @Override
+  public String toString() {
+    return getValue().toString();
+  }
 }

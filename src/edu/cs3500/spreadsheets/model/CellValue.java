@@ -8,4 +8,5 @@ public abstract class CellValue implements Formula {
   public void combine(CellValue acc, Operation o) {
     acc = o.apply(acc, this);
   }
+
 }

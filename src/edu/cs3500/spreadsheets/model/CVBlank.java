@@ -2,12 +2,7 @@ package edu.cs3500.spreadsheets.model;
 
 import java.util.ArrayList;
 
-public class CVError extends CellValue {
-
-  @Override
-  public void combine(CellValue acc, Operation o) {
-    acc = this;
-  }
+public class CVBlank extends CellValue {
 
   @Override
   public CellValue getValue() {
@@ -26,6 +21,6 @@ public class CVError extends CellValue {
 
   @Override
   public String toString() {
-    return "ERROR";
+    return "";
   }
 }
