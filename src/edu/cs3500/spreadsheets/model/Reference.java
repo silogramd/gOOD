@@ -9,6 +9,9 @@ public class Reference implements Formula {
 
   public Reference(Coord first, Coord last) {
 
+
+
+
   }
 
   public Reference(Coord c) {
