@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class CVDouble extends CellValue {
 
-  double contents;
+  final double contents;
 
   public CVDouble(double d) {
     this.contents = d;

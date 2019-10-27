@@ -3,7 +3,7 @@ package edu.cs3500.spreadsheets.model;
 import java.util.ArrayList;
 
 public class CVBool extends CellValue {
-  boolean content;
+  final boolean content;
 
   public CVBool(boolean b) {
     this.content = b;

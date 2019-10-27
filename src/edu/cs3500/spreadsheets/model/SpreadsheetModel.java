@@ -16,14 +16,6 @@ public interface SpreadsheetModel<k> {
   String getCellAt(Coord coord);
 
   /**
-   * Gets the raw cell value at the given coordinate.
-   *
-   * @param coord the coordinates of the desired cell
-   * @return raw string value of the requested cell
-   */
-  String getRawCellAt(Coord coord);
-
-  /**
    * Updates or adds a cell at the desired coordinates.
    *
    * @param coord spot to add or update the cell.

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class CVString extends CellValue {
 
-  String contents;
+  final String contents;
 
   public CVString(String s) {
     this.contents = s;

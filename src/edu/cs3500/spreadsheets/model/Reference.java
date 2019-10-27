@@ -18,7 +18,11 @@ public class Reference implements Formula {
   //TODO: Getting the value of all the cells referenced? Is that a different interface?
   @Override
   public CellValue getValue() {
-    return model.coordMap.get(reference.get(0)).getValue();
+    if (reference.size() == 1) {
+      return model.coordMap.get(reference.get(0)).getValue();
+    } else {
+      return new CVError();
+    }
   }
 
   @Override
