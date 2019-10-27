@@ -6,13 +6,15 @@ public class FormulaValue implements Formula {
 
   CellValue contents;
 
+  public FormulaValue(CellValue content) {
+    this.contents = content;
+  }
 
   @Override
   public CellValue accept(FormulaVisitor fv) {
     return null;
   }
 
-  @Override
   public ArrayList<CellValue> flatten() {
     return null;
   }

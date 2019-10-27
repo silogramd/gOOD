@@ -4,11 +4,15 @@ import java.util.ArrayList;
 
 public class Function implements Formula {
   //TODO: DO YOU EVEN NEED OPERATIONS? WHAT ARE THEY SUPPOSED TO DO?
-  private Operation operation;
+  Operation operation;
 
   private ArrayList<Formula> rest;
 
-  Function(Operation o, ArrayList<Formula> rest) {
+  public Function() {
+
+  }
+
+  public Function(Operation o, ArrayList<Formula> rest) {
     this.operation = o;
     this.rest = rest;
   }

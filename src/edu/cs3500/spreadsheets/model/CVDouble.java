@@ -1,10 +1,27 @@
 package edu.cs3500.spreadsheets.model;
 
-public class CVDouble implements CellValue {
+import java.util.ArrayList;
 
-  double contents;
+public class CVDouble extends CellValue {
+
+  final double contents;
 
   public CVDouble(double d) {
     this.contents = d;
+  }
+
+  @Override
+  public CellValue getValue() {
+    return this;
+  }
+
+  @Override
+  public CellValue accept(FormulaVisitor fv) {
+    return null;
+  }
+
+  @Override
+  public void flattenHelp(ArrayList<CellValue> acc) {
+    acc.add(this);
   }
 }

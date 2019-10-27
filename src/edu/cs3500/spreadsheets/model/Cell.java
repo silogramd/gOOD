@@ -7,7 +7,7 @@ public class Cell implements ICell {
 
   private String rawContents;
   private Coord coord;
-  private CellContents contents;
+  private Formula contents;
 
 
   Cell(int row, int col, String contents) {

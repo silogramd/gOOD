@@ -7,10 +7,22 @@ public class Reference implements Formula {
   ArrayList<Coord> reference;
   BasicSpreadsheetModel model = new BasicSpreadsheetModel();
 
+  public Reference(Coord first, Coord last) {
+
+  }
+
+  public Reference(Coord c) {
+
+  }
+
   //TODO: Getting the value of all the cells referenced? Is that a different interface?
   @Override
   public CellValue getValue() {
-    return model.coordMap.get(reference.get(0)).getValue();
+    if (reference.size() == 1) {
+      return model.coordMap.get(reference.get(0)).getValue();
+    } else {
+      return new CVError();
+    }
   }
 
   @Override

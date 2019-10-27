@@ -1,7 +1,9 @@
 package edu.cs3500.spreadsheets.model;
 
-public class CVBool implements CellValue {
-  boolean content;
+import java.util.ArrayList;
+
+public class CVBool extends CellValue {
+  final boolean content;
 
   public CVBool(boolean b) {
     this.content = b;
@@ -10,5 +12,15 @@ public class CVBool implements CellValue {
   @Override
   public CellValue getValue() {
     return this;
+  }
+
+  @Override
+  public CellValue accept(FormulaVisitor fv) {
+    return null;
+  }
+
+  @Override
+  public void flattenHelp(ArrayList<CellValue> acc) {
+    acc.add(this);
   }
 }
