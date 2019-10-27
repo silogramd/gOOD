@@ -29,6 +29,15 @@ public class BasicSpreadsheetModel implements SpreadsheetModel<ICell> {
     }
   }
 
+  @Override
+  public String getRawCellAt(Coord coord) {
+    try {
+      return coordMap.get(coord).getRawValue();
+    } catch (NullPointerException e) {
+      return new Cell(coord).getRawValue();
+    }
+  }
+
 
 
   @Override

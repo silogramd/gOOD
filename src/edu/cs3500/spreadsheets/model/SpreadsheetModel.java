@@ -15,6 +15,9 @@ public interface SpreadsheetModel<k> {
    */
   CellValue getCellAt(Coord coord);
 
+  String getRawCellAt(Coord coord);
+
+
   /**
    * Updates or adds a cell at the desired coordinates.
    *
