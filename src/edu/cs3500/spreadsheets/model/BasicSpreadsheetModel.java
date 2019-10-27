@@ -21,9 +21,6 @@ public class BasicSpreadsheetModel implements SpreadsheetModel<ICell> {
 
   @Override
   public CellValue getCellAt(Coord coord) {
-    //debuging
-    System.out.println(coordMap.toString());
-
 
     try {
       return coordMap.get(coord).getValue();

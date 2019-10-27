@@ -8,10 +8,6 @@ public class Function implements Formula {
 
   private ArrayList<Formula> rest;
 
-  public Function() {
-
-  }
-
   public Function(Operation o, ArrayList<Formula> rest) {
     this.operation = o;
     this.rest = rest;
@@ -22,22 +18,22 @@ public class Function implements Formula {
     for (Formula f: this.rest) {
       f.flattenHelp(values);
     }
+    System.out.println("result of flatten: " + values.toString());
     return values;
   }
 
   private CellValue calculate(ArrayList<CellValue> cells) {
-    CellValue outpt = new CVDouble(0);
+    CellValue outpt = cells.remove(0);
     for (CellValue cv: cells) {
-      cv.combine(outpt,this.operation);
+      outpt = cv.combine(outpt,this.operation);
     }
     return outpt;
   }
 
   @Override
   public void flattenHelp(ArrayList<CellValue> acc) {
-    for (Formula form: this.rest) {
-      form.flattenHelp(acc);
-    }
+    acc.add(getValue());
+
   }
 
 
@@ -47,6 +43,7 @@ public class Function implements Formula {
     //This should traverse through the list of Formulas, flatten the list down to just CellValues,
     //and then apply the function to all the CellValues. THE VISITOR PATTERN SHOULD BE USED HERE.
     return this.calculate(this.flatten());
+    //return this.calculate(this.flatten());
   }
 
   @Override

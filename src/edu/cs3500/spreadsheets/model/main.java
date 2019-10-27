@@ -31,6 +31,9 @@ public class main {
       System.out.println(rawCellVal);
     }
 
+    //debuging
+    System.out.println(model.coordMap.toString());
+
   }
 
 }

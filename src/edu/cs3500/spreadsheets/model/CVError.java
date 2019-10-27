@@ -5,8 +5,8 @@ import java.util.ArrayList;
 public class CVError extends CellValue {
 
   @Override
-  public void combine(CellValue acc, Operation o) {
-    acc = this;
+  public CellValue combine(CellValue acc, Operation o) {
+    return this;
   }
 
   @Override

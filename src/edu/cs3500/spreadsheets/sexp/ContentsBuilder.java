@@ -56,9 +56,9 @@ public class ContentsBuilder implements SexpVisitor<Formula> {
 
   private Formula parseList(List<Sexp> l) {
     ArrayList<Formula> forms = new ArrayList<>();
-    String symbol = l.remove(0).toString();
-    for (Sexp s : l) {
-      Formula f = s.accept(this);
+    String symbol = l.get(0).toString();
+    for (int i = 1; i < l.size(); i++) {
+      Formula f = l.get(i).accept(this);
       forms.add(f);
     }
     switch (symbol) {

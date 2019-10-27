@@ -16,7 +16,8 @@ public class CVBlank extends CellValue {
 
   @Override
   public void flattenHelp(ArrayList<CellValue> acc) {
-    acc.add(this);
+    System.out.println("inside flatten help from blank cell val");
+    // doesnt do anything because we dont want this in the list of things to operate on
   }
 
   @Override
