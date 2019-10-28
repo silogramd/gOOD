@@ -3,9 +3,8 @@ package edu.cs3500.spreadsheets.model;
 import java.util.ArrayList;
 
 public class Function implements Formula {
-  //TODO: DO YOU EVEN NEED OPERATIONS? WHAT ARE THEY SUPPOSED TO DO?
   Operation operation;
-
+  BasicSpreadsheetModel model = new BasicSpreadsheetModel();
   private ArrayList<Formula> rest;
 
   public Function(Operation o, ArrayList<Formula> rest) {
@@ -34,6 +33,13 @@ public class Function implements Formula {
   public void flattenHelp(ArrayList<CellValue> acc) {
     acc.add(getValue());
 
+  }
+
+  @Override
+  public void checkCycles(ArrayList<Coord> visited) {
+    for (Formula f: this.rest) {
+      f.checkCycles(visited);
+    }
   }
 
 

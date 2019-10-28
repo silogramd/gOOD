@@ -13,7 +13,7 @@ public interface SpreadsheetModel<k> {
    * @param coord the coordinates of the desired cell
    * @return String value of the requested cell
    */
-  CellValue getCellAt(Coord coord);
+  ICell getCellAt(Coord coord);
 
   String getRawCellAt(Coord coord);
 

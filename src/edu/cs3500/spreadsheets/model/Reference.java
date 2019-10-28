@@ -16,10 +16,11 @@ public class Reference implements Formula {
     int rowStart = Math.min(last.row, first.row);
     int colEnd = width + colStart;
     int rowEnd = height + rowStart;
-
+    ArrayList<Coord> visited = new ArrayList<>();
     for (int i = colStart; i <= colEnd; i++) {
       for (int j = rowStart; j <= rowEnd; j++) {
-        reference.add(new Coord(i, j));
+        Coord coord = new Coord(i,j);
+        reference.add(coord);
       }
     }
 
@@ -32,7 +33,6 @@ public class Reference implements Formula {
     reference.add(c);
   }
 
-  //TODO: Getting the value of all the cells referenced? Is that a different interface?
   @Override
   public CellValue getValue() {
     if (reference.size() == 1) {
@@ -49,9 +49,20 @@ public class Reference implements Formula {
 
   @Override
   public void flattenHelp(ArrayList<CellValue> acc) {
-    for (Coord c: reference) {
+    for (Coord c: this.reference) {
       if (model.coordMap.containsKey(c)) {
-        acc.add(model.getCellAt(c));
+        acc.add(model.getCellAt(c).getValue());
+      }
+    }
+  }
+
+  @Override
+  public void checkCycles(ArrayList<Coord> visited) {
+    for (Coord c: this.reference) {
+      if (visited.contains(c)) {
+        throw new IllegalStateException("Cycle in Cells Found.");
+      } else {
+        model.getCellAt(c).checkCycles(visited);
       }
     }
   }

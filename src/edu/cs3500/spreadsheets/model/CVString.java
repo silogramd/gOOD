@@ -26,6 +26,11 @@ public class CVString extends CellValue {
   }
 
   @Override
+  public void checkCycles(ArrayList<Coord> visited) {
+
+  }
+
+  @Override
   public String toString() {
     return this.contents;
   }

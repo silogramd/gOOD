@@ -24,7 +24,7 @@ public class TestMain {
     }
 
 
-    String rawCellVal = model.getCellAt(new Coord(args[3])).toString();
+    String rawCellVal = model.getCellAt(new Coord(args[3])).getValue().toString();
     if (rawCellVal.equals("")) {
       System.out.println("Cell " + args[3] + " is blank");
     } else {

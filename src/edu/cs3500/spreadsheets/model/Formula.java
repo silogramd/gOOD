@@ -13,4 +13,5 @@ public interface Formula extends CellContents {
 
   public void flattenHelp(ArrayList<CellValue> acc);
 
+  void checkCycles(ArrayList<Coord> visited);
 }

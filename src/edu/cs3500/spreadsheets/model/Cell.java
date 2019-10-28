@@ -2,6 +2,7 @@ package edu.cs3500.spreadsheets.model;
 
 import edu.cs3500.spreadsheets.sexp.ContentsBuilder;
 import edu.cs3500.spreadsheets.sexp.Parser;
+import java.util.ArrayList;
 
 public class Cell implements ICell {
 
@@ -44,6 +45,12 @@ public class Cell implements ICell {
   @Override
   public Coord getCoord() {
     return new Coord(this.coord.col, this.coord.row);
+  }
+
+  @Override
+  public void checkCycles(ArrayList<Coord> visited) throws IllegalStateException {
+    visited.add(this.coord);
+    this.contents.checkCycles(visited);
   }
 
 

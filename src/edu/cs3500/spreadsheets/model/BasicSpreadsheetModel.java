@@ -8,24 +8,27 @@ import java.util.HashMap;
  */
 public class BasicSpreadsheetModel implements SpreadsheetModel<ICell> {
 
-  static HashMap<Coord, ICell> coordMap = new HashMap<>();
+  static final HashMap<Coord, ICell> coordMap = new HashMap<>();
 
   BasicSpreadsheetModel(ArrayList<ICell> cells) {
     for (ICell c: cells) {
       coordMap.put(c.getCoord(), c);
     }
 
+    for (ICell c: cells) {
+      c.checkCycles(new ArrayList<>());
+    }
   }
 
   public BasicSpreadsheetModel() {}
 
   @Override
-  public CellValue getCellAt(Coord coord) {
+  public ICell getCellAt(Coord coord) {
 
     try {
-      return coordMap.get(coord).getValue();
+      return coordMap.get(coord);
     } catch (NullPointerException e) {
-      return new Cell(coord).getValue();
+      return new Cell(coord);
     }
   }
 
