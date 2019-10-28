@@ -3,7 +3,7 @@ package edu.cs3500.spreadsheets.model;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 
-public class main {
+public class TestMain {
 
   public static void main(String[] args) {
 

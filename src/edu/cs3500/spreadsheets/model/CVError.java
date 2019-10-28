@@ -26,6 +26,6 @@ public class CVError extends CellValue {
 
   @Override
   public String toString() {
-    return "ERROR";
+    return "#ERROR";
   }
 }

@@ -27,6 +27,6 @@ public class CVDouble extends CellValue {
 
   @Override
   public String toString() {
-    return String.valueOf(this.contents);
+    return String.format("%f", this.contents);
   }
 }

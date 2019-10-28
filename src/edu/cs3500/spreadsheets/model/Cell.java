@@ -30,6 +30,9 @@ public class Cell implements ICell {
 
   @Override
   public CellValue getValue() {
+    if (this.contents == null) {
+      return new CVString("");
+    }
     return contents.getValue();
   }
 

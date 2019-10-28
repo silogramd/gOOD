@@ -3,6 +3,7 @@ package edu.cs3500.spreadsheets.sexp;
 import edu.cs3500.spreadsheets.model.AddObject;
 import edu.cs3500.spreadsheets.model.CVBool;
 import edu.cs3500.spreadsheets.model.CVDouble;
+import edu.cs3500.spreadsheets.model.CVError;
 import edu.cs3500.spreadsheets.model.CVString;
 import edu.cs3500.spreadsheets.model.CompareObject;
 import edu.cs3500.spreadsheets.model.ConcatObject;
@@ -35,12 +36,19 @@ public class ContentsBuilder implements SexpVisitor<Formula> {
 
   @Override
   public Formula visitSymbol(String s) {
-    checkValidReference(s);
+    try {
+      checkValidReference(s);
+    } catch (IllegalArgumentException e) {
+      return new CVError();
+    }
 
     System.out.println("ContentsBuilding: " + s);
-
     if (!s.contains(":")) {
-      return new Reference(new Coord(s));
+      try {
+        return new Reference(new Coord(s));
+      } catch (NumberFormatException e) {
+        return new CVError();
+      }
     } else {
       int colonIndex = s.indexOf(":");
       return new Reference(new Coord(s.substring(0, colonIndex)),
