@@ -8,11 +8,28 @@ public class Reference implements Formula {
   BasicSpreadsheetModel model = new BasicSpreadsheetModel();
 
   public Reference(Coord first, Coord last) {
+    this.reference = new ArrayList<>();
 
+    int width = Math.abs(last.col - first.col);
+    int height = Math.abs(last.row - first.row);
+    int colStart = Math.min(last.col, first.col);
+    int rowStart = Math.min(last.row, first.row);
+    int colEnd = width + colStart;
+    int rowEnd = height + rowStart;
+
+    for (int i = colStart; i <= colEnd; i++) {
+      for (int j = rowStart; j <= rowEnd; j++) {
+        reference.add(new Coord(i, j));
+      }
+    }
+
+    System.out.println(reference.toString());
   }
 
   public Reference(Coord c) {
 
+    this.reference = new ArrayList<>();
+    reference.add(c);
   }
 
   //TODO: Getting the value of all the cells referenced? Is that a different interface?
@@ -33,7 +50,14 @@ public class Reference implements Formula {
   @Override
   public void flattenHelp(ArrayList<CellValue> acc) {
     for (Coord c: reference) {
-      acc.add(model.coordMap.get(c).getValue());
+      if (model.coordMap.containsKey(c)) {
+        acc.add(model.getCellAt(c));
+      }
     }
+  }
+
+  @Override
+  public String toString() {
+    return getValue().toString();
   }
 }

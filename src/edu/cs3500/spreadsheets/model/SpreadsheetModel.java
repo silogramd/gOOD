@@ -13,7 +13,10 @@ public interface SpreadsheetModel<k> {
    * @param coord the coordinates of the desired cell
    * @return String value of the requested cell
    */
-  String getCellAt(Coord coord);
+  CellValue getCellAt(Coord coord);
+
+  String getRawCellAt(Coord coord);
+
 
   /**
    * Updates or adds a cell at the desired coordinates.

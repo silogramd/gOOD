@@ -5,7 +5,8 @@ package edu.cs3500.spreadsheets.model;
  */
 public abstract class CellValue implements Formula {
 
-  public void combine(CellValue acc, Operation o) {
-    acc = o.apply(acc, this);
+  public CellValue combine(CellValue acc, Operation o) {
+    return o.apply(acc, this);
   }
+
 }

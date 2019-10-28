@@ -37,12 +37,14 @@ public class ContentsBuilder implements SexpVisitor<Formula> {
   public Formula visitSymbol(String s) {
     checkValidReference(s);
 
+    System.out.println("ContentsBuilding: " + s);
+
     if (!s.contains(":")) {
-      return new Reference(getCoord(s));
+      return new Reference(new Coord(s));
     } else {
       int colonIndex = s.indexOf(":");
-      return new Reference(getCoord(s.substring(0, colonIndex)),
-          getCoord(s.substring(colonIndex + 1)));
+      return new Reference(new Coord(s.substring(0, colonIndex)),
+          new Coord(s.substring(colonIndex + 1)));
     }
   }
 
@@ -54,9 +56,9 @@ public class ContentsBuilder implements SexpVisitor<Formula> {
 
   private Formula parseList(List<Sexp> l) {
     ArrayList<Formula> forms = new ArrayList<>();
-    String symbol = l.remove(0).toString();
-    for (Sexp s : l) {
-      Formula f = s.accept(this);
+    String symbol = l.get(0).toString();
+    for (int i = 1; i < l.size(); i++) {
+      Formula f = l.get(i).accept(this);
       forms.add(f);
     }
     switch (symbol) {
@@ -87,23 +89,4 @@ public class ContentsBuilder implements SexpVisitor<Formula> {
     }
   }
 
-  private Coord getCoord(String s) {
-    StringBuilder sbNums = new StringBuilder();
-    StringBuilder sbLetters = new StringBuilder();
-    boolean seenDigit = false;
-
-    for (Character c : s.toCharArray()) {
-      if (Character.isDigit(c)) {
-        seenDigit = true;
-        sbNums.append(c);
-      }
-      if (seenDigit && Character.isAlphabetic(c)) {
-        throw new IllegalArgumentException("Malformed input.");
-      }
-      sbLetters.append(c);
-    }
-
-    return new Coord(Coord.colNameToIndex(sbLetters.toString()),
-        Integer.valueOf(sbNums.toString()));
-  }
 }
