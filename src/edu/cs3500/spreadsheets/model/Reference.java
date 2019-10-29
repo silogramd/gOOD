@@ -24,7 +24,6 @@ public class Reference implements Formula {
       }
     }
 
-    System.out.println(reference.toString());
   }
 
   public Reference(Coord c) {
