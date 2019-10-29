@@ -4,8 +4,8 @@ import java.util.ArrayList;
 
 public class Reference implements Formula {
 
-  ArrayList<Coord> reference;
-  BasicSpreadsheetModel model = new BasicSpreadsheetModel();
+  private final ArrayList<Coord> reference;
+  private final BasicSpreadsheetModel model = new BasicSpreadsheetModel();
 
   public Reference(Coord first, Coord last) {
     this.reference = new ArrayList<>();
@@ -16,7 +16,6 @@ public class Reference implements Formula {
     int rowStart = Math.min(last.row, first.row);
     int colEnd = width + colStart;
     int rowEnd = height + rowStart;
-    ArrayList<Coord> visited = new ArrayList<>();
     for (int i = colStart; i <= colEnd; i++) {
       for (int j = rowStart; j <= rowEnd; j++) {
         Coord coord = new Coord(i,j);
@@ -54,11 +53,17 @@ public class Reference implements Formula {
   public void checkCycles(ArrayList<Coord> visited) {
     for (Coord c: this.reference) {
       if (visited.contains(c)) {
+        model.getCellAt(c).accept(new CycleVisitor(visited));
         throw new IllegalStateException("Cycle in Cells Found.");
       } else {
         model.getCellAt(c).checkCycles(visited);
       }
     }
+  }
+
+  @Override
+  public void accept(CycleVisitor cv) {
+    cv.visitReference(this.reference);
   }
 
   @Override

@@ -7,8 +7,12 @@ public class CVBlank extends CellValue {
 
   @Override
   public void flattenHelp(ArrayList<CellValue> acc) {
-    System.out.println("inside flatten help from blank cell val");
-    // doesnt do anything because we dont want this in the list of things to operate on
+    //do nothing! if value is blank, there is nothing to flatten.
+  }
+
+  @Override
+  public void accept(CycleVisitor cv) {
+    //do nothing! Cycles are only relevant for References and Formulas.
   }
 
   @Override

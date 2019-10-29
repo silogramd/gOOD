@@ -2,6 +2,7 @@ package edu.cs3500.spreadsheets.model;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Represents a basic version of a spreadsheet model
@@ -24,12 +25,7 @@ public class BasicSpreadsheetModel implements SpreadsheetModel<ICell> {
 
   @Override
   public ICell getCellAt(Coord coord) {
-
-    try {
-      return coordMap.get(coord);
-    } catch (NullPointerException e) {
-      return new Cell(coord);
-    }
+    return coordMap.getOrDefault(coord, new Cell(coord));
   }
 
   @Override
@@ -41,11 +37,13 @@ public class BasicSpreadsheetModel implements SpreadsheetModel<ICell> {
     }
   }
 
-
-
   @Override
   public void editCell(Coord coord, String string) {
-
     coordMap.put(coord, new Cell(coord, string));
+  }
+
+  @Override
+  public Map<Coord, ICell> getAllCells() {
+    return Map.copyOf(coordMap);
   }
 }

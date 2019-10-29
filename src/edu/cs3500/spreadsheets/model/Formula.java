@@ -12,4 +12,6 @@ public interface Formula {
   public void flattenHelp(ArrayList<CellValue> acc);
 
   void checkCycles(ArrayList<Coord> visited);
+
+  void accept(CycleVisitor cv);
 }

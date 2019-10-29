@@ -53,6 +53,11 @@ public class Cell implements ICell {
     this.contents.checkCycles(visited);
   }
 
+  @Override
+  public void accept(CycleVisitor cv) {
+    this.contents.accept(cv, );
+  }
+
 
   // for debugging
   @Override

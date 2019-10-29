@@ -3,8 +3,7 @@ package edu.cs3500.spreadsheets.model;
 import java.util.ArrayList;
 
 public class Function implements Formula {
-  Operation operation;
-  BasicSpreadsheetModel model = new BasicSpreadsheetModel();
+  final Operation operation;
   private ArrayList<Formula> rest;
 
   public Function(Operation o, ArrayList<Formula> rest) {
@@ -39,6 +38,11 @@ public class Function implements Formula {
     for (Formula f: this.rest) {
       f.checkCycles(visited);
     }
+  }
+
+  @Override
+  public void accept(CycleVisitor cv) {
+    cv.visitFunction(this.rest);
   }
 
 

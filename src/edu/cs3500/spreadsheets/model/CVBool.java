@@ -15,6 +15,11 @@ public class CVBool extends CellValue {
   }
 
   @Override
+  public void accept(CycleVisitor cv) {
+    //do nothing! Cycles are only relevant for References and Formulas.
+  }
+
+  @Override
   public String toString() {
     return String.valueOf(this.content);
   }

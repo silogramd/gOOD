@@ -11,4 +11,6 @@ public interface ICell {
   public Coord getCoord();
 
   void checkCycles(ArrayList<Coord> visited) throws IllegalStateException;
+
+  void accept(CycleVisitor cv);
 }

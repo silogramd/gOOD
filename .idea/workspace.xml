@@ -2,8 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4ef46782-5e33-4721-8a2f-343cfa9a918c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/CycleVisitor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/BasicSpreadsheetModelTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/BeyondGood.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/BeyondGood.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/BasicSpreadsheetModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/BasicSpreadsheetModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/CVBlank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/CVBlank.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/CVBool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/CVBool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/CVDouble.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/CVDouble.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/CVError.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/CVError.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/CVString.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/CVString.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/Cell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/Cell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/Formula.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/Formula.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/Function.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/Function.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/ICell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/ICell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/Reference.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/Reference.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/SpreadsheetModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/SpreadsheetModel.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -65,7 +78,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.BeyondGood 1">
+  <component name="RunManager" selected="JUnit.BasicSpreadsheetModelTests.testCellTypes">
     <configuration name="BeyondGood 1" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="edu.cs3500.spreadsheets.BeyondGood" />
       <module name="gOOD" />
@@ -82,10 +95,74 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="BasicSpreadsheetModelTests.getCell" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="gOOD" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="BasicSpreadsheetModelTests" />
+      <option name="METHOD_NAME" value="getCell" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BasicSpreadsheetModelTests.testAddCell" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="gOOD" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="BasicSpreadsheetModelTests" />
+      <option name="METHOD_NAME" value="testAddCell" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BasicSpreadsheetModelTests.testCellTypes" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="gOOD" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="BasicSpreadsheetModelTests" />
+      <option name="METHOD_NAME" value="testCellTypes" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BasicSpreadsheetModelTests.testEditCell" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="gOOD" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="BasicSpreadsheetModelTests" />
+      <option name="METHOD_NAME" value="testEditCell" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BasicSpreadsheetModelTests.testEmptySheet" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="gOOD" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="BasicSpreadsheetModelTests" />
+      <option name="METHOD_NAME" value="testEmptySheet" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.test1" />
       <item itemvalue="Application.BeyondGood 1" />
+      <item itemvalue="JUnit.BasicSpreadsheetModelTests.testEmptySheet" />
+      <item itemvalue="JUnit.BasicSpreadsheetModelTests.testAddCell" />
+      <item itemvalue="JUnit.BasicSpreadsheetModelTests.testEditCell" />
+      <item itemvalue="JUnit.BasicSpreadsheetModelTests.getCell" />
+      <item itemvalue="JUnit.BasicSpreadsheetModelTests.testCellTypes" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.BasicSpreadsheetModelTests.testCellTypes" />
+        <item itemvalue="JUnit.BasicSpreadsheetModelTests.getCell" />
+        <item itemvalue="JUnit.BasicSpreadsheetModelTests.testEditCell" />
+        <item itemvalue="JUnit.BasicSpreadsheetModelTests.testAddCell" />
+        <item itemvalue="JUnit.BasicSpreadsheetModelTests.testEmptySheet" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -102,7 +179,7 @@
       <workItem from="1572018420357" duration="14148000" />
       <workItem from="1572274422180" duration="7886000" />
       <workItem from="1572304196052" duration="599000" />
-      <workItem from="1572375083749" duration="5702000" />
+      <workItem from="1572375083749" duration="9471000" />
     </task>
     <task id="LOCAL-00001" summary="main method, bug fixes, test1.txt">
       <created>1572209255057</created>
@@ -153,7 +230,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572381098745</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="replaced println with print in BeyondGood">
+      <created>1572382087952</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1572382087952</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -179,6 +263,7 @@
     <MESSAGE value="Worked on Cycle Detecting" />
     <MESSAGE value="Replaced instanceof checks, deleted unnecessary files, refactored some repeated code." />
     <MESSAGE value="Deleted println's for handins" />
-    <option name="LAST_COMMIT_MESSAGE" value="Deleted println's for handins" />
+    <MESSAGE value="replaced println with print in BeyondGood" />
+    <option name="LAST_COMMIT_MESSAGE" value="replaced println with print in BeyondGood" />
   </component>
 </project>

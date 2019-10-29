@@ -16,6 +16,11 @@ public class CVDouble extends CellValue {
   }
 
   @Override
+  public void accept(CycleVisitor cv) {
+    //do nothing! Cycles are only relevant for References and Formulas.
+  }
+
+  @Override
   public String toString() {
     return String.format("%f", this.contents);
   }
