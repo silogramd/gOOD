@@ -37,11 +37,11 @@ public class BeyondGood {
     }
     String rawCellVal = model.getCellAt(new Coord(args[3])).toString();
     if (rawCellVal.equals("")) {
-      System.out.println("Error in Cell " + args[3] + ": Cell is empty");
+      System.out.print("Error in Cell " + args[3] + ": Cell is empty");
     } else if (rawCellVal.equals("#ERROR")) {
-      System.out.println("Error in Cell " + args[3] + ": Invalid raw contents.");
+      System.out.print("Error in Cell " + args[3] + ": Invalid raw contents.");
     } else {
-      System.out.println(rawCellVal);
+      System.out.print(rawCellVal);
     }
   }
 }
