@@ -54,7 +54,6 @@ public class ContentsBuilder implements SexpVisitor<Formula> {
       return new CVError();
     }
 
-    System.out.println("ContentsBuilding: " + s);
     if (!s.contains(":")) {
       try {
         return new Reference(new Coord(s));

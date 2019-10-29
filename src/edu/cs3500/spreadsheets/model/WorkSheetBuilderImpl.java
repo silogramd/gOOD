@@ -14,8 +14,6 @@ public class WorkSheetBuilderImpl implements WorksheetBuilder<BasicSpreadsheetMo
   public WorksheetBuilder<BasicSpreadsheetModel> createCell(int row, int col, String contents) {
     ICell cell = new Cell(row, col, contents);
     cells.add(cell);
-    //debugging
-    System.out.println("Builder: " + new Coord(col, row).toString() + " = " + contents);
     return this;
   }
 

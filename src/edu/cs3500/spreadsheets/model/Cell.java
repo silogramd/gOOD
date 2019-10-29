@@ -57,7 +57,7 @@ public class Cell implements ICell {
   // for debugging
   @Override
   public String toString() {
-    return "Cell contents = " + this.getValue().toString() + "\n";
+    return this.getValue().toString();
   }
 
 

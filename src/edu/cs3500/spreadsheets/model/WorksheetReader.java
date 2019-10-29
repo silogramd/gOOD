@@ -80,8 +80,6 @@ public final class WorksheetReader {
         scan.skip("\\s*");
       }
       String contents = scan.nextLine();
-      //debuging purposes
-      System.out.println("Reader: " + new Coord(col, row).toString() +  " = " + contents);
       builder = builder.createCell(row, col, contents);
     }
 
