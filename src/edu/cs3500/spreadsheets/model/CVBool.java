@@ -10,16 +10,6 @@ public class CVBool extends CellValue {
   }
 
   @Override
-  public CellValue getValue() {
-    return this;
-  }
-
-  @Override
-  public CellValue accept(FormulaVisitor fv) {
-    return null;
-  }
-
-  @Override
   public void flattenHelp(ArrayList<CellValue> acc) {
     acc.add(this);
   }
@@ -28,4 +18,5 @@ public class CVBool extends CellValue {
   public String toString() {
     return String.valueOf(this.content);
   }
+
 }

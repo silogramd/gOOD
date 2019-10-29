@@ -10,13 +10,25 @@ import edu.cs3500.spreadsheets.model.ConcatObject;
 import edu.cs3500.spreadsheets.model.Coord;
 import edu.cs3500.spreadsheets.model.Formula;
 import edu.cs3500.spreadsheets.model.Function;
+import edu.cs3500.spreadsheets.model.Operation;
 import edu.cs3500.spreadsheets.model.ProductObject;
 import edu.cs3500.spreadsheets.model.Reference;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class ContentsBuilder implements SexpVisitor<Formula> {
 
+  Map operations;
+
+  public ContentsBuilder() {
+    operations = new HashMap<String, Operation>();
+    operations.put("SUM", new AddObject());
+    operations.put("CONCAT", new ConcatObject());
+    operations.put("PRODUCT", new ProductObject());
+    operations.put("<", new CompareObject());
+  }
 
   @Override
   public Formula visitBoolean(boolean b) {
@@ -47,7 +59,7 @@ public class ContentsBuilder implements SexpVisitor<Formula> {
       try {
         return new Reference(new Coord(s));
       } catch (NumberFormatException e) {
-        return new CVError();
+        return new CVString(s);
       }
     } else {
       int colonIndex = s.indexOf(":");
@@ -69,18 +81,7 @@ public class ContentsBuilder implements SexpVisitor<Formula> {
       Formula f = l.get(i).accept(this);
       forms.add(f);
     }
-    switch (symbol) {
-      case "SUM":
-        return new Function(new AddObject(), forms);
-      case "<":
-        return new Function(new CompareObject(), forms);
-      case "PRODUCT":
-        return new Function(new ProductObject(), forms);
-      case "CONCAT":
-        return new Function(new ConcatObject(), forms);
-      default:
-        throw new IllegalArgumentException("Not Valid Function.");
-    }
+    return new Function((Operation) operations.get(symbol), forms);
   }
 
   private void checkValidReference(String s) {

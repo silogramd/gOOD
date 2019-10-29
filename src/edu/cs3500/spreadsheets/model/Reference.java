@@ -43,11 +43,6 @@ public class Reference implements Formula {
   }
 
   @Override
-  public CellValue accept(FormulaVisitor fv) {
-    return null;
-  }
-
-  @Override
   public void flattenHelp(ArrayList<CellValue> acc) {
     for (Coord c: this.reference) {
       if (model.coordMap.containsKey(c)) {

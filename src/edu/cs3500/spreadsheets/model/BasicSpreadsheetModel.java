@@ -15,9 +15,9 @@ public class BasicSpreadsheetModel implements SpreadsheetModel<ICell> {
       coordMap.put(c.getCoord(), c);
     }
 
-    for (ICell c: cells) {
-      c.checkCycles(new ArrayList<>());
-    }
+//    for (ICell c: cells) {
+//      c.checkCycles(new ArrayList<>());
+//    }
   }
 
   public BasicSpreadsheetModel() {}

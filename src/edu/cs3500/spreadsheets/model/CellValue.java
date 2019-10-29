@@ -12,6 +12,11 @@ public abstract class CellValue implements Formula {
   }
 
   @Override
+  public CellValue getValue() {
+    return this;
+  }
+
+  @Override
   public void checkCycles(ArrayList<Coord> visited) {
 
   }

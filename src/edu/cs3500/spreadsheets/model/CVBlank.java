@@ -4,15 +4,6 @@ import java.util.ArrayList;
 
 public class CVBlank extends CellValue {
 
-  @Override
-  public CellValue getValue() {
-    return this;
-  }
-
-  @Override
-  public CellValue accept(FormulaVisitor fv) {
-    return null;
-  }
 
   @Override
   public void flattenHelp(ArrayList<CellValue> acc) {
@@ -24,4 +15,5 @@ public class CVBlank extends CellValue {
   public String toString() {
     return "";
   }
+
 }

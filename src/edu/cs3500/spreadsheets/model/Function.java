@@ -53,12 +53,6 @@ public class Function implements Formula {
   }
 
   @Override
-  public CellValue accept(FormulaVisitor fv) {
-    //THIS IS PART OF AFOREMENTIONED VISITOR PATTERN.
-    return null;
-  }
-
-  @Override
   public String toString() {
     return getValue().toString();
   }

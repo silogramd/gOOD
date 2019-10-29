@@ -5,11 +5,9 @@ import java.util.ArrayList;
 /***
  * Geneeral Interface for CellContents that are Formulas.
  */
-public interface Formula extends CellContents {
+public interface Formula {
 
   public CellValue getValue();
-
-  public CellValue accept(FormulaVisitor fv);
 
   public void flattenHelp(ArrayList<CellValue> acc);
 

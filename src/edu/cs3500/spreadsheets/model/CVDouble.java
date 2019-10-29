@@ -11,16 +11,6 @@ public class CVDouble extends CellValue {
   }
 
   @Override
-  public CellValue getValue() {
-    return this;
-  }
-
-  @Override
-  public CellValue accept(FormulaVisitor fv) {
-    return null;
-  }
-
-  @Override
   public void flattenHelp(ArrayList<CellValue> acc) {
     acc.add(this);
   }
@@ -29,4 +19,5 @@ public class CVDouble extends CellValue {
   public String toString() {
     return String.format("%f", this.contents);
   }
+
 }

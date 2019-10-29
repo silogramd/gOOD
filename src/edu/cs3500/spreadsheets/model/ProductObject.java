@@ -4,9 +4,12 @@ public class ProductObject implements Operation {
 
   @Override
   public CellValue apply(CellValue cv1, CellValue cv2) {
-    if (!((cv1 instanceof CVDouble) && (cv2 instanceof CVDouble))) {
+    try {
+      return new CVDouble(Double.valueOf(cv1.toString())
+          * Double.valueOf(cv2.toString()));
+    } catch (NumberFormatException e) {
       return new CVError();
     }
-    return new CVDouble(((CVDouble) cv1).contents * ((CVDouble) cv2).contents);
   }
+
 }
