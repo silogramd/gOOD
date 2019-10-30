@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class CVString extends CellValue {
 
-  final String contents;
+  private final String contents;
 
   public CVString(String s) {
     this.contents = s;
@@ -16,17 +16,27 @@ public class CVString extends CellValue {
   }
 
   @Override
-  public void checkCycles(ArrayList<Coord> visited) {
-
-  }
-
-  @Override
-  public void accept(CycleVisitor cv) {
-    //do nothing! Cycles are only relevant for References and Formulas.
-  }
-
-  @Override
   public String toString() {
     return this.contents;
+  }
+
+  @Override
+  public boolean equals(Object other) {
+    if (other == this) {
+      return true;
+    }
+
+    if (!(other instanceof CVString)) {
+      return false;
+    }
+
+    CVString o = (CVString) other;
+
+    return this.contents.equals(o.contents);
+  }
+
+  @Override
+  public int hashCode() {
+    return this.contents.hashCode();
   }
 }

@@ -33,18 +33,6 @@ public class Function implements Formula {
 
   }
 
-  @Override
-  public void checkCycles(ArrayList<Coord> visited) {
-    for (Formula f: this.rest) {
-      f.checkCycles(visited);
-    }
-  }
-
-  @Override
-  public void accept(CycleVisitor cv) {
-    cv.visitFunction(this.rest);
-  }
-
 
   @Override
   public CellValue getValue() {
@@ -54,5 +42,38 @@ public class Function implements Formula {
   @Override
   public String toString() {
     return getValue().toString();
+  }
+
+  @Override
+  public boolean equals(Object other) {
+    if (other == this) {
+      return true;
+    }
+
+    if (!(other instanceof Function)) {
+      return false;
+    }
+
+    Function o = (Function)other;
+
+    boolean restSame = true;
+    if (rest.size() == o.rest.size()) {
+      ArrayList<Formula> copy = new ArrayList<>();
+      copy.addAll(o.rest);
+      for (Formula f : rest) {
+        if (copy.contains(f)) {
+          copy.remove(f);
+        } else {
+          restSame = false;
+        }
+      }
+    }
+
+    return o.operation.equals(operation) && restSame;
+  }
+
+  @Override
+  public int hashCode() {
+    return operation.hashCode() * 31 * rest.hashCode();
   }
 }

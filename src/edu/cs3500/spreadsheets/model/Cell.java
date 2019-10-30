@@ -11,19 +11,19 @@ public class Cell implements ICell {
   private Formula contents;
 
 
-  Cell(int row, int col, String contents) {
+  public Cell(int row, int col, String contents) {
     this.rawContents = contents;
     this.coord = new Coord(col,row);
     this.contents = createContents(contents);
   }
 
-  Cell(Coord coord, String contents) {
+  public Cell(Coord coord, String contents) {
     this.rawContents = contents;
     this.coord = coord;
     this.contents = createContents(contents);
   }
 
-  Cell(Coord coord) {
+  public Cell(Coord coord) {
     this.contents = new CVBlank();
     this.rawContents = "";
     this.coord = coord;
@@ -47,18 +47,6 @@ public class Cell implements ICell {
     return new Coord(this.coord.col, this.coord.row);
   }
 
-  @Override
-  public void checkCycles(ArrayList<Coord> visited) throws IllegalStateException {
-    visited.add(this.coord);
-    this.contents.checkCycles(visited);
-  }
-
-  @Override
-  public void accept(CycleVisitor cv) {
-    this.contents.accept(cv, );
-  }
-
-
   // for debugging
   @Override
   public String toString() {
@@ -70,10 +58,31 @@ public class Cell implements ICell {
     Parser p = new Parser();
 
     if (contents.charAt(0) == '=') {
-      return p.parse(this.rawContents.substring(1)).accept(new ContentsBuilder());
+      return p.parse(this.rawContents.substring(1)).accept(new ContentsBuilder(coord));
     } else {
-      return p.parse(this.rawContents).accept(new ContentsBuilder());
+      return p.parse(this.rawContents).accept(new ContentsBuilder(coord));
     }
+  }
+
+
+  @Override
+  public boolean equals(Object other) {
+    if (other == this) {
+      return true;
+    }
+
+    if (!(other instanceof Cell)) {
+      return false;
+    }
+
+    Cell o = (Cell)other;
+
+    return (this.rawContents.equals(o.rawContents) && this.coord.equals(o.coord));
+  }
+
+  @Override
+  public int hashCode() {
+    return this.rawContents.hashCode() * this.coord.hashCode() * 31;
   }
 
 }

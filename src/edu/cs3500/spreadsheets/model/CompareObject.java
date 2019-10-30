@@ -12,4 +12,21 @@ public class CompareObject implements Operation{
     }
   }
 
+  @Override
+  public boolean equals(Object other) {
+    if (other == this) {
+      return true;
+    }
+
+    if (!(other instanceof CompareObject)) {
+      return false;
+    } else {
+      return true;
+    }
+  }
+
+  @Override
+  public int hashCode() {
+    return 2;
+  }
 }

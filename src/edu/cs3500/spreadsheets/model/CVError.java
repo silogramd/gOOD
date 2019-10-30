@@ -15,17 +15,25 @@ public class CVError extends CellValue {
   }
 
   @Override
-  public void checkCycles(ArrayList<Coord> visited) {
-
-  }
-
-  @Override
-  public void accept(CycleVisitor cv) {
-    //do nothing! Cycles are only relevant for References and Formulas.
-  }
-
-  @Override
   public String toString() {
     return "#ERROR";
+  }
+
+  @Override
+  public boolean equals(Object other) {
+    if (other == this) {
+      return true;
+    }
+
+    if (!(other instanceof CVError)) {
+      return false;
+    } else {
+      return true;
+    }
+  }
+
+  @Override
+  public int hashCode() {
+    return 9;
   }
 }

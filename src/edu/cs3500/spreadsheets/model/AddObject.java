@@ -12,4 +12,22 @@ public class AddObject implements Operation {
     }
   }
 
+  @Override
+  public boolean equals(Object other) {
+    if (other == this) {
+      return true;
+    }
+
+    if (!(other instanceof AddObject)) {
+      return false;
+    } else {
+      return true;
+    }
+  }
+
+  @Override
+  public int hashCode() {
+    return 1;
+  }
+
 }

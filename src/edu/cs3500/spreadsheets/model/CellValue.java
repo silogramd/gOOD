@@ -16,9 +16,10 @@ public abstract class CellValue implements Formula {
     return this;
   }
 
+  /*
   @Override
   public void checkCycles(ArrayList<Coord> visited) {
 
-  }
+  }*/
 
 }

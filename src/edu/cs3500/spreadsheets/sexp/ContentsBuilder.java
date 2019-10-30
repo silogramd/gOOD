@@ -21,13 +21,16 @@ import java.util.Map;
 public class ContentsBuilder implements SexpVisitor<Formula> {
 
   Map operations;
+  Coord position;
 
-  public ContentsBuilder() {
+  public ContentsBuilder(Coord position) {
     operations = new HashMap<String, Operation>();
     operations.put("SUM", new AddObject());
     operations.put("CONCAT", new ConcatObject());
     operations.put("PRODUCT", new ProductObject());
     operations.put("<", new CompareObject());
+
+    this.position = position;
   }
 
   @Override
@@ -56,14 +59,22 @@ public class ContentsBuilder implements SexpVisitor<Formula> {
 
     if (!s.contains(":")) {
       try {
-        return new Reference(new Coord(s));
-      } catch (NumberFormatException e) {
+        return new Reference(new Coord(s), position);
+      } catch (NumberFormatException ex1) {
         return new CVString(s);
+      } catch (IllegalArgumentException ex2) {
+        return new CVError();
       }
     } else {
       int colonIndex = s.indexOf(":");
+      try {
       return new Reference(new Coord(s.substring(0, colonIndex)),
-          new Coord(s.substring(colonIndex + 1)));
+          new Coord(s.substring(colonIndex + 1)), position);
+      } catch (NumberFormatException ex1) {
+        return new CVString(s);
+      } catch (IllegalArgumentException ex2) {
+        return new CVError();
+      }
     }
   }
 
