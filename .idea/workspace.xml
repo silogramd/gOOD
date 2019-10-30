@@ -3,6 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="4ef46782-5e33-4721-8a2f-343cfa9a918c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/BeyondGood.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/BeyondGood.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/CVBool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/CVBool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/Cell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/Cell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/CellValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/CellValue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/Formula.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/Formula.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/Function.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/Function.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/ICell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/ICell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/Reference.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/Reference.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/BasicSpreadsheetModelTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/BasicSpreadsheetModelTests.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -76,7 +85,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.test1">
+  <component name="RunManager" selected="JUnit.BasicSpreadsheetModelTests.testNoCycles">
     <configuration name="BeyondGood 1" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="edu.cs3500.spreadsheets.BeyondGood" />
       <module name="gOOD" />
@@ -93,21 +102,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CellTest.getCoord" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BasicSpreadsheetModelTests.testEditCell" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="gOOD" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CellTest" />
-      <option name="METHOD_NAME" value="getCoord" />
+      <option name="MAIN_CLASS_NAME" value="BasicSpreadsheetModelTests" />
+      <option name="METHOD_NAME" value="testEditCell" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CellTest.getRawValue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BasicSpreadsheetModelTests.testNoCycles" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="gOOD" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="BasicSpreadsheetModelTests" />
+      <option name="METHOD_NAME" value="testNoCycles" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CellTest.getCoord" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="gOOD" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="CellTest" />
-      <option name="METHOD_NAME" value="getRawValue" />
+      <option name="METHOD_NAME" value="getCoord" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -133,32 +152,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CellValueTest.getValue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="gOOD" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CellValueTest" />
-      <option name="METHOD_NAME" value="getValue" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="Application.test1" />
       <item itemvalue="Application.BeyondGood 1" />
-      <item itemvalue="JUnit.CellValueTest.getValue" />
       <item itemvalue="JUnit.CellTest.getValue" />
-      <item itemvalue="JUnit.CellTest.getRawValue" />
       <item itemvalue="JUnit.CellTest.getCoord" />
       <item itemvalue="JUnit.CellTest.testToString" />
+      <item itemvalue="JUnit.BasicSpreadsheetModelTests.testNoCycles" />
+      <item itemvalue="JUnit.BasicSpreadsheetModelTests.testEditCell" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BasicSpreadsheetModelTests.testNoCycles" />
+        <item itemvalue="JUnit.BasicSpreadsheetModelTests.testEditCell" />
         <item itemvalue="JUnit.CellTest.testToString" />
         <item itemvalue="JUnit.CellTest.getCoord" />
         <item itemvalue="JUnit.CellTest.getValue" />
-        <item itemvalue="JUnit.CellTest.getRawValue" />
-        <item itemvalue="JUnit.CellValueTest.getValue" />
       </list>
     </recent_temporary>
   </component>
@@ -179,6 +188,7 @@
       <workItem from="1572304196052" duration="599000" />
       <workItem from="1572375083749" duration="5702000" />
       <workItem from="1572446235524" duration="194000" />
+      <workItem from="1572454066711" duration="2009000" />
     </task>
     <task id="LOCAL-00001" summary="main method, bug fixes, test1.txt">
       <created>1572209255057</created>

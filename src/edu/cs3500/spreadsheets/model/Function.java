@@ -1,15 +1,24 @@
 package edu.cs3500.spreadsheets.model;
 
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Function implements Formula {
   final Operation operation;
   private ArrayList<Formula> rest;
+  private CellValue evaluated;
 
   public Function(Operation o, ArrayList<Formula> rest) {
     this.operation = o;
     this.rest = rest;
+    this.evaluated = this.calculate(this.flatten());
   }
+
+  void refresh() {
+    this.evaluated = this.calculate(this.flatten());
+  }
+
 
   private ArrayList<CellValue> flatten() {
     ArrayList<CellValue> values = new ArrayList<>();
@@ -33,10 +42,9 @@ public class Function implements Formula {
 
   }
 
-
   @Override
   public CellValue getValue() {
-    return this.calculate(this.flatten());
+    return this.evaluated;
   }
 
   @Override

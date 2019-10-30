@@ -8,4 +8,5 @@ public interface ICell {
   String getRawValue();
 
   Coord getCoord();
+
 }
