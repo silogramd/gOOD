@@ -2,36 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4ef46782-5e33-4721-8a2f-343cfa9a918c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Archive.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/AddObjectTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/CellTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/CellValueTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/CompareObjectTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/ConcatObjectTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/ParserTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/ProductObjectTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/AddObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/AddObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/BasicSpreadsheetModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/BasicSpreadsheetModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/CVBlank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/CVBlank.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/CVBool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/CVBool.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/CVDouble.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/CVDouble.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/CVError.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/CVError.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/CVString.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/CVString.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/Cell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/Cell.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/CellValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/CellValue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/CompareObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/CompareObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/ConcatObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/ConcatObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/CycleVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/CycleVisitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/Formula.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/Formula.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/Function.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/Function.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/ICell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/ICell.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/ProductObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/ProductObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/Reference.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/Reference.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/TestMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/TestMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/WorkSheetBuilderImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/WorkSheetBuilderImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/sexp/ContentsBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/sexp/ContentsBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test1.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -105,7 +76,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.CellTest.testToString">
+  <component name="RunManager" selected="Application.test1">
     <configuration name="BeyondGood 1" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="edu.cs3500.spreadsheets.BeyondGood" />
       <module name="gOOD" />
@@ -207,6 +178,7 @@
       <workItem from="1572274422180" duration="7886000" />
       <workItem from="1572304196052" duration="599000" />
       <workItem from="1572375083749" duration="5702000" />
+      <workItem from="1572446235524" duration="194000" />
     </task>
     <task id="LOCAL-00001" summary="main method, bug fixes, test1.txt">
       <created>1572209255057</created>
@@ -257,7 +229,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572381098745</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="tests for cell, cellvalue, and operations. Sketchy solution to checking for cycles. bug fixes.">
+      <created>1572409516561</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1572409516561</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -283,6 +262,7 @@
     <MESSAGE value="Worked on Cycle Detecting" />
     <MESSAGE value="Replaced instanceof checks, deleted unnecessary files, refactored some repeated code." />
     <MESSAGE value="Deleted println's for handins" />
-    <option name="LAST_COMMIT_MESSAGE" value="Deleted println's for handins" />
+    <MESSAGE value="tests for cell, cellvalue, and operations. Sketchy solution to checking for cycles. bug fixes." />
+    <option name="LAST_COMMIT_MESSAGE" value="tests for cell, cellvalue, and operations. Sketchy solution to checking for cycles. bug fixes." />
   </component>
 </project>
