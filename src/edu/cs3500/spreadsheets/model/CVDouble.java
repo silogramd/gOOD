@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class CVDouble extends CellValue {
 
-  final double contents;
+  private final double contents;
 
   public CVDouble(double d) {
     this.contents = d;
@@ -16,13 +16,28 @@ public class CVDouble extends CellValue {
   }
 
   @Override
-  public void accept(CycleVisitor cv) {
-    //do nothing! Cycles are only relevant for References and Formulas.
-  }
-
-  @Override
   public String toString() {
     return String.format("%f", this.contents);
   }
 
+  @Override
+  public boolean equals(Object other) {
+    if (other == this) {
+      return true;
+    }
+
+    if (!(other instanceof CVDouble)) {
+      return false;
+    }
+
+    CVDouble o = (CVDouble)other;
+
+    return (Math.abs(this.contents - o.contents) < 0.0001);
+  }
+
+  @Override
+  public int hashCode() {
+    Double d = this.contents;
+    return d.hashCode();
+  }
 }

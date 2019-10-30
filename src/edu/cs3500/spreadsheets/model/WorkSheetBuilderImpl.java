@@ -9,6 +9,7 @@ import java.util.ArrayList;
 public class WorkSheetBuilderImpl implements WorksheetBuilder<BasicSpreadsheetModel> {
 
   ArrayList<ICell> cells = new ArrayList<>();
+  BasicSpreadsheetModel model = new BasicSpreadsheetModel();
   //TODO: DOES THIS WORK?
   @Override
   public WorksheetBuilder<BasicSpreadsheetModel> createCell(int row, int col, String contents) {
@@ -19,6 +20,10 @@ public class WorkSheetBuilderImpl implements WorksheetBuilder<BasicSpreadsheetMo
 
   @Override
   public BasicSpreadsheetModel createWorksheet() {
-    return new BasicSpreadsheetModel(cells);
+    for (ICell c : cells) {
+      model.editCell(c.getCoord(), c.getRawValue());
+    }
+
+    return model;
   }
 }

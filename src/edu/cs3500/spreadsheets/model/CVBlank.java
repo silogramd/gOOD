@@ -11,13 +11,25 @@ public class CVBlank extends CellValue {
   }
 
   @Override
-  public void accept(CycleVisitor cv) {
-    //do nothing! Cycles are only relevant for References and Formulas.
-  }
-
-  @Override
   public String toString() {
     return "";
   }
 
+  @Override
+  public boolean equals(Object other) {
+    if (other == this) {
+      return true;
+    }
+
+    if (!(other instanceof CVBlank)) {
+      return false;
+    } else {
+      return true;
+    }
+  }
+
+  @Override
+  public int hashCode() {
+    return 6;
+  }
 }

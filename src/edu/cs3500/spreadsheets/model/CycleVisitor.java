@@ -12,7 +12,7 @@ public class CycleVisitor {
 
   public void visitFunction(ArrayList<Formula> f) throws IllegalStateException {
     for (Formula form: f) {
-      form.accept(this);
+      //form.accept(this);
     }
   }
 

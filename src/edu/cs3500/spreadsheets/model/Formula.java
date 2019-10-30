@@ -7,11 +7,7 @@ import java.util.ArrayList;
  */
 public interface Formula {
 
-  public CellValue getValue();
+  CellValue getValue();
 
-  public void flattenHelp(ArrayList<CellValue> acc);
-
-  void checkCycles(ArrayList<Coord> visited);
-
-  void accept(CycleVisitor cv);
+  void flattenHelp(ArrayList<CellValue> acc);
 }

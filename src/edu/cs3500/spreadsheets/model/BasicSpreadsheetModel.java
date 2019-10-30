@@ -9,23 +9,15 @@ import java.util.Map;
  */
 public class BasicSpreadsheetModel implements SpreadsheetModel<ICell> {
 
-  static final HashMap<Coord, ICell> coordMap = new HashMap<>();
-
-  BasicSpreadsheetModel(ArrayList<ICell> cells) {
-    for (ICell c: cells) {
-      coordMap.put(c.getCoord(), c);
-    }
-
-//    for (ICell c: cells) {
-//      c.checkCycles(new ArrayList<>());
-//    }
-  }
+  protected static HashMap<Coord, ICell> coordMap = new HashMap<>();
 
   public BasicSpreadsheetModel() {}
 
   @Override
   public ICell getCellAt(Coord coord) {
-    return coordMap.getOrDefault(coord, new Cell(coord));
+    ICell real = coordMap.getOrDefault(coord, new Cell(coord));
+    ICell copy = new Cell(real.getCoord(), real.getRawValue());
+    return copy;
   }
 
   @Override
