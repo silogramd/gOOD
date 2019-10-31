@@ -36,4 +36,8 @@ public interface SpreadsheetModel<k> {
    */
   Map<Coord, ICell> getAllCells();
 
+  /**
+   * Clears the sheet of all cell values.
+   */
+  void clearSheet();
 }

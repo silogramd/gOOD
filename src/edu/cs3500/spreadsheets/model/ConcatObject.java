@@ -1,5 +1,8 @@
 package edu.cs3500.spreadsheets.model;
 
+/**
+ * <p>Class representing Concat function.</p>
+ */
 public class ConcatObject implements Operation {
 
   @Override

@@ -2,6 +2,9 @@ package edu.cs3500.spreadsheets.model;
 
 import java.util.ArrayList;
 
+/**
+ * <p>Class representing String Cell Value.</p>
+ */
 public class CVString extends CellValue {
 
   private final String contents;

@@ -38,4 +38,9 @@ public class BasicSpreadsheetModel implements SpreadsheetModel<ICell> {
   public Map<Coord, ICell> getAllCells() {
     return Map.copyOf(coordMap);
   }
+
+  @Override
+  public void clearSheet() {
+    this.coordMap = new HashMap<Coord, ICell>();
+  }
 }

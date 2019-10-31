@@ -3,6 +3,9 @@ package edu.cs3500.spreadsheets.model;
 import edu.cs3500.spreadsheets.sexp.ContentsBuilder;
 import edu.cs3500.spreadsheets.sexp.Parser;
 
+/**
+ * <p>Class representing a Cell.</p>
+ */
 public class Cell implements ICell {
 
   private String rawContents;
@@ -54,7 +57,9 @@ public class Cell implements ICell {
 
   private Formula createContents(String contents) {
     Parser p = new Parser();
-
+    if (contents == "") {
+      return new CVBlank();
+    }
     if (contents.charAt(0) == '=') {
       return p.parse(this.rawContents.substring(1)).accept(new ContentsBuilder(coord));
     } else {

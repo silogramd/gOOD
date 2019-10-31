@@ -1,5 +1,8 @@
 package edu.cs3500.spreadsheets.model;
 
+/**
+ * <p>Class representing the Compare function.</p>
+ */
 public class CompareObject implements Operation{
 
   @Override

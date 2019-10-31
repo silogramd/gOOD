@@ -2,6 +2,9 @@ package edu.cs3500.spreadsheets.model;
 
 import java.util.ArrayList;
 
+/**
+ * <p>Class representing a blank CellValue tests.</p>
+ */
 public class CVBlank extends CellValue {
 
 

@@ -14,7 +14,9 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.assertFalse;
 
-
+/**
+ * <p>Class representing Cell tests.</p>
+ */
 public class CellTest {
 
   Cell c1 = new Cell(1,1, "dog");
