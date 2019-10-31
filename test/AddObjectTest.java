@@ -33,7 +33,6 @@ public class AddObjectTest {
     assertTrue(addOp.apply(addObj1, boolObj) instanceof CVError);
     assertTrue(addOp.apply(addObj1, stringObj) instanceof CVError);
     assertTrue(addOp.apply(addObj1, errObj) instanceof CVError);
-    assertTrue(addOp.apply(addObj1, blankObj) instanceof CVError);
 
 
     CellValue returned = addOp.apply(addObj1, addObj2);
