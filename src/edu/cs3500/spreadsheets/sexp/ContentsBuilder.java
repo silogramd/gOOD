@@ -18,6 +18,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * <p>Implementation of the {@link SexpVisitor}</p>
+ */
 public class ContentsBuilder implements SexpVisitor<Formula> {
 
   Map operations;
@@ -84,6 +87,11 @@ public class ContentsBuilder implements SexpVisitor<Formula> {
     return new CVString(s);
   }
 
+  /**
+   * Parses a list of Sexp.
+   * @param l the list of Sexp
+   * @return the outputted Formula.
+   */
   private Formula parseList(List<Sexp> l) {
     ArrayList<Formula> forms = new ArrayList<>();
     String symbol = l.get(0).toString();
@@ -94,6 +102,10 @@ public class ContentsBuilder implements SexpVisitor<Formula> {
     return new Function((Operation) operations.get(symbol), forms);
   }
 
+  /**
+   * Determines if the reference is valid, and contains a valid Coordinate.
+   * @param s the raw string being checked for a Coordinate.
+   */
   private void checkValidReference(String s) {
     int acc = 0;
 

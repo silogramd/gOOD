@@ -2,6 +2,9 @@ package edu.cs3500.spreadsheets.model;
 
 import java.util.ArrayList;
 
+/**
+ * <p>Class representing a reference in a cell.</p>
+ */
 public class Reference implements Formula {
 
   private final ArrayList<Coord> reference;

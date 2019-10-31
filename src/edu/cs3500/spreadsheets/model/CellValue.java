@@ -5,6 +5,12 @@ package edu.cs3500.spreadsheets.model;
  */
 public abstract class CellValue implements Formula {
 
+  /**
+   * Accumlator method that addes this value to the Operation.
+   * @param acc accumulated CellValue
+   * @param o Operation doing the work
+   * @return the new Accumulated CellValue
+   */
   public CellValue combine(CellValue acc, Operation o) {
     return o.apply(acc, this);
   }

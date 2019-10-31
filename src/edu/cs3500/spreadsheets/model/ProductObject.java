@@ -1,5 +1,8 @@
 package edu.cs3500.spreadsheets.model;
 
+/**
+ * <p>Class representing the Product function.</p>
+ */
 public class ProductObject implements Operation {
 
   @Override
