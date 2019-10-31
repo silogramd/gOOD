@@ -34,7 +34,6 @@ public class ProductObjectTest {
     assertTrue(productObj.apply(addObj1, boolObj) instanceof CVError);
     assertTrue(productObj.apply(addObj1, stringObj) instanceof CVError);
     assertTrue(productObj.apply(addObj1, errObj) instanceof CVError);
-    assertTrue(productObj.apply(addObj1, blankObj) instanceof CVError);
 
 
     CellValue returned = productObj.apply(addObj1, addObj2);

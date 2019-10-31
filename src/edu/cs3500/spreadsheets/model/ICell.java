@@ -9,4 +9,11 @@ public interface ICell {
 
   Coord getCoord();
 
+  void update(String contents);
+
+  void addReferencedBy(Coord other);
+
+  void removeReferencedBy(Coord other);
+
+  void refresh();
 }

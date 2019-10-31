@@ -34,6 +34,7 @@ public class BasicSpreadsheetModelTests {
     SpreadsheetModel m = new BasicSpreadsheetModel();
     m.editCell(new Coord(1,1), "2");
     assertEquals(m.getCellAt(new Coord(1,1)).toString(), String.format("%f", 2.0));
+    m.clearSheet();
   }
 
   @Test
@@ -43,13 +44,13 @@ public class BasicSpreadsheetModelTests {
     assertEquals(m.getCellAt(new Coord(1,1)).toString(), String.format("%f", 2.0));
     m.editCell(new Coord(1,1), "hi!");
     assertEquals(m.getCellAt(new Coord(1,1)).toString(), "hi!");
+    m.clearSheet();
     m.editCell(new Coord(2,1), "4");
     m.editCell(new Coord(2,2), "=(SUM B1 B1)");
     assertEquals(m.getCellAt(new Coord(2,2)).toString(), String.format("%f", 8.0));
     m.editCell(new Coord(2,1), "1");
     assertEquals(m.getCellAt(new Coord(2,2)).toString(), String.format("%f", 2.0));
     m.clearSheet();
-
   }
 
   @Test
