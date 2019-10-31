@@ -9,7 +9,8 @@ import java.util.Map;
  */
 public class BasicSpreadsheetModel implements SpreadsheetModel<ICell> {
 
-  protected static HashMap<Coord, ICell> coordMap = new HashMap<>();
+  static HashMap<Coord, ICell> coordMap = new HashMap<>();
+
 
   public BasicSpreadsheetModel() {}
 
@@ -31,7 +32,7 @@ public class BasicSpreadsheetModel implements SpreadsheetModel<ICell> {
 
   @Override
   public void editCell(Coord coord, String string) {
-    coordMap.put(coord, new Cell(coord, string));
+    coordMap.get(coord).update(string);
   }
 
   @Override

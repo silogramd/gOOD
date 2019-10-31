@@ -3,6 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="4ef46782-5e33-4721-8a2f-343cfa9a918c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/AddObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/AddObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/BasicSpreadsheetModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/BasicSpreadsheetModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/Cell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/Cell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/CompareObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/CompareObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/CycleVisitor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/ICell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/ICell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/ProductObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/ProductObject.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -76,7 +83,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.test1">
+  <component name="RunManager" selected="JUnit.CellTest">
     <configuration name="BeyondGood 1" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="edu.cs3500.spreadsheets.BeyondGood" />
       <module name="gOOD" />
@@ -89,6 +96,15 @@
       <option name="MAIN_CLASS_NAME" value="edu.cs3500.spreadsheets.model.TestMain" />
       <module name="gOOD" />
       <option name="PROGRAM_PARAMETERS" value="-in test1.txt -eval A3" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CellTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="gOOD" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CellTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -133,32 +149,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CellValueTest.getValue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="gOOD" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CellValueTest" />
-      <option name="METHOD_NAME" value="getValue" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="Application.test1" />
       <item itemvalue="Application.BeyondGood 1" />
-      <item itemvalue="JUnit.CellValueTest.getValue" />
       <item itemvalue="JUnit.CellTest.getValue" />
       <item itemvalue="JUnit.CellTest.getRawValue" />
       <item itemvalue="JUnit.CellTest.getCoord" />
       <item itemvalue="JUnit.CellTest.testToString" />
+      <item itemvalue="JUnit.CellTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CellTest" />
+        <item itemvalue="JUnit.CellTest.getValue" />
         <item itemvalue="JUnit.CellTest.testToString" />
         <item itemvalue="JUnit.CellTest.getCoord" />
-        <item itemvalue="JUnit.CellTest.getValue" />
         <item itemvalue="JUnit.CellTest.getRawValue" />
-        <item itemvalue="JUnit.CellValueTest.getValue" />
       </list>
     </recent_temporary>
   </component>
@@ -236,7 +242,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572409516561</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="tests for creating cells with all types of contents">
+      <created>1572489744743</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1572489744743</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -263,6 +276,7 @@
     <MESSAGE value="Replaced instanceof checks, deleted unnecessary files, refactored some repeated code." />
     <MESSAGE value="Deleted println's for handins" />
     <MESSAGE value="tests for cell, cellvalue, and operations. Sketchy solution to checking for cycles. bug fixes." />
-    <option name="LAST_COMMIT_MESSAGE" value="tests for cell, cellvalue, and operations. Sketchy solution to checking for cycles. bug fixes." />
+    <MESSAGE value="tests for creating cells with all types of contents" />
+    <option name="LAST_COMMIT_MESSAGE" value="tests for creating cells with all types of contents" />
   </component>
 </project>
