@@ -2,15 +2,28 @@ package edu.cs3500.spreadsheets.model;
 
 import java.util.ArrayList;
 
+/**
+ * <p>Class representing a Cell with a Function.</p>
+ */
 public class Function implements Formula {
   final Operation operation;
   private ArrayList<Formula> rest;
+  private CellValue evaluated;
 
   public Function(Operation o, ArrayList<Formula> rest) {
     this.operation = o;
     this.rest = rest;
+    this.evaluated = this.calculate(this.flatten());
   }
 
+  void refresh() {
+    this.evaluated = this.calculate(this.flatten());
+  }
+
+  /**
+   * Flattens the {@link rest} list to CellValues.
+   * @return the flattened list of CellValues.
+   */
   private ArrayList<CellValue> flatten() {
     ArrayList<CellValue> values = new ArrayList<>();
     for (Formula f: this.rest) {
@@ -19,6 +32,11 @@ public class Function implements Formula {
     return values;
   }
 
+  /**
+   * Returns a 
+   * @param cells
+   * @return
+   */
   private CellValue calculate(ArrayList<CellValue> cells) {
     CellValue outpt = cells.remove(0);
     for (CellValue cv: cells) {
@@ -33,10 +51,9 @@ public class Function implements Formula {
 
   }
 
-
   @Override
   public CellValue getValue() {
-    return this.calculate(this.flatten());
+    return this.evaluated;
   }
 
   @Override

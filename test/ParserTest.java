@@ -4,6 +4,9 @@ import edu.cs3500.spreadsheets.sexp.Parser;
 import java.util.Scanner;
 import org.junit.Test;
 
+/**
+ * <p>Class representing Parser tests.</p>
+ */
 public class ParserTest {
 
   @Test

@@ -6,6 +6,9 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * <p>Class representing a Cell.</p>
+ */
 public class Cell implements ICell {
 
   private String rawContents;
@@ -13,7 +16,6 @@ public class Cell implements ICell {
   private Formula contents;
   private Set<Coord> referencedBy = new HashSet<>();
   private BasicSpreadsheetModel model = new BasicSpreadsheetModel();
-
 
   public Cell(int row, int col, String contents) {
     this.rawContents = contents;
@@ -84,7 +86,6 @@ public class Cell implements ICell {
 
   private Formula createContents(String contents) {
     Parser p = new Parser();
-
     if (contents.length() == 0) {
       return new CVBlank();
     }

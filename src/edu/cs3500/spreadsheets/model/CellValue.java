@@ -1,7 +1,5 @@
 package edu.cs3500.spreadsheets.model;
 
-import java.util.ArrayList;
-
 /***
  * Interface for CellContents that are solely values.
  */

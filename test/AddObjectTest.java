@@ -12,7 +12,9 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.assertFalse;
 
-
+/**
+ * <p>Class representing AddObject tests.</p>
+ */
 public class AddObjectTest {
   @Test
   public void applyTest() {

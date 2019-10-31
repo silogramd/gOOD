@@ -47,5 +47,6 @@ public class BasicSpreadsheetModel implements SpreadsheetModel<ICell> {
   @Override
   public void clearSheet() {
     coordMap = new HashMap<>();
+
   }
 }

@@ -1,7 +1,11 @@
 package edu.cs3500.spreadsheets.model;
 
 import java.util.ArrayList;
+import java.util.Set;
 
+/**
+ * <p>Class representing a boolean Cell Value.</p>
+ */
 public class CVBool extends CellValue {
   private final boolean content;
 

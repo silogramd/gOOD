@@ -2,6 +2,9 @@ package edu.cs3500.spreadsheets.model;
 
 import java.util.ArrayList;
 
+/**
+ * <p>Class representing a double cell value.</p>
+ */
 public class CVDouble extends CellValue {
 
   private final double contents;

@@ -1,5 +1,4 @@
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotEquals;
 
 import edu.cs3500.spreadsheets.model.BasicSpreadsheetModel;
 import edu.cs3500.spreadsheets.model.Coord;
@@ -8,6 +7,9 @@ import edu.cs3500.spreadsheets.model.SpreadsheetModel;
 import java.util.HashMap;
 import org.junit.Test;
 
+/**
+ * <p>Class representing tests for a BasicSpreadSheetModel.</p>
+ */
 public class BasicSpreadsheetModelTests {
 
 
@@ -20,6 +22,7 @@ public class BasicSpreadsheetModelTests {
   @Test
   public void getCell() {
     SpreadsheetModel m = new BasicSpreadsheetModel();
+    m.clearSheet();
     m.editCell(new Coord(1,1), "2");
     assertEquals(m.getCellAt(new Coord(1,1)).toString(), String.format("%f", 2.0));
     assertEquals(m.getCellAt(new Coord(7,7)).toString(), "");
@@ -41,6 +44,12 @@ public class BasicSpreadsheetModelTests {
     assertEquals(m.getCellAt(new Coord(1,1)).toString(), String.format("%f", 2.0));
     m.editCell(new Coord(1,1), "hi!");
     assertEquals(m.getCellAt(new Coord(1,1)).toString(), "hi!");
+    m.clearSheet();
+    m.editCell(new Coord(2,1), "4");
+    m.editCell(new Coord(2,2), "=(SUM B1 B1)");
+    assertEquals(m.getCellAt(new Coord(2,2)).toString(), String.format("%f", 8.0));
+    m.editCell(new Coord(2,1), "1");
+    assertEquals(m.getCellAt(new Coord(2,2)).toString(), String.format("%f", 2.0));
     m.clearSheet();
   }
 
@@ -75,6 +84,17 @@ public class BasicSpreadsheetModelTests {
 
   @Test
   public void testNoCycles() {
+    SpreadsheetModel m = new BasicSpreadsheetModel();
+    m.editCell(new Coord(1,1), "=A2");
+    m.editCell(new Coord(1,2), "=A1");
+    assertEquals(m.getCellAt(new Coord(1,2)).toString(), "#ERROR");
+
+    m.editCell(new Coord(1,3), "4");
+    m.editCell(new Coord(1,4), "=A5");
+    m.editCell(new Coord(1,5), "=(SUM A3:A4)");
+    assertEquals(m.getCellAt(new Coord(1,5)).toString(), "#ERROR");
+    assertEquals(m.getCellAt(new Coord(1,4)).toString(), "#ERROR");
+    m.clearSheet();
 
   }
 }
