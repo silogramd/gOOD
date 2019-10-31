@@ -30,7 +30,6 @@ public class CellValueTest {
     assertTrue(addObj1.combine(boolObj, addOp) instanceof CVError);
     assertTrue(addObj1.combine(errObj, addOp) instanceof CVError);
     assertTrue(addObj1.combine(stringObj, addOp) instanceof CVError);
-    assertTrue(addObj1.combine(blankObj, addOp) instanceof CVError);
 
     CellValue returned = addObj1.combine(addObj2, addOp);
     assertTrue(returned instanceof CVDouble);

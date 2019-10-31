@@ -32,11 +32,20 @@ public class BasicSpreadsheetModel implements SpreadsheetModel<ICell> {
 
   @Override
   public void editCell(Coord coord, String string) {
-    coordMap.get(coord).update(string);
+    if (!coordMap.containsKey(coord)) {
+      coordMap.put(coord, new Cell(coord, string));
+    } else {
+      coordMap.get(coord).update(string);
+    }
   }
 
   @Override
   public Map<Coord, ICell> getAllCells() {
     return Map.copyOf(coordMap);
+  }
+
+  @Override
+  public void clearSheet() {
+    coordMap = new HashMap<>();
   }
 }

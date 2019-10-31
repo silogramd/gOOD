@@ -31,7 +31,6 @@ public class CompareObjectTest {
     assertTrue(compObj.apply(addObj1, boolObj) instanceof CVError);
     assertTrue(compObj.apply(addObj1, stringObj) instanceof CVError);
     assertTrue(compObj.apply(addObj1, errObj) instanceof CVError);
-    assertTrue(compObj.apply(addObj1, blankObj) instanceof CVError);
 
 
     CellValue returned = compObj.apply(addObj1, addObj2);

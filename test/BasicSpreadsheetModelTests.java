@@ -23,6 +23,7 @@ public class BasicSpreadsheetModelTests {
     m.editCell(new Coord(1,1), "2");
     assertEquals(m.getCellAt(new Coord(1,1)).toString(), String.format("%f", 2.0));
     assertEquals(m.getCellAt(new Coord(7,7)).toString(), "");
+    m.clearSheet();
   }
 
   @Test
@@ -30,6 +31,7 @@ public class BasicSpreadsheetModelTests {
     SpreadsheetModel m = new BasicSpreadsheetModel();
     m.editCell(new Coord(1,1), "2");
     assertEquals(m.getCellAt(new Coord(1,1)).toString(), String.format("%f", 2.0));
+    m.clearSheet();
   }
 
   @Test
@@ -39,6 +41,7 @@ public class BasicSpreadsheetModelTests {
     assertEquals(m.getCellAt(new Coord(1,1)).toString(), String.format("%f", 2.0));
     m.editCell(new Coord(1,1), "hi!");
     assertEquals(m.getCellAt(new Coord(1,1)).toString(), "hi!");
+    m.clearSheet();
   }
 
   @Test
@@ -67,7 +70,7 @@ public class BasicSpreadsheetModelTests {
     assertEquals(m.getCellAt(new Coord(2,3)).toString(), "this is a string:)");
     assertEquals(m.getCellAt(new Coord(3,1)).toString(), "#ERROR");
     assertEquals(m.getCellAt(new Coord(4,1)).toString(), String.format("%f", 4.0));
-
+    m.clearSheet();
   }
 
   @Test
