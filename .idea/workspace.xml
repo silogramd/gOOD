@@ -105,9 +105,14 @@
     <configuration name="BasicSpreadsheetModelTests.testEditCell" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="gOOD" />
       <option name="PACKAGE_NAME" value="" />
+<<<<<<< Updated upstream
       <option name="MAIN_CLASS_NAME" value="BasicSpreadsheetModelTests" />
       <option name="METHOD_NAME" value="testEditCell" />
       <option name="TEST_OBJECT" value="method" />
+=======
+      <option name="MAIN_CLASS_NAME" value="AddObjectTest" />
+      <option name="TEST_OBJECT" value="class" />
+>>>>>>> Stashed changes
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -115,9 +120,13 @@
     <configuration name="BasicSpreadsheetModelTests.testNoCycles" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="gOOD" />
       <option name="PACKAGE_NAME" value="" />
+<<<<<<< Updated upstream
       <option name="MAIN_CLASS_NAME" value="BasicSpreadsheetModelTests" />
       <option name="METHOD_NAME" value="testNoCycles" />
       <option name="TEST_OBJECT" value="method" />
+=======
+      <option name="TEST_OBJECT" value="package" />
+>>>>>>> Stashed changes
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -274,5 +283,19 @@
     <MESSAGE value="Deleted println's for handins" />
     <MESSAGE value="tests for cell, cellvalue, and operations. Sketchy solution to checking for cycles. bug fixes." />
     <option name="LAST_COMMIT_MESSAGE" value="tests for cell, cellvalue, and operations. Sketchy solution to checking for cycles. bug fixes." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/Function.java</url>
+          <line>26</line>
+          <properties class="edu.cs3500.spreadsheets.model.Function" method="flatten">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

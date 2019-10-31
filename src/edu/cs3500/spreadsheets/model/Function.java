@@ -29,6 +29,7 @@ public class Function implements Formula {
   }
 
   private CellValue calculate(ArrayList<CellValue> cells) {
+    System.out.println(cells);
     CellValue outpt = cells.remove(0);
     for (CellValue cv: cells) {
       outpt = cv.combine(outpt,this.operation);
