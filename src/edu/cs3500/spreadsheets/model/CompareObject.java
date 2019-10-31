@@ -3,7 +3,7 @@ package edu.cs3500.spreadsheets.model;
 /**
  * <p>Class representing the Compare function.</p>
  */
-public class CompareObject implements Operation{
+public class CompareObject implements Operation {
 
   @Override
   public CellValue apply(CellValue cv1, CellValue cv2) {
@@ -22,7 +22,7 @@ public class CompareObject implements Operation{
 
     if (cv2 instanceof CVBlank) {
       val2 = 0;
-    }  else {
+    } else {
       try {
         val2 = Double.parseDouble(cv2.toString());
       } catch (NumberFormatException e) {
@@ -39,11 +39,7 @@ public class CompareObject implements Operation{
       return true;
     }
 
-    if (!(other instanceof CompareObject)) {
-      return false;
-    } else {
-      return true;
-    }
+    return other instanceof CompareObject;
   }
 
   @Override

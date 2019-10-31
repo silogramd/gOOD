@@ -39,11 +39,7 @@ public class AddObject implements Operation {
       return true;
     }
 
-    if (!(other instanceof AddObject)) {
-      return false;
-    } else {
-      return true;
-    }
+    return other instanceof AddObject;
   }
 
   @Override

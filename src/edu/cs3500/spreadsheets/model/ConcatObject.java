@@ -10,7 +10,7 @@ public class ConcatObject implements Operation {
     if ((cv1 instanceof CVError) || (cv2 instanceof CVError)) {
       return new CVError();
     }
-      return new CVString(cv1.toString() + cv2.toString());
+    return new CVString(cv1.toString() + cv2.toString());
   }
 
   @Override
@@ -19,11 +19,7 @@ public class ConcatObject implements Operation {
       return true;
     }
 
-    if (!(other instanceof ConcatObject)) {
-      return false;
-    } else {
-      return true;
-    }
+    return other instanceof ConcatObject;
   }
 
   @Override

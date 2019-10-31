@@ -9,6 +9,10 @@ public class CVString extends CellValue {
 
   private final String contents;
 
+  /**
+   * Default constructor.
+   * @param s the string contents.
+   */
   public CVString(String s) {
     this.contents = s;
   }

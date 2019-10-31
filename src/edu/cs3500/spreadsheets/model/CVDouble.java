@@ -9,6 +9,11 @@ public class CVDouble extends CellValue {
 
   private final double contents;
 
+  /**
+   * Default constructor.
+   *
+   * @param d the double contents.
+   */
   public CVDouble(double d) {
     this.contents = d;
   }

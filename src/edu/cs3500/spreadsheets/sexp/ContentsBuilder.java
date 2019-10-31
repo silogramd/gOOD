@@ -18,11 +18,19 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * Sexp visitor to build into cell values.
+ */
 public class ContentsBuilder implements SexpVisitor<Formula> {
 
   Map operations;
   Coord position;
 
+  /**
+   * Default constructor.
+   *
+   * @param position
+   */
   public ContentsBuilder(Coord position) {
     operations = new HashMap<String, Operation>();
     operations.put("SUM", new AddObject());
@@ -68,8 +76,8 @@ public class ContentsBuilder implements SexpVisitor<Formula> {
     } else {
       int colonIndex = s.indexOf(":");
       try {
-      return new Reference(new Coord(s.substring(0, colonIndex)),
-          new Coord(s.substring(colonIndex + 1)), position);
+        return new Reference(new Coord(s.substring(0, colonIndex)),
+            new Coord(s.substring(colonIndex + 1)), position);
       } catch (NumberFormatException ex1) {
         return new CVString(s);
       } catch (IllegalArgumentException ex2) {

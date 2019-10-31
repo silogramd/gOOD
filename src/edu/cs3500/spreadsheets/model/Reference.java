@@ -2,12 +2,23 @@ package edu.cs3500.spreadsheets.model;
 
 import java.util.ArrayList;
 
+/**
+ * Represents a reference cell value.
+ */
 public class Reference implements Formula {
 
   private final ArrayList<Coord> reference;
   private final BasicSpreadsheetModel model = new BasicSpreadsheetModel();
   private final String position;
 
+  /**
+   * Constructor for box references.
+   *
+   * @param first The first corner.
+   * @param last The opposite corner.
+   * @param position The position of this reference cell.
+   * @throws IllegalArgumentException if there is a cycle.
+   */
   public Reference(Coord first, Coord last, Coord position) {
     this.reference = new ArrayList<>();
     this.position = position.toString();
@@ -31,6 +42,13 @@ public class Reference implements Formula {
 
   }
 
+  /**
+   * Constructor for a single cell reference.
+   *
+   * @param c the cell to reference.
+   * @param position of this cell.
+   * @throws IllegalArgumentException if there is a cycle
+   */
   public Reference(Coord c, Coord position) {
     this.position = position.toString();
     if (noCycles(c)) {

@@ -8,17 +8,18 @@ import java.util.ArrayList;
 public class Function implements Formula {
   final Operation operation;
   private ArrayList<Formula> rest;
-  private CellValue evaluated;
 
+  /**
+   * Default constructor.
+   *
+   * @param o the operation.
+   * @param rest the items for the operation.
+   */
   public Function(Operation o, ArrayList<Formula> rest) {
     this.operation = o;
     this.rest = rest;
-    this.evaluated = this.calculate(this.flatten());
   }
 
-  void refresh() {
-    this.evaluated = this.calculate(this.flatten());
-  }
 
   /**
    * Flattens the {@link rest} list to CellValues.
@@ -32,11 +33,6 @@ public class Function implements Formula {
     return values;
   }
 
-  /**
-   * Returns a 
-   * @param cells
-   * @return
-   */
   private CellValue calculate(ArrayList<CellValue> cells) {
     CellValue outpt = cells.remove(0);
     for (CellValue cv: cells) {
@@ -53,7 +49,7 @@ public class Function implements Formula {
 
   @Override
   public CellValue getValue() {
-    return this.evaluated;
+    return this.calculate(flatten());
   }
 
   @Override

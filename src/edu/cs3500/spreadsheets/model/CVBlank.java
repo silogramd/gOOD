@@ -24,11 +24,7 @@ public class CVBlank extends CellValue {
       return true;
     }
 
-    if (!(other instanceof CVBlank)) {
-      return false;
-    } else {
-      return true;
-    }
+    return other instanceof CVBlank;
   }
 
   @Override

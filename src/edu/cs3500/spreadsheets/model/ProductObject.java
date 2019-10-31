@@ -1,7 +1,17 @@
 package edu.cs3500.spreadsheets.model;
 
+/**
+ * Represents a multiplication object.
+ */
 public class ProductObject implements Operation {
 
+  /**
+   * Multiplies the tow cell values into a new one.
+   *
+   * @param cv1 first cell value.
+   * @param cv2 second cell value.
+   * @return result cell value.
+   */
   @Override
   public CellValue apply(CellValue cv1, CellValue cv2) {
     double val1;
@@ -36,11 +46,7 @@ public class ProductObject implements Operation {
       return true;
     }
 
-    if (!(other instanceof ProductObject)) {
-      return false;
-    } else {
-      return true;
-    }
+    return other instanceof ProductObject;
   }
 
   @Override

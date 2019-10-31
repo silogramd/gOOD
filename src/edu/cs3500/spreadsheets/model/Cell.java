@@ -2,9 +2,6 @@ package edu.cs3500.spreadsheets.model;
 
 import edu.cs3500.spreadsheets.sexp.ContentsBuilder;
 import edu.cs3500.spreadsheets.sexp.Parser;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Set;
 
 /**
  * <p>Class representing a Cell.</p>
@@ -14,21 +11,37 @@ public class Cell implements ICell {
   private String rawContents;
   private Coord coord;
   private Formula contents;
-  private Set<Coord> referencedBy = new HashSet<>();
-  private BasicSpreadsheetModel model = new BasicSpreadsheetModel();
 
+  /**
+   * Row and col constructor.
+   *
+   * @param row The desired row.
+   * @param col The desired col.
+   * @param contents The desired raw contents.
+   */
   public Cell(int row, int col, String contents) {
     this.rawContents = contents;
     this.coord = new Coord(col,row);
     this.contents = createContents(contents);
   }
 
+  /**
+   * Coord constructor.
+   *
+   * @param coord The desired coord.
+   * @param contents The desired raw contents.
+   */
   public Cell(Coord coord, String contents) {
     this.rawContents = contents;
     this.coord = coord;
     this.contents = createContents(contents);
   }
 
+  /**
+   * Default only coord constructor, value is automatically blank.
+   *
+   * @param coord The desired coord.
+   */
   public Cell(Coord coord) {
     this.contents = new CVBlank();
     this.rawContents = "";
@@ -64,24 +77,6 @@ public class Cell implements ICell {
   public void update(String contents) {
     this.rawContents = contents;
     this.contents = createContents(contents);
-    for (Coord c : referencedBy) {
-      model.getCellAt(c).refresh();
-    }
-  }
-
-  @Override
-  public void addReferencedBy(Coord other) {
-    referencedBy.add(other);
-  }
-
-  @Override
-  public void removeReferencedBy(Coord other) {
-    referencedBy.remove(other);
-  }
-
-  @Override
-  public void refresh() {
-    this.contents = createContents(rawContents);
   }
 
   private Formula createContents(String contents) {
