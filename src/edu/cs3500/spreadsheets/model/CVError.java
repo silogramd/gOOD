@@ -28,11 +28,7 @@ public class CVError extends CellValue {
       return true;
     }
 
-    if (!(other instanceof CVError)) {
-      return false;
-    } else {
-      return true;
-    }
+    return other instanceof CVError;
   }
 
   @Override

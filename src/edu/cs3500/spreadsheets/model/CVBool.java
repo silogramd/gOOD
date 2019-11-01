@@ -6,6 +6,7 @@ import java.util.ArrayList;
  * <p>Class representing a boolean Cell Value.</p>
  */
 public class CVBool extends CellValue {
+
   private final boolean content;
 
   /**
@@ -44,7 +45,7 @@ public class CVBool extends CellValue {
 
   @Override
   public int hashCode() {
-    if(content) {
+    if (content) {
       return 1;
     } else {
       return 0;

@@ -8,8 +8,8 @@ import java.util.Map;
  */
 public class BasicSpreadsheetModel implements SpreadsheetModel<ICell> {
 
-  static HashMap<Coord, ICell> coordMap = new HashMap<>();
-  
+  protected static HashMap<Coord, ICell> coordMap = new HashMap<>();
+
   @Override
   public ICell getCellAt(Coord coord) {
     ICell real = coordMap.getOrDefault(coord, new Cell(coord));
@@ -43,6 +43,5 @@ public class BasicSpreadsheetModel implements SpreadsheetModel<ICell> {
   @Override
   public void clearSheet() {
     coordMap = new HashMap<>();
-
   }
 }

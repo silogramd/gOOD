@@ -29,7 +29,7 @@ public class ContentsBuilder implements SexpVisitor<Formula> {
   /**
    * Default constructor.
    *
-   * @param position
+   * @param position to put the new formula.
    */
   public ContentsBuilder(Coord position) {
     operations = new HashMap<String, Operation>();

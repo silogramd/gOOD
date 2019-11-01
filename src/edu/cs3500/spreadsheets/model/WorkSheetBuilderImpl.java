@@ -8,7 +8,7 @@ import java.util.ArrayList;
  */
 public class WorkSheetBuilderImpl implements WorksheetBuilder<BasicSpreadsheetModel> {
 
-  ArrayList<ICell> cells = new ArrayList<>();
+  static ArrayList<ICell> cells = new ArrayList<>();
   BasicSpreadsheetModel model = new BasicSpreadsheetModel();
 
   @Override

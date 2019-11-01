@@ -2,6 +2,7 @@ package edu.cs3500.spreadsheets.model;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.util.Map;
 
 /**
  * Represents a simple main method to test building worksheets.
@@ -10,10 +11,10 @@ public class TestMain {
 
   /**
    * Main method.
-   * @param args
    *
+   * @param args The command line args passed in
    * @throws IllegalArgumentException if input formatting is incorrect.
-   * @throws IllegalStateException if the file cannot be found.
+   * @throws IllegalStateException    if the file cannot be found.
    */
   public static void main(String[] args) {
 
@@ -22,7 +23,6 @@ public class TestMain {
     } else if (!(args[0].equals("-in")) || !(args[2].equals("-eval"))) {
       throw new IllegalArgumentException("invalid syntax");
     }
-
 
     BasicSpreadsheetModel model;
 
@@ -33,17 +33,35 @@ public class TestMain {
       throw new IllegalStateException("file not found");
     }
 
-
-    String rawCellVal = model.getCellAt(new Coord(args[3])).getValue().toString();
-    if (rawCellVal.equals("")) {
-      System.out.println("Cell " + args[3] + " is blank");
-    } else {
-      System.out.println(rawCellVal);
+    Map<Coord, ICell> result = model.getAllCells();
+    ICell cur;
+    for (Map.Entry<Coord, ICell> e : result.entrySet()) {
+      cur = e.getValue();
+      if (cur.getValue() instanceof CVError) {
+        System.out.println("Error in cell " + cur.getCoord().toString());
+      }
     }
 
+    CellValue val = model.getCellAt(new Coord(args[3])).getValue();
 
-    //debuging
-    System.out.println(model.coordMap.toString());
+    if (val instanceof CVBlank) {
+      System.out.println("Cell " + args[3] + " is blank");
+    } else if (val instanceof CVString) {
+
+      String contents = val.toString();
+
+      contents = contents.replaceAll("\\\\", "\\\\\\\\");
+      contents = contents.replaceAll("\"", "\\\\\"");
+
+      String ret = "\"";
+      ret += contents + "\"";
+
+      System.out.println(ret);
+
+    } else {
+      System.out.println(val.toString());
+    }
+
 
   }
 

@@ -11,6 +11,7 @@ public class CVString extends CellValue {
 
   /**
    * Default constructor.
+   *
    * @param s the string contents.
    */
   public CVString(String s) {
