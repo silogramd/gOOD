@@ -1,12 +1,11 @@
 package edu.cs3500.spreadsheets.model;
 
-import edu.cs3500.spreadsheets.sexp.Sexp;
 import java.util.Map;
 
 /**
  *  Interface for the model of spreadsheets.
  */
-public interface SpreadsheetModel<k> {
+public interface SpreadsheetModel<K> {
 
   /**
    * Gets the cell value at the given coordinate.
@@ -36,4 +35,8 @@ public interface SpreadsheetModel<k> {
    */
   Map<Coord, ICell> getAllCells();
 
+  /**
+   * Clears the sheet of all cell values.
+   */
+  void clearSheet();
 }

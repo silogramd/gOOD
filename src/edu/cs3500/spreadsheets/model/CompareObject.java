@@ -1,13 +1,46 @@
 package edu.cs3500.spreadsheets.model;
 
-public class CompareObject implements Operation{
+import java.util.List;
+
+/**
+ * <p>Class representing the Compare function.</p>
+ */
+public class CompareObject implements Operation, CellValueVisitor<Double> {
 
   @Override
-  public CellValue apply(CellValue cv1, CellValue cv2) {
+  public Double visitDouble(CVDouble cv) {
+    return Double.valueOf(cv.toString());
+  }
+
+  @Override
+  public Double visitError(CVError cv) {
+    throw new IllegalStateException();
+  }
+
+  @Override
+  public Double visitBlank(CVBlank cv) {
+    throw new IllegalStateException();
+  }
+
+  @Override
+  public Double visitBool(CVBool cv) {
+    throw new IllegalStateException();
+  }
+
+  @Override
+  public Double visitString(CVString cv) {
+    throw new IllegalStateException();
+  }
+
+  @Override
+  public CellValue apply(List<CellValue> vals) {
+    if (vals.size() != 2) {
+      return new CVError();
+    }
     try {
-      return new CVBool(Double.valueOf(cv1.toString()) <
-          Double.valueOf(cv2.toString()));
-    } catch (NumberFormatException nfe) {
+      boolean outpt = vals.get(0).accept(this) < vals.get(1).accept(this);
+      return new CVBool(outpt);
+    } catch (IllegalStateException e) {
       return new CVError();
     }
   }
@@ -18,11 +51,7 @@ public class CompareObject implements Operation{
       return true;
     }
 
-    if (!(other instanceof CompareObject)) {
-      return false;
-    } else {
-      return true;
-    }
+    return other instanceof CompareObject;
   }
 
   @Override

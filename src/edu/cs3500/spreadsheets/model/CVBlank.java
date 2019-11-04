@@ -2,6 +2,9 @@ package edu.cs3500.spreadsheets.model;
 
 import java.util.ArrayList;
 
+/**
+ * <p>Class representing a blank CellValue tests.</p>
+ */
 public class CVBlank extends CellValue {
 
 
@@ -21,15 +24,17 @@ public class CVBlank extends CellValue {
       return true;
     }
 
-    if (!(other instanceof CVBlank)) {
-      return false;
-    } else {
-      return true;
-    }
+    return other instanceof CVBlank;
   }
 
   @Override
   public int hashCode() {
     return 6;
+  }
+
+
+  @Override
+  public <R> R accept(CellValueVisitor<R> visitor) {
+    return visitor.visitBlank(this);
   }
 }

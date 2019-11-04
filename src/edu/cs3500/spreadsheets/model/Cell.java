@@ -3,29 +3,51 @@ package edu.cs3500.spreadsheets.model;
 import edu.cs3500.spreadsheets.sexp.ContentsBuilder;
 import edu.cs3500.spreadsheets.sexp.Parser;
 
+/**
+ * <p>Class representing a Cell.</p>
+ */
 public class Cell implements ICell {
 
   private String rawContents;
   private Coord coord;
   private Formula contents;
 
-  public Cell(int row, int col, String contents) {
+  /**
+   * Row and col constructor.
+   *
+   * @param row The desired row.
+   * @param col The desired col.
+   * @param contents The desired raw contents.
+   */
+  public Cell(int row, int col, String contents, BasicSpreadsheetModel model) {
     this.rawContents = contents;
     this.coord = new Coord(col,row);
-    this.contents = createContents(contents);
+    this.contents = createContents(model);
   }
 
-  public Cell(Coord coord, String contents) {
+  /**
+   * Coord constructor.
+   *
+   * @param coord The desired coord.
+   * @param contents The desired raw contents.
+   */
+  public Cell(Coord coord, String contents, BasicSpreadsheetModel model) {
     this.rawContents = contents;
     this.coord = coord;
-    this.contents = createContents(contents);
+    this.contents = createContents(model);
   }
 
+  /**
+   * Default only coord constructor, value is automatically blank.
+   *
+   * @param coord The desired coord.
+   */
   public Cell(Coord coord) {
     this.contents = new CVBlank();
     this.rawContents = "";
     this.coord = coord;
   }
+
 
   @Override
   public CellValue getValue() {
@@ -52,13 +74,22 @@ public class Cell implements ICell {
   }
 
 
-  private Formula createContents(String contents) {
-    Parser p = new Parser();
+  @Override
+  public void update(String contents, BasicSpreadsheetModel model) {
+    this.rawContents = contents;
+    this.contents = createContents(model);
+  }
 
-    if (contents.charAt(0) == '=') {
-      return p.parse(this.rawContents.substring(1)).accept(new ContentsBuilder(coord));
+  private Formula createContents(BasicSpreadsheetModel model) {
+    Parser p = new Parser();
+    if (rawContents.length() == 0) {
+      return new CVBlank();
+    }
+
+    if (rawContents.charAt(0) == '=') {
+      return p.parse(this.rawContents.substring(1)).accept(new ContentsBuilder(coord, model));
     } else {
-      return p.parse(this.rawContents).accept(new ContentsBuilder(coord));
+      return p.parse(this.rawContents).accept(new ContentsBuilder(coord, model));
     }
   }
 

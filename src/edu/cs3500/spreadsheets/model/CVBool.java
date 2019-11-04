@@ -1,11 +1,19 @@
 package edu.cs3500.spreadsheets.model;
 
 import java.util.ArrayList;
-import java.util.Set;
 
+/**
+ * <p>Class representing a boolean Cell Value.</p>
+ */
 public class CVBool extends CellValue {
+
   private final boolean content;
 
+  /**
+   * Default constructor.
+   *
+   * @param b the boolean content.
+   */
   public CVBool(boolean b) {
     this.content = b;
   }
@@ -37,10 +45,15 @@ public class CVBool extends CellValue {
 
   @Override
   public int hashCode() {
-    if(content) {
+    if (content) {
       return 1;
     } else {
       return 0;
     }
+  }
+
+  @Override
+  public <R> R accept(CellValueVisitor<R> visitor) {
+    return visitor.visitBool(this);
   }
 }

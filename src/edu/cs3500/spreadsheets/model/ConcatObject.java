@@ -1,13 +1,49 @@
 package edu.cs3500.spreadsheets.model;
 
-public class ConcatObject implements Operation {
+import java.util.List;
+
+/**
+ * <p>Class representing Concat function.</p>
+ */
+public class ConcatObject implements Operation, CellValueVisitor<String> {
+
 
   @Override
-  public CellValue apply(CellValue cv1, CellValue cv2) {
-    if ((cv1 instanceof CVError) || (cv2 instanceof CVError)) {
-      return new CVError();
+  public String visitDouble(CVDouble cv) {
+    return cv.toString();
+  }
+
+  @Override
+  public String visitError(CVError cv) {
+    throw new IllegalStateException();
+  }
+
+  @Override
+  public String visitBlank(CVBlank cv) {
+    return "";
+  }
+
+  @Override
+  public String visitBool(CVBool cv) {
+    return cv.toString();
+  }
+
+  @Override
+  public String visitString(CVString cv) {
+    return cv.toString();
+  }
+
+  @Override
+  public CellValue apply(List<CellValue> vals) {
+    StringBuilder outpt = new StringBuilder();
+    for (CellValue v: vals) {
+      try {
+        outpt.append(v.accept(this));
+      } catch (IllegalStateException e) {
+        return new CVError();
+      }
     }
-      return new CVString(cv1.toString() + cv2.toString());
+    return new CVString(outpt.toString());
   }
 
   @Override
@@ -16,11 +52,7 @@ public class ConcatObject implements Operation {
       return true;
     }
 
-    if (!(other instanceof ConcatObject)) {
-      return false;
-    } else {
-      return true;
-    }
+    return other instanceof ConcatObject;
   }
 
   @Override

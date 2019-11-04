@@ -2,10 +2,18 @@ package edu.cs3500.spreadsheets.model;
 
 import java.util.ArrayList;
 
+/**
+ * <p>Class representing a double cell value.</p>
+ */
 public class CVDouble extends CellValue {
 
   private final double contents;
 
+  /**
+   * Default constructor.
+   *
+   * @param d the double contents.
+   */
   public CVDouble(double d) {
     this.contents = d;
   }
@@ -39,5 +47,10 @@ public class CVDouble extends CellValue {
   public int hashCode() {
     Double d = this.contents;
     return d.hashCode();
+  }
+
+  @Override
+  public <R> R accept(CellValueVisitor<R> visitor) {
+    return visitor.visitDouble(this);
   }
 }

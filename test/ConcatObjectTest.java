@@ -6,13 +6,16 @@ import edu.cs3500.spreadsheets.model.CVString;
 import edu.cs3500.spreadsheets.model.CellValue;
 import edu.cs3500.spreadsheets.model.ConcatObject;
 import edu.cs3500.spreadsheets.model.Operation;
+import java.util.ArrayList;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.assertFalse;
 
-
+/**
+ * <p>Class representing ConcatObject tests.</p>
+ */
 public class ConcatObjectTest {
   @Test
   public void applyTest() {
@@ -27,23 +30,27 @@ public class ConcatObjectTest {
 
     Operation concatObj = new ConcatObject();
 
-    assertFalse(concatObj.apply(addObj1, addObj2) instanceof CVError);
-    assertFalse(concatObj.apply(blankObj, boolObj) instanceof CVError);
-    assertFalse(concatObj.apply(addObj1, boolObj) instanceof CVError);
-    assertFalse(concatObj.apply(addObj1, stringObj1) instanceof CVError);
-    assertTrue(concatObj.apply(addObj1, errObj) instanceof CVError);
-    assertFalse(concatObj.apply(addObj1, blankObj) instanceof CVError);
+    ArrayList<CellValue> cells = new ArrayList<>();
 
+    cells.add(addObj1);
+    cells.add(addObj2);
+    assertFalse(concatObj.apply(cells) instanceof CVError);
+    cells.add(blankObj);
+    assertFalse(concatObj.apply(cells) instanceof CVError);
+    cells.add(boolObj);
+    assertFalse(concatObj.apply(cells) instanceof CVError);
+    cells.add(stringObj1);
+    assertFalse(concatObj.apply(cells) instanceof CVError);
+    cells.add(errObj);
+    assertTrue(concatObj.apply(cells) instanceof CVError);
 
-    CellValue returned = concatObj.apply(addObj1, addObj2);
+    cells.remove(errObj);
+    CellValue returned = concatObj.apply(cells);
     assertTrue(returned instanceof CVString);
-    assertEquals(returned.toString(), "1.0000002.000000");
+    assertEquals(returned.toString(), "1.0000002.000000falsetest");
 
-    CellValue returned2 = concatObj.apply(stringObj1, stringObj2);
-    assertTrue(returned2 instanceof CVString);
-    assertEquals(returned2.toString(), "testcat");
-
-    CellValue returned3 = concatObj.apply(stringObj1, errObj);
+    cells.add(errObj);
+    CellValue returned3 = concatObj.apply(cells);
     assertTrue(returned3 instanceof CVError);
     assertEquals(returned3.toString(), "#ERROR");
   }

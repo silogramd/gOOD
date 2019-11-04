@@ -2,10 +2,18 @@ package edu.cs3500.spreadsheets.model;
 
 import java.util.ArrayList;
 
+/**
+ * <p>Class representing String Cell Value.</p>
+ */
 public class CVString extends CellValue {
 
   private final String contents;
 
+  /**
+   * Default constructor.
+   *
+   * @param s the string contents.
+   */
   public CVString(String s) {
     this.contents = s;
   }
@@ -38,5 +46,10 @@ public class CVString extends CellValue {
   @Override
   public int hashCode() {
     return this.contents.hashCode();
+  }
+
+  @Override
+  public <R> R accept(CellValueVisitor<R> visitor) {
+    return visitor.visitString(this);
   }
 }

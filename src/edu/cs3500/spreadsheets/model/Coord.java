@@ -4,12 +4,18 @@ import java.util.Objects;
 
 
 /**
- * A value type representing coordinates in a {@link Worksheet}.
+ * A value type representing coordinates in a Worksheet}.
  */
 public class Coord {
   public final int row;
   public final int col;
 
+  /**
+   * Integer row and col constructor.
+   *
+   * @param col the column.
+   * @param row the row.
+   */
   public Coord(int col, int row) {
     if (row < 1 || col < 1) {
       throw new IllegalArgumentException("Coordinates should be strictly positive");
@@ -18,6 +24,11 @@ public class Coord {
     this.col = col;
   }
 
+  /**
+   * String constructor.
+   *
+   * @param s the string form of the coordinate
+   */
   public Coord(String s) {
     StringBuilder sbNums = new StringBuilder();
     StringBuilder sbLetters = new StringBuilder();

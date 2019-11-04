@@ -1,33 +1,48 @@
 package edu.cs3500.spreadsheets.model;
 
-public class AddObject implements Operation {
+import java.util.List;
+
+/**
+ * <p>Class representing the Add function.</p>
+ */
+public class AddObject implements Operation, CellValueVisitor<Double> {
+
 
   @Override
-  public CellValue apply(CellValue cv1, CellValue cv2) {
-    try {
-      return new CVDouble(Double.valueOf(cv1.toString())
-          + Double.valueOf(cv2.toString()));
-    } catch (NumberFormatException e) {
-      return new CVError();
-    }
+  public Double visitDouble(CVDouble cv) {
+    return Double.valueOf(cv.toString());
   }
 
   @Override
-  public boolean equals(Object other) {
-    if (other == this) {
-      return true;
-    }
-
-    if (!(other instanceof AddObject)) {
-      return false;
-    } else {
-      return true;
-    }
+  public Double visitError(CVError cv) {
+    throw new IllegalStateException();
   }
 
   @Override
-  public int hashCode() {
-    return 1;
+  public Double visitBlank(CVBlank cv) {
+    return 0.0;
   }
 
+  @Override
+  public Double visitBool(CVBool cv) {
+    return 0.0;
+  }
+
+  @Override
+  public Double visitString(CVString cv) {
+    return 0.0;
+  }
+
+  @Override
+  public CellValue apply(List<CellValue> vals) {
+    Double outpt = 0.0;
+    for (CellValue v: vals) {
+      try {
+        outpt += v.accept(this);
+      } catch (IllegalStateException e) {
+        return new CVError();
+      }
+    }
+    return new CVDouble(outpt);
+  }
 }

@@ -1,6 +1,7 @@
 package edu.cs3500.spreadsheets.sexp;
 
 import edu.cs3500.spreadsheets.model.AddObject;
+import edu.cs3500.spreadsheets.model.BasicSpreadsheetModel;
 import edu.cs3500.spreadsheets.model.CVBool;
 import edu.cs3500.spreadsheets.model.CVDouble;
 import edu.cs3500.spreadsheets.model.CVError;
@@ -18,17 +19,28 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * Sexp visitor to build into cell values.
+ */
 public class ContentsBuilder implements SexpVisitor<Formula> {
 
-  Map operations;
+  Map<String, Operation> operations;
   Coord position;
+  BasicSpreadsheetModel model;
 
-  public ContentsBuilder(Coord position) {
+  /**
+   * Default constructor.
+   *
+   * @param position to put the new formula.
+   * @param model
+   */
+  public ContentsBuilder(Coord position, BasicSpreadsheetModel model) {
     operations = new HashMap<String, Operation>();
     operations.put("SUM", new AddObject());
     operations.put("CONCAT", new ConcatObject());
     operations.put("PRODUCT", new ProductObject());
     operations.put("<", new CompareObject());
+    this.model = model;
 
     this.position = position;
   }
@@ -59,7 +71,7 @@ public class ContentsBuilder implements SexpVisitor<Formula> {
 
     if (!s.contains(":")) {
       try {
-        return new Reference(new Coord(s), position);
+        return new Reference(new Coord(s), position, model);
       } catch (NumberFormatException ex1) {
         return new CVString(s);
       } catch (IllegalArgumentException ex2) {
@@ -68,8 +80,8 @@ public class ContentsBuilder implements SexpVisitor<Formula> {
     } else {
       int colonIndex = s.indexOf(":");
       try {
-      return new Reference(new Coord(s.substring(0, colonIndex)),
-          new Coord(s.substring(colonIndex + 1)), position);
+        return new Reference(new Coord(s.substring(0, colonIndex)),
+            new Coord(s.substring(colonIndex + 1)), position, model);
       } catch (NumberFormatException ex1) {
         return new CVString(s);
       } catch (IllegalArgumentException ex2) {
@@ -91,7 +103,7 @@ public class ContentsBuilder implements SexpVisitor<Formula> {
       Formula f = l.get(i).accept(this);
       forms.add(f);
     }
-    return new Function((Operation) operations.get(symbol), forms);
+    return new Function(operations.get(symbol), forms);
   }
 
   private void checkValidReference(String s) {
