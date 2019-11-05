@@ -12,7 +12,7 @@ public interface SpreadsheetModel<K> {
    * @param coord the coordinates of the desired cell
    * @return The cell at the given coordinate.
    */
-  ICell getCellAt(Coord coord);
+  K getCellAt(Coord coord);
 
   /**
    * <p>Gets the raw contents of the Cell at the given coordinate.</p>

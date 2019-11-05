@@ -3,6 +3,7 @@ import static org.junit.Assert.assertEquals;
 import edu.cs3500.spreadsheets.model.BasicSpreadsheetModel;
 import edu.cs3500.spreadsheets.model.CVDouble;
 import edu.cs3500.spreadsheets.model.CVError;
+import edu.cs3500.spreadsheets.model.Cell;
 import edu.cs3500.spreadsheets.model.Coord;
 import edu.cs3500.spreadsheets.model.ICell;
 import edu.cs3500.spreadsheets.model.SpreadsheetModel;
@@ -17,13 +18,13 @@ public class BasicSpreadsheetModelTests {
 
   @Test
   public void testEmptySheet() {
-    SpreadsheetModel<ICell> m = new BasicSpreadsheetModel();
+    SpreadsheetModel<Cell> m = new BasicSpreadsheetModel();
     assertEquals(new HashMap<Coord, ICell>(), m.getAllCells());
   }
 
   @Test
   public void getCell() {
-    SpreadsheetModel<ICell> m = new BasicSpreadsheetModel();
+    SpreadsheetModel<Cell> m = new BasicSpreadsheetModel();
     m.clearSheet();
     m.editCell(new Coord(1, 1), "2");
     assertEquals(m.getCellAt(new Coord(1, 1)).toString(), String.format("%f", 2.0));
@@ -33,7 +34,7 @@ public class BasicSpreadsheetModelTests {
 
   @Test
   public void testAddCell() {
-    SpreadsheetModel<ICell> m = new BasicSpreadsheetModel();
+    SpreadsheetModel<Cell> m = new BasicSpreadsheetModel();
     m.editCell(new Coord(1, 1), "2");
     assertEquals(m.getCellAt(new Coord(1, 1)).toString(), String.format("%f", 2.0));
     m.clearSheet();
@@ -41,7 +42,7 @@ public class BasicSpreadsheetModelTests {
 
   @Test
   public void testEditCell() {
-    SpreadsheetModel<ICell> m = new BasicSpreadsheetModel();
+    SpreadsheetModel<Cell> m = new BasicSpreadsheetModel();
     m.editCell(new Coord(1, 1), "2");
     assertEquals(m.getCellAt(new Coord(1, 1)).toString(), String.format("%f", 2.0));
     m.editCell(new Coord(1, 1), "hi!");
@@ -57,7 +58,7 @@ public class BasicSpreadsheetModelTests {
 
   @Test
   public void testCellTypes() {
-    SpreadsheetModel<ICell> m = new BasicSpreadsheetModel();
+    SpreadsheetModel<Cell> m = new BasicSpreadsheetModel();
     m.editCell(new Coord(1, 1), "2");
     m.editCell(new Coord(1, 2), "A1");
     m.editCell(new Coord(1, 3), "=(< 1 2)");
@@ -93,7 +94,7 @@ public class BasicSpreadsheetModelTests {
 
   @Test
   public void testNoCycles() {
-    SpreadsheetModel<ICell> m = new BasicSpreadsheetModel();
+    SpreadsheetModel<Cell> m = new BasicSpreadsheetModel();
     m.editCell(new Coord(1, 1), "=A2");
     m.editCell(new Coord(1, 2), "=A1");
     assertEquals(m.getCellAt(new Coord(1, 2)).toString(), "#ERROR");

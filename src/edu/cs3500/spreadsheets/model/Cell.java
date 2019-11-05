@@ -48,6 +48,9 @@ public class Cell implements ICell {
     this.coord = coord;
   }
 
+  Formula getContents() {
+    return contents;
+  }
 
   @Override
   public CellValue getValue() {
@@ -87,9 +90,20 @@ public class Cell implements ICell {
     }
 
     if (rawContents.charAt(0) == '=') {
-      return p.parse(this.rawContents.substring(1)).accept(new ContentsBuilder(coord, model));
+      Formula f = p.parse(this.rawContents.substring(1)).accept(new ContentsBuilder(coord, model));
+      if (f.hasCycle()) {
+        return new CVError();
+      }
+      if (this.rawContents.contains(this.coord.toString())) {
+        return new CVError();
+      }
+      return f;
     } else {
-      return p.parse(this.rawContents).accept(new ContentsBuilder(coord, model));
+      Formula f = p.parse(this.rawContents).accept(new ContentsBuilder(coord, model));
+      if (f.hasCycle()) {
+        return new CVError();
+      }
+      return f;
     }
   }
 

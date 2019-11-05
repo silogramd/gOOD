@@ -6,12 +6,12 @@ import java.util.Map;
 /**
  * Represents a basic version of a spreadsheet model.
  */
-public class BasicSpreadsheetModel implements SpreadsheetModel<ICell> {
+public class BasicSpreadsheetModel implements SpreadsheetModel<Cell> {
 
-  HashMap<Coord, ICell> coordMap = new HashMap<>();
+  HashMap<Coord, Cell> coordMap = new HashMap<>();
 
   @Override
-  public ICell getCellAt(Coord coord) {
+  public Cell getCellAt(Coord coord) {
     return coordMap.getOrDefault(coord, new Cell(coord));
   }
 

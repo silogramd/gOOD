@@ -1,6 +1,9 @@
 package edu.cs3500.spreadsheets.model;
 
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.Stack;
 
 /**
  * <p>Class representing a Cell with a Function.</p>
@@ -37,6 +40,39 @@ public class Function implements Formula {
   public void flattenHelp(ArrayList<CellValue> acc) {
     acc.add(getValue());
 
+  }
+
+  @Override
+  public boolean hasCycle() {
+    Stack<Formula> worklist = new Stack<>();
+    ArrayList<Formula> seen = new ArrayList<>();
+    worklist.addAll(this.rest);
+    while (!worklist.isEmpty()) {
+      Formula next = worklist.pop();
+      if (seen.contains(next)) {
+        if (!next.isFlat()) {
+          return true;
+        }
+      } else {
+        for (Formula f: next.getEdges()) {
+          worklist.add(f);
+        }
+        seen.add(next);
+      }
+    }
+    return false;
+  }
+
+  @Override
+  public boolean isFlat() {
+    return false;
+  }
+
+  @Override
+  public Set<Formula> getEdges() {
+    Set<Formula> set = new HashSet<>();
+    set.addAll(this.rest);
+    return set;
   }
 
   @Override

@@ -1,6 +1,10 @@
 package edu.cs3500.spreadsheets.model;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.Stack;
 
 /**
  * Represents a reference cell value.
@@ -81,9 +85,49 @@ public class Reference implements Formula {
     }
   }
 
+  @Override
+  public boolean hasCycle() {
+    Stack<Formula> worklist = new Stack<>();
+    ArrayList<Formula> seen = new ArrayList<>();
+    addAllRefs(worklist);
+    while (!worklist.isEmpty()) {
+      Formula next = worklist.pop();
+      if (seen.contains(next)) {
+        if (!next.isFlat()) {
+          return true;
+        }
+      } else {
+        for (Formula f: next.getEdges()) {
+          worklist.add(f);
+        }
+        seen.add(next);
+      }
+    }
+    return false;
+  }
+
+  @Override
+  public boolean isFlat() {
+    if (reference.size() == 1) {
+      return model.getCellAt(reference.get(0)).getContents().isFlat();
+    }
+    return false;
+  }
+
+  private void addAllRefs(Collection<Formula> collection) {
+    for (Coord c: this.reference) {
+      collection.add(model.getCellAt(c).getContents());
+    }
+  }
+
+  @Override
+  public Set<Formula> getEdges() {
+    Set<Formula> set = new HashSet<>();
+    addAllRefs(set);
+    return set;
+  }
 
   private boolean noCycles(Coord coord) {
-
     String otherRaw = model.coordMap.getOrDefault(coord, new Cell(coord)).getRawValue();
     if (otherRaw.length() > 1) {
       if ((otherRaw.charAt(0) == '=') && (otherRaw.contains(position))) {
