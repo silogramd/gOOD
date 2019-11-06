@@ -21,16 +21,17 @@ public class SpreadsheetTextualView implements SpreadsheetView{
 
   @Override
   public String toString() {
-    String s = "";
+    StringBuilder s = new StringBuilder();
 
     Map<Coord, ICell> cells = model.getAllCells();
 
     for (Map.Entry<Coord, ICell> entry : cells.entrySet()) {
-      s += entry.getKey().toString() + " " + entry.getValue().getRawValue() + "\n";
+      s.append(entry.getKey().toString()).append(" ").append(entry.getValue().getRawValue())
+          .append("\n");
 
     }
 
-    return s;
+    return s.toString();
   }
 
 
