@@ -10,8 +10,8 @@ import java.util.Map;
 
 public class SpreadsheetTextualView implements SpreadsheetView{
 
-  Appendable ap;
-  BasicSpreadsheetModel model;
+  private Appendable ap;
+  private BasicSpreadsheetModel model;
 
   public SpreadsheetTextualView(Appendable ap, BasicSpreadsheetModel model) {
     this.ap = ap;
