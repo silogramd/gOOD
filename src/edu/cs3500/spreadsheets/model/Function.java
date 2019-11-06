@@ -71,6 +71,10 @@ public class Function implements Formula {
   @Override
   public Set<Formula> getEdges() {
     Set<Formula> set = new HashSet<>();
+    for (Formula f : this.rest) {
+      set.addAll(f.getEdges());
+    }
+
     set.addAll(this.rest);
     return set;
   }

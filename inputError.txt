@@ -6,8 +6,9 @@ B2 5
 B3 6
 A1 3
 
-A4 =(SUM A1 A5)
-A5 =(SUM (SUM A4 B2) (SUM A1 B2))
+A4 =(SUM A1 (SUM B3 A5))
+A5 =(SUM (SUM A6 B2) (SUM A1 B2))
+A6 =(SUM A4 B2)
 
 
 A7 =A8
