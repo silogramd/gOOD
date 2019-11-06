@@ -8,7 +8,7 @@ import java.util.Map;
  */
 public class BasicSpreadsheetModel implements SpreadsheetModel<Cell> {
 
-  HashMap<Coord, Cell> coordMap = new HashMap<>();
+  protected HashMap<Coord, Cell> coordMap = new HashMap<>();
 
   @Override
   public Cell getCellAt(Coord coord) {

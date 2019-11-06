@@ -62,6 +62,7 @@ public class TestMain {
       System.out.println(val.toString());
     }
 
+    System.out.println(model.coordMap);
 
   }
 
