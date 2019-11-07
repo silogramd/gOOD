@@ -34,7 +34,7 @@ public class BasicSpreadsheetModel implements SpreadsheetModel<Cell> {
   }
 
   @Override
-  public Map<Coord, ICell> getAllCells() {
+  public Map<Coord, Cell> getAllCells() {
     return Map.copyOf(coordMap);
   }
 
