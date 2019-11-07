@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4ef46782-5e33-4721-8a2f-343cfa9a918c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/SpreadsheetTextualView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/SpreadsheetView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/SpreadsheetFrameView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/BasicSpreadsheetModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/BasicSpreadsheetModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/Function.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/Function.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/SpreadsheetModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/SpreadsheetModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/TestMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/TestMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/SpreadsheetTextualView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/SpreadsheetTextualView.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -93,6 +93,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SpreadsheetFrameView" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="edu.cs3500.spreadsheets.view.SpreadsheetFrameView" />
+      <module name="gOOD" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.cs3500.spreadsheets.view.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="test1" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="edu.cs3500.spreadsheets.model.TestMain" />
       <module name="gOOD" />
@@ -139,15 +152,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProductObjectTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="gOOD" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ProductObjectTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ProductObjectTest.applyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="gOOD" />
       <option name="PACKAGE_NAME" value="" />
@@ -163,18 +167,18 @@
       <item itemvalue="Application.testError" />
       <item itemvalue="Application.BeyondGood 1" />
       <item itemvalue="JUnit.BasicSpreadsheetModelTests.testEditCell" />
-      <item itemvalue="JUnit.ProductObjectTest" />
       <item itemvalue="JUnit.AddObjectTest.applyTest" />
       <item itemvalue="JUnit.ConcatObjectTest.applyTest" />
       <item itemvalue="JUnit.ProductObjectTest.applyTest" />
+      <item itemvalue="Application.SpreadsheetFrameView" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.SpreadsheetFrameView" />
         <item itemvalue="JUnit.BasicSpreadsheetModelTests.testEditCell" />
         <item itemvalue="JUnit.ProductObjectTest.applyTest" />
         <item itemvalue="JUnit.ConcatObjectTest.applyTest" />
         <item itemvalue="JUnit.AddObjectTest.applyTest" />
-        <item itemvalue="JUnit.ProductObjectTest" />
       </list>
     </recent_temporary>
   </component>
@@ -197,6 +201,7 @@
       <workItem from="1572446235524" duration="194000" />
       <workItem from="1572454066711" duration="2009000" />
       <workItem from="1572894131812" duration="11247000" />
+      <workItem from="1573085080029" duration="3898000" />
     </task>
     <task id="LOCAL-00001" summary="main method, bug fixes, test1.txt">
       <created>1572209255057</created>
@@ -261,7 +266,28 @@
       <option name="project" value="LOCAL" />
       <updated>1572902390298</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Textual view done i think">
+      <created>1573010507205</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1573010507205</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Textual view done i think">
+      <created>1573010545120</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1573010545120</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Textual view done i think">
+      <created>1573010565291</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1573010565291</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -289,7 +315,8 @@
     <MESSAGE value="Deleted println's for handins" />
     <MESSAGE value="tests for cell, cellvalue, and operations. Sketchy solution to checking for cycles. bug fixes." />
     <MESSAGE value="Broke cycles, but added CellValueVisitors and fixed instance of casting." />
-    <option name="LAST_COMMIT_MESSAGE" value="Broke cycles, but added CellValueVisitors and fixed instance of casting." />
+    <MESSAGE value="Textual view done i think" />
+    <option name="LAST_COMMIT_MESSAGE" value="Textual view done i think" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

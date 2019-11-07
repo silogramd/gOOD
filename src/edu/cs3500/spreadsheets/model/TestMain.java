@@ -1,7 +1,9 @@
 package edu.cs3500.spreadsheets.model;
 
+import edu.cs3500.spreadsheets.view.SpreadsheetFrameView;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.IOException;
 import java.util.Map;
 
 /**
@@ -33,9 +35,9 @@ public class TestMain {
       throw new IllegalStateException("file not found");
     }
 
-    Map<Coord, ICell> result = model.getAllCells();
+    Map<Coord, Cell> result = model.getAllCells();
     ICell cur;
-    for (Map.Entry<Coord, ICell> e : result.entrySet()) {
+    for (Map.Entry<Coord, Cell> e : result.entrySet()) {
       cur = e.getValue();
       if (cur.getValue() instanceof CVError) {
         System.out.println("Error in cell " + cur.getCoord().toString());
@@ -63,6 +65,12 @@ public class TestMain {
     }
 
     System.out.println(model.coordMap);
+    SpreadsheetFrameView view = new SpreadsheetFrameView(model);
+    try {
+      view.render();
+    } catch (IOException ex) {
+      throw new IllegalStateException("it broke");
+    }
 
   }
 

@@ -33,7 +33,7 @@ public interface SpreadsheetModel<K> {
    * Gets the map of coordinates and their associated Cells.
    * @return
    */
-  Map<Coord, ICell> getAllCells();
+  Map<Coord, K> getAllCells();
 
   /**
    * Clears the sheet of all cell values.
