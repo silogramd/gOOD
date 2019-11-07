@@ -12,4 +12,5 @@ public interface SpreadsheetView {
    */
   void render() throws IOException;
 
+  void refresh();
 }

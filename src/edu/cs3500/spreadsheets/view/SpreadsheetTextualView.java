@@ -42,4 +42,9 @@ public class SpreadsheetTextualView implements SpreadsheetView{
     ap.append(this.toString());
 
   }
+
+  @Override
+  public void refresh() {
+
+  }
 }
