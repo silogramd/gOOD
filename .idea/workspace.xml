@@ -3,9 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="4ef46782-5e33-4721-8a2f-343cfa9a918c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/input1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/input1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/TestMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/TestMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/SpreadsheetFrameView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/SpreadsheetFrameView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/SpreadsheetTextualView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/SpreadsheetTextualView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/SpreadsheetView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/SpreadsheetView.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,9 +20,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Arquillian JUnit Test Class" />
-        <option value="JUnit4 Test Class" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -59,12 +59,16 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="edu.cs3500.spreadsheets.view" />
       <recent name="" />
       <recent name="edu.cs3500.spreadsheets.model" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -85,7 +89,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.testError">
+  <component name="RunManager" selected="JUnit.SpreadsheetTextualViewTest">
     <configuration name="BeyondGood 1" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="edu.cs3500.spreadsheets.BeyondGood" />
       <module name="gOOD" />
@@ -99,7 +103,7 @@
       <module name="gOOD" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="edu.cs3500.spreadsheets.view.*" />
+          <option name="PATTERN" value=".*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -123,32 +127,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AddObjectTest.applyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="gOOD" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="AddObjectTest" />
-      <option name="METHOD_NAME" value="applyTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="BasicSpreadsheetModelTests.testEditCell" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="gOOD" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="AddObjectTest" />
       <option name="METHOD_NAME" value="testEditCell" />
       <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ConcatObjectTest.applyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="gOOD" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ConcatObjectTest" />
-      <option name="METHOD_NAME" value="applyTest" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -163,23 +147,42 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SpreadsheetTextualViewTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="gOOD" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SpreadsheetTextualViewTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpreadsheetTextualViewTest.testFileIO" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="gOOD" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SpreadsheetTextualViewTest" />
+      <option name="METHOD_NAME" value="testFileIO" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.test1" />
       <item itemvalue="Application.testError" />
       <item itemvalue="Application.BeyondGood 1" />
       <item itemvalue="Application.SpreadsheetFrameView" />
       <item itemvalue="JUnit.BasicSpreadsheetModelTests.testEditCell" />
-      <item itemvalue="JUnit.AddObjectTest.applyTest" />
-      <item itemvalue="JUnit.ConcatObjectTest.applyTest" />
       <item itemvalue="JUnit.ProductObjectTest.applyTest" />
+      <item itemvalue="JUnit.SpreadsheetTextualViewTest.testFileIO" />
+      <item itemvalue="JUnit.SpreadsheetTextualViewTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SpreadsheetTextualViewTest" />
+        <item itemvalue="JUnit.SpreadsheetTextualViewTest.testFileIO" />
         <item itemvalue="Application.SpreadsheetFrameView" />
         <item itemvalue="JUnit.BasicSpreadsheetModelTests.testEditCell" />
         <item itemvalue="JUnit.ProductObjectTest.applyTest" />
-        <item itemvalue="JUnit.ConcatObjectTest.applyTest" />
-        <item itemvalue="JUnit.AddObjectTest.applyTest" />
       </list>
     </recent_temporary>
   </component>
@@ -203,6 +206,8 @@
       <workItem from="1572454066711" duration="2009000" />
       <workItem from="1572894131812" duration="11247000" />
       <workItem from="1573085080029" duration="3898000" />
+      <workItem from="1573153375281" duration="4629000" />
+      <workItem from="1573176393441" duration="3633000" />
     </task>
     <task id="LOCAL-00001" summary="main method, bug fixes, test1.txt">
       <created>1572209255057</created>
@@ -318,16 +323,5 @@
     <MESSAGE value="Broke cycles, but added CellValueVisitors and fixed instance of casting." />
     <MESSAGE value="Textual view done i think" />
     <option name="LAST_COMMIT_MESSAGE" value="Textual view done i think" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/test/BasicSpreadsheetModelTests.java</url>
-          <line>65</line>
-          <option name="timeStamp" value="22" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
