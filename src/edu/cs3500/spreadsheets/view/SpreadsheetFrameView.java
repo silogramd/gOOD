@@ -9,14 +9,19 @@ import java.awt.Color;
 import java.awt.GridLayout;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-public class SpreadsheetFrameView extends JFrame implements SpreadsheetView {
+public class SpreadsheetFrameView extends JFrame implements SpreadsheetView<Cell> {
 
   private static int WIDTH = 15;
   private static int HEIGHT = 30;
@@ -32,6 +37,8 @@ public class SpreadsheetFrameView extends JFrame implements SpreadsheetView {
   private JPanel xButtons;
   private JPanel yButtons;
 
+  private List<ViewEvent> events = new ArrayList<>();
+
   public SpreadsheetFrameView(SpreadsheetModel<Cell> model) {
     this.model = model;
     this.rowOffset = 0;
@@ -45,8 +52,8 @@ public class SpreadsheetFrameView extends JFrame implements SpreadsheetView {
     fillCoords(rows, cols);
 
 
-    this.xButtons = new JPanel(new GridLayout(1,2));
-    this.yButtons = new JPanel(new GridLayout(2,1));
+    this.xButtons = new JPanel(new GridLayout(1,3));
+    this.yButtons = new JPanel(new GridLayout(3,1));
     createXButtons(xButtons);
     createYButtons(yButtons);
 
@@ -81,14 +88,40 @@ public class SpreadsheetFrameView extends JFrame implements SpreadsheetView {
   private void createYButtons(JPanel yButtons) {
     JButton up = new JButton("Up");
     JButton down = new JButton("Down");
+    JButton save = new JButton("Save");
 
 
 
     up.addActionListener(e -> scroll("up"));
     down.addActionListener(e -> scroll("down"));
+    save.addActionListener(e -> saveHelp());
 
+    yButtons.add(save);
     yButtons.add(up);
     yButtons.add(down);
+
+  }
+
+  private void saveHelp() {
+
+    PrintWriter pw;
+    File file = new File(this.model.toString() + ".txt");
+    try {
+      file.createNewFile();
+      pw = new PrintWriter(new FileOutputStream(file,true));
+    } catch (Exception ex) {
+      throw new IllegalStateException("Cant open or make file");
+    }
+
+    SpreadsheetView<Cell> textView = new SpreadsheetTextualView(pw, model);
+
+    try {
+      textView.render();
+    } catch (IOException ex) {
+      throw new IllegalStateException("IOException");
+    }
+
+    pw.close();
   }
 
 
@@ -127,13 +160,17 @@ public class SpreadsheetFrameView extends JFrame implements SpreadsheetView {
 
     Cell curCell;
     String curText;
+    JTextField field;
 
     for (int i = 0; i < HEIGHT; i++) {
       for (int j = 0; j < WIDTH; j++) {
         curCell = model.getCellAt(new Coord(j + colOffset + 1, i + rowOffset + 1));
         curText = curCell.getValue().toString();
-        fieldGrid[i][j] = new JTextField(curText, 6);
+
+        field = new JTextField(curText, 6);
+
         //fieldGrid[i][j].setEditable(false);
+        fieldGrid[i][j] = field;
         panel.add(fieldGrid[i][j]);
       }
     }
@@ -184,13 +221,7 @@ public class SpreadsheetFrameView extends JFrame implements SpreadsheetView {
     this.pack();
     this.repaint();
   }
-
-  //TODO: DELETE THIS! THIS IS NOT PERMANENT.
-  public static void main(String[] args) throws IOException {
-    SpreadsheetModel<Cell> model = new BasicSpreadsheetModel();
-    SpreadsheetFrameView view = new SpreadsheetFrameView(model);
-    view.render();
-  }
+  
 
   private class ScrollHandler implements KeyListener {
 
