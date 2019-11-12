@@ -8,9 +8,14 @@ import java.io.IOException;
 public interface SpreadsheetView<K> {
 
   /**
-   * Renders the spreadsheet view.
+   * <p>Renders the spreadsheet view.</p>
    */
   void render() throws IOException;
 
+  /**
+   * <p>Refreshes the view.</p>
+   *
+   * @throws IOException
+   */
   void refresh() throws IOException;
 }

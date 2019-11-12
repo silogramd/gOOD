@@ -35,7 +35,7 @@ public class ProductObject implements Operation, CellValueVisitor<Double> {
   @Override
   public CellValue apply(List<CellValue> vals) {
     Double outpt = 1.0;
-    for (CellValue v: vals) {
+    for (CellValue v : vals) {
       try {
         outpt *= v.accept(this);
       } catch (IllegalStateException e) {

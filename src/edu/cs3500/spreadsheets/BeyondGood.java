@@ -3,6 +3,7 @@ package edu.cs3500.spreadsheets;
 import edu.cs3500.spreadsheets.model.BasicSpreadsheetModel;
 import edu.cs3500.spreadsheets.model.Cell;
 import edu.cs3500.spreadsheets.model.Coord;
+import edu.cs3500.spreadsheets.model.ReadOnlyModel;
 import edu.cs3500.spreadsheets.model.WorkSheetBuilderImpl;
 import edu.cs3500.spreadsheets.model.WorksheetReader;
 import edu.cs3500.spreadsheets.view.SpreadsheetFrameView;
@@ -19,8 +20,10 @@ import java.io.PrintWriter;
  * The main class for our program.
  */
 public class BeyondGood {
+
   /**
    * The main entry point.
+   *
    * @param args any command-line arguments
    */
   public static void main(String[] args) {
@@ -34,10 +37,9 @@ public class BeyondGood {
       throw new IllegalArgumentException("too many args");
     }
 
-
-    switch(args[0]) {
+    switch (args[0]) {
       case "-in":
-        switch(args[2]) {
+        switch (args[2]) {
           case "-eval":
             evalHelp(args[1], args[3]);
             break;
@@ -59,7 +61,11 @@ public class BeyondGood {
     }
   }
 
-
+  /**
+   * <p>Helper that runs a {@link SpreadsheetFrameView} from the file.</p>
+   *
+   * @param fileName the file being viewed.
+   */
   private static void guiHelp(String fileName) {
     BasicSpreadsheetModel model;
 
@@ -67,10 +73,11 @@ public class BeyondGood {
       model = WorksheetReader
           .read(new WorkSheetBuilderImpl(), new FileReader(fileName));
     } catch (FileNotFoundException ex) {
+      System.out.println("File not found.");
       model = new BasicSpreadsheetModel();
     }
 
-    SpreadsheetView<Cell> gui = new SpreadsheetFrameView(model);
+    SpreadsheetView<Cell> gui = new SpreadsheetFrameView(new ReadOnlyModel(model));
     try {
       gui.render();
     } catch (IOException ex) {
@@ -78,6 +85,12 @@ public class BeyondGood {
     }
   }
 
+  /**
+   * <p>Saves the given file to a new file.</p>
+   *
+   * @param fileName    the file being saved.
+   * @param newFileName the name of the new file being created.
+   */
   private static void saveHelp(String fileName, String newFileName) {
     BasicSpreadsheetModel model;
 
@@ -88,12 +101,11 @@ public class BeyondGood {
       throw new IllegalStateException("file not found");
     }
 
-
     PrintWriter pw;
     File file = new File(newFileName);
     try {
       file.createNewFile();
-      pw = new PrintWriter(new FileOutputStream(file,true));
+      pw = new PrintWriter(new FileOutputStream(file, true));
     } catch (Exception ex) {
       throw new IllegalStateException("Cant open or make file");
     }
@@ -109,7 +121,12 @@ public class BeyondGood {
     pw.close();
   }
 
-
+  /**
+   * <p>Runs the evaluation main through the console.</p>
+   *
+   * @param fileName the file being read.
+   * @param cell     the cell being evaluated.
+   */
   private static void evalHelp(String fileName, String cell) {
 
     BasicSpreadsheetModel model;

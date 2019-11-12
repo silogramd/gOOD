@@ -6,6 +6,7 @@ import java.util.Objects;
  * A boolean constant {@link Sexp}.
  */
 public class SBoolean implements Sexp {
+
   boolean val;
 
   public SBoolean(boolean val) {

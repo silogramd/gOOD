@@ -7,11 +7,12 @@ import java.util.Objects;
  * A value type representing coordinates in a Worksheet}.
  */
 public class Coord {
+
   public final int row;
   public final int col;
 
   /**
-   * Integer row and col constructor.
+   * <p>Integer row and col constructor.</p>
    *
    * @param col the column.
    * @param row the row.
@@ -25,7 +26,7 @@ public class Coord {
   }
 
   /**
-   * String constructor.
+   * <p>String constructor.</p>
    *
    * @param s the string form of the coordinate
    */
@@ -52,7 +53,8 @@ public class Coord {
 
 
   /**
-   * Converts from the A-Z column naming system to a 1-indexed numeric value.
+   * <p>Converts from the A-Z column naming system to a 1-indexed numeric value.</p>
+   *
    * @param name the column name
    * @return the corresponding column index
    */
@@ -67,7 +69,8 @@ public class Coord {
   }
 
   /**
-   * Converts a 1-based column index into the A-Z column naming system.
+   * <p>Converts a 1-based column index into the A-Z column naming system.</p>
+   *
    * @param index the column index
    * @return the corresponding column name
    */

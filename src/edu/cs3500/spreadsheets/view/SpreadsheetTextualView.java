@@ -6,11 +6,20 @@ import edu.cs3500.spreadsheets.model.Coord;
 import java.io.IOException;
 import java.util.Map;
 
+/**
+ * <p>Textual View for a {@link SpreadsheetModel}.</p>
+ */
 public class SpreadsheetTextualView implements SpreadsheetView<Cell> {
 
   private Appendable ap;
   private SpreadsheetModel<Cell> model;
 
+  /**
+   * <p>Constructor for the TextualView.</p>
+   *
+   * @param ap    the {@link Appendable} where the view is written.
+   * @param model the {@link SpreadsheetModel}.
+   */
   public SpreadsheetTextualView(Appendable ap, SpreadsheetModel<Cell> model) {
     this.ap = ap;
     this.model = model;
@@ -32,10 +41,6 @@ public class SpreadsheetTextualView implements SpreadsheetView<Cell> {
     return s.toString();
   }
 
-
-  /**
-   * Renders the spreadsheet view.
-   */
   @Override
   public void render() throws IOException {
 

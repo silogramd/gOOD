@@ -6,6 +6,7 @@ import java.util.Objects;
  * A string constant {@link Sexp}.
  */
 public class SString implements Sexp {
+
   String val;
 
   public SString(String name) {

@@ -9,13 +9,14 @@ import java.util.Stack;
  * <p>Class representing a Cell with a Function.</p>
  */
 public class Function implements Formula {
+
   final Operation operation;
   private ArrayList<Formula> rest;
 
   /**
    * Default constructor.
    *
-   * @param o the operation.
+   * @param o    the operation.
    * @param rest the items for the operation.
    */
   public Function(Operation o, ArrayList<Formula> rest) {
@@ -26,11 +27,12 @@ public class Function implements Formula {
 
   /**
    * Flattens the {@link this.rest} list to CellValues.
+   *
    * @return the flattened list of CellValues.
    */
   private ArrayList<CellValue> flatten() {
     ArrayList<CellValue> values = new ArrayList<>();
-    for (Formula f: this.rest) {
+    for (Formula f : this.rest) {
       f.flattenHelp(values);
     }
     return values;
@@ -54,7 +56,7 @@ public class Function implements Formula {
           return true;
         }
       } else {
-        for (Formula f: next.getEdges()) {
+        for (Formula f : next.getEdges()) {
           worklist.add(f);
         }
         seen.add(next);
@@ -99,7 +101,7 @@ public class Function implements Formula {
       return false;
     }
 
-    Function o = (Function)other;
+    Function o = (Function) other;
 
     boolean restSame = true;
     if (rest.size() == o.rest.size()) {

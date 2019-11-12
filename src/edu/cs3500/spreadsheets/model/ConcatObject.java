@@ -36,7 +36,7 @@ public class ConcatObject implements Operation, CellValueVisitor<String> {
   @Override
   public CellValue apply(List<CellValue> vals) {
     StringBuilder outpt = new StringBuilder();
-    for (CellValue v: vals) {
+    for (CellValue v : vals) {
       try {
         outpt.append(v.accept(this));
       } catch (IllegalStateException e) {
