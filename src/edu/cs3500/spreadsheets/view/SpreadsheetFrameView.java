@@ -222,7 +222,6 @@ public class SpreadsheetFrameView extends JFrame implements SpreadsheetView<Cell
     this.repaint();
   }
 
-
   private class ScrollHandler implements KeyListener {
 
     private HashMap<Integer, Runnable> typedMap = new HashMap<>();
