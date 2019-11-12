@@ -7,7 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4ef46782-5e33-4721-8a2f-343cfa9a918c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/SpreadsheetFrameView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/SpreadsheetFrameView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,7 +37,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1SZsREvmxTJwhftBJg6S5eqNKfE" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="Downloaded.Files.Path.Enabled" value="false" />
@@ -212,7 +214,7 @@
       <workItem from="1572894131812" duration="11247000" />
       <workItem from="1573085080029" duration="3898000" />
       <workItem from="1573153375281" duration="4629000" />
-      <workItem from="1573176393441" duration="10271000" />
+      <workItem from="1573176393441" duration="10504000" />
     </task>
     <task id="LOCAL-00001" summary="main method, bug fixes, test1.txt">
       <created>1572209255057</created>
@@ -319,7 +321,28 @@
       <option name="project" value="LOCAL" />
       <updated>1573569777354</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="updates to testing, remake the jar if changes are made">
+      <created>1573569834134</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1573569834134</updated>
+    </task>
+    <task id="LOCAL-00017" summary="jar">
+      <created>1573569857024</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1573569857024</updated>
+    </task>
+    <task id="LOCAL-00018" summary="jar">
+      <created>1573569870831</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1573569870831</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -339,6 +362,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="main method, bug fixes, test1.txt" />
     <MESSAGE value="tested more things, more bug fixes" />
     <MESSAGE value="Added BeyondGood class, cleaned up errors slightly" />
@@ -351,6 +375,7 @@
     <MESSAGE value="Scroll buttons, Textual test" />
     <MESSAGE value="JAR and README and inputs, bug fixes and saving" />
     <MESSAGE value="updates to testing, remake the jar if changes are made" />
-    <option name="LAST_COMMIT_MESSAGE" value="updates to testing, remake the jar if changes are made" />
+    <MESSAGE value="jar" />
+    <option name="LAST_COMMIT_MESSAGE" value="jar" />
   </component>
 </project>
