@@ -221,7 +221,7 @@ public class SpreadsheetFrameView extends JFrame implements SpreadsheetView<Cell
     this.pack();
     this.repaint();
   }
-  
+
 
   private class ScrollHandler implements KeyListener {
 

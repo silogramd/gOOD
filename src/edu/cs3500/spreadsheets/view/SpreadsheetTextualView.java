@@ -1,17 +1,17 @@
 package edu.cs3500.spreadsheets.view;
 
-import edu.cs3500.spreadsheets.model.BasicSpreadsheetModel;
+import edu.cs3500.spreadsheets.model.SpreadsheetModel;
 import edu.cs3500.spreadsheets.model.Cell;
 import edu.cs3500.spreadsheets.model.Coord;
 import java.io.IOException;
 import java.util.Map;
 
-public class SpreadsheetTextualView implements SpreadsheetView{
+public class SpreadsheetTextualView implements SpreadsheetView<Cell> {
 
   private Appendable ap;
-  private BasicSpreadsheetModel model;
+  private SpreadsheetModel<Cell> model;
 
-  public SpreadsheetTextualView(Appendable ap, BasicSpreadsheetModel model) {
+  public SpreadsheetTextualView(Appendable ap, SpreadsheetModel<Cell> model) {
     this.ap = ap;
     this.model = model;
   }
@@ -44,7 +44,7 @@ public class SpreadsheetTextualView implements SpreadsheetView{
   }
 
   @Override
-  public void refresh() {
-
+  public void refresh() throws IOException {
+    ap.append(this.toString());
   }
 }

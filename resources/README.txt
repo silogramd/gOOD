@@ -1,4 +1,27 @@
-Interfaces and sub classes
+VIEW Interface:
+  - Render: renders the view the first time
+  - Refresh: updates the view after a change
+
+TextualView:
+  - takes an appendable and a model
+  - Uses render to append the textual view of the model to the appendable
+  - refresh does the same thing
+
+Frame view:
+  - Uses textfields for input boxes and buttons for scrolling.
+  - includes a save button that saves the project to a new file and a reset button
+        to reset the orientation.
+
+
+Changes:
+  - updates to main method to handle view interface arguments.
+    -> specified by the assignment
+  - bug fixes to model implementation to handle cyclic references.
+    -> changed from checking the raw string for references to using DFS (ensure that there are no
+        multi level/deep cycles)
+
+
+MODEL Interfaces and sub classes
 
 SpreadsheetModel: the interface for all models
   - BasicSpreadsheetModel: basic implementation of a spreadsheet

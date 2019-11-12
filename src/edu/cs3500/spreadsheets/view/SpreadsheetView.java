@@ -5,12 +5,12 @@ import java.io.IOException;
 /**
  * Interface for all spreadsheet views.
  */
-public interface SpreadsheetView {
+public interface SpreadsheetView<K> {
 
   /**
    * Renders the spreadsheet view.
    */
   void render() throws IOException;
 
-  void refresh();
+  void refresh() throws IOException;
 }
