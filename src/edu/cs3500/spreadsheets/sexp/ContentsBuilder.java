@@ -32,7 +32,7 @@ public class ContentsBuilder implements SexpVisitor<Formula> {
    * Default constructor.
    *
    * @param position to put the new formula.
-   * @param model
+   * @param model to add the contents to.
    */
   public ContentsBuilder(Coord position, BasicSpreadsheetModel model) {
     operations = new HashMap<String, Operation>();

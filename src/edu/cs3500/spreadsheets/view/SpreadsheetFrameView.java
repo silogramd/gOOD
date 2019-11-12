@@ -1,10 +1,8 @@
 package edu.cs3500.spreadsheets.view;
 
-import edu.cs3500.spreadsheets.model.BasicSpreadsheetModel;
 import edu.cs3500.spreadsheets.model.Cell;
 import edu.cs3500.spreadsheets.model.Coord;
 import edu.cs3500.spreadsheets.model.ReadOnlyModel;
-import edu.cs3500.spreadsheets.model.SpreadsheetModel;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.GridLayout;
@@ -22,6 +20,9 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
+/**
+ * Frame view for a spreadsheet model.
+ */
 public class SpreadsheetFrameView extends JFrame implements SpreadsheetView<Cell> {
 
   private static int WIDTH = 15;
@@ -30,16 +31,22 @@ public class SpreadsheetFrameView extends JFrame implements SpreadsheetView<Cell
   private int rowOffset;
   private int colOffset;
   private static final Color BG = Color.DARK_GRAY;
-  private JTextField[][] fieldGrid = new JTextField[HEIGHT][WIDTH];
+  private JTextField[][] fieldGrid;
   private ReadOnlyModel model;
   private JPanel mainPanel;
   private JPanel rows;
   private JPanel cols;
-  private JPanel xButtons;
-  private JPanel yButtons;
+  // uncommented for handins java style.
+  //private JPanel xButtons;
+  //private JPanel yButtons;
 
   private List<ViewEvent> events = new ArrayList<>();
 
+  /**
+   * Constructor that takes a read only model.
+   *
+   * @param model to be displayed
+   */
   public SpreadsheetFrameView(ReadOnlyModel model) {
     this.model = model;
     this.rowOffset = 0;
@@ -52,8 +59,10 @@ public class SpreadsheetFrameView extends JFrame implements SpreadsheetView<Cell
     this.cols = new JPanel(new GridLayout(1, WIDTH + 1));
     fillCoords(rows, cols);
 
-    this.xButtons = new JPanel(new GridLayout(1, 3));
-    this.yButtons = new JPanel(new GridLayout(3, 1));
+    fieldGrid = new JTextField[HEIGHT][WIDTH];
+
+    JPanel xButtons = new JPanel(new GridLayout(1, 3));
+    JPanel yButtons = new JPanel(new GridLayout(3, 1));
     createXButtons(xButtons);
     createYButtons(yButtons);
 
@@ -170,7 +179,6 @@ public class SpreadsheetFrameView extends JFrame implements SpreadsheetView<Cell
         panel.add(fieldGrid[i][j]);
       }
     }
-
   }
 
   private void scroll(String direction) {
@@ -239,21 +247,19 @@ public class SpreadsheetFrameView extends JFrame implements SpreadsheetView<Cell
 
     @Override
     public void keyTyped(KeyEvent e) {
-      if (!typedMap.containsKey(e)) {
-
-      } else {
+      if (typedMap.containsKey(e)) {
         typedMap.get(e).run();
       }
     }
 
     @Override
     public void keyPressed(KeyEvent e) {
-
+      // Do not want to handle key presses.
     }
 
     @Override
     public void keyReleased(KeyEvent e) {
-
+      // Do not want to handle key releases.
     }
   }
 }

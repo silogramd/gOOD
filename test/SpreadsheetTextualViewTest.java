@@ -17,8 +17,14 @@ import java.io.PrintWriter;
 import java.util.Map;
 import org.junit.Test;
 
+/**
+ * Class with test cases for the spreadsheet textual view.
+ */
 public class SpreadsheetTextualViewTest {
 
+  /**
+   * Test via round trip testing.
+   */
   @Test
   public void testFileIO() {
 

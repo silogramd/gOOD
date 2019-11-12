@@ -31,6 +31,7 @@ public class ReadOnlyModel implements SpreadsheetModel<Cell> {
   @Override
   public void editCell(Coord coord, String string) {
 
+    // This is a read only model, it needs to prevent editing of the cells.
   }
 
   @Override
@@ -40,7 +41,7 @@ public class ReadOnlyModel implements SpreadsheetModel<Cell> {
 
   @Override
   public void clearSheet() {
-
+    // This is a read only model, the cells should not be cleared.
   }
 
   @Override

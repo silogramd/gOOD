@@ -15,7 +15,7 @@ public interface SpreadsheetView<K> {
   /**
    * <p>Refreshes the view.</p>
    *
-   * @throws IOException
+   * @throws IOException if fails to refresh.
    */
   void refresh() throws IOException;
 }

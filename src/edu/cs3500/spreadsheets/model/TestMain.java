@@ -65,7 +65,7 @@ public class TestMain {
     }
 
     System.out.println(model.coordMap);
-    SpreadsheetFrameView view = new SpreadsheetFrameView(model);
+    SpreadsheetFrameView view = new SpreadsheetFrameView(new ReadOnlyModel(model));
     try {
       view.render();
     } catch (IOException ex) {

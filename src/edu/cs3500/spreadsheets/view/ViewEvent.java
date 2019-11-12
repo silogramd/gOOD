@@ -8,7 +8,7 @@ import edu.cs3500.spreadsheets.model.Coord;
 public interface ViewEvent {
 
   /**
-   * <p>Updates the cell at the given {@link Coord}</p>
+   * <p>Updates the cell at the given {@link Coord}.</p>
    *
    * @param coord the coordinates of the cell being updated.
    * @param s     the new raw value of the cell.

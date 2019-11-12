@@ -14,14 +14,14 @@ import static org.junit.Assert.assertEquals;
  */
 public class CellTest {
 
-  BasicSpreadsheetModel model =new BasicSpreadsheetModel();
+  BasicSpreadsheetModel model = new BasicSpreadsheetModel();
 
-  Cell c1 = new Cell(1,1, "dog", model);
+  Cell c1 = new Cell(1, 1, "dog", model);
   Cell c2 = new Cell(new Coord(1, 1), "1", model);
   Cell c3 = new Cell(new Coord(1, 1));
-  Cell c4 = new Cell(new Coord(1,1),"true", model);
-  Cell c5 = new Cell(new Coord(1,1),"=A2", model);
-  Cell c6 = new Cell(new Coord(1,1), "=(SUM A2 A3)", model);
+  Cell c4 = new Cell(new Coord(1, 1), "true", model);
+  Cell c5 = new Cell(new Coord(1, 1), "=A2", model);
+  Cell c6 = new Cell(new Coord(1, 1), "=(SUM A2 A3)", model);
 
   @Test
   public void getValue() {
@@ -42,9 +42,9 @@ public class CellTest {
 
   @Test
   public void getCoord() {
-    assertEquals(c1.getCoord(), new Coord(1,1));
-    assertEquals(c2.getCoord(), new Coord(1,1));
-    assertEquals(c3.getCoord(), new Coord(1,1));
+    assertEquals(c1.getCoord(), new Coord(1, 1));
+    assertEquals(c2.getCoord(), new Coord(1, 1));
+    assertEquals(c3.getCoord(), new Coord(1, 1));
   }
 
   @Test
