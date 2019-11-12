@@ -15,20 +15,20 @@ public class Cell implements ICell {
   /**
    * Row and col constructor.
    *
-   * @param row The desired row.
-   * @param col The desired col.
+   * @param row      The desired row.
+   * @param col      The desired col.
    * @param contents The desired raw contents.
    */
   public Cell(int row, int col, String contents, BasicSpreadsheetModel model) {
     this.rawContents = contents;
-    this.coord = new Coord(col,row);
+    this.coord = new Coord(col, row);
     this.contents = createContents(model);
   }
 
   /**
    * Coord constructor.
    *
-   * @param coord The desired coord.
+   * @param coord    The desired coord.
    * @param contents The desired raw contents.
    */
   public Cell(Coord coord, String contents, BasicSpreadsheetModel model) {
@@ -118,7 +118,7 @@ public class Cell implements ICell {
       return false;
     }
 
-    Cell o = (Cell)other;
+    Cell o = (Cell) other;
 
     return (this.rawContents.equals(o.rawContents) && this.coord.equals(o.coord));
   }

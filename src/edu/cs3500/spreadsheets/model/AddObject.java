@@ -36,7 +36,7 @@ public class AddObject implements Operation, CellValueVisitor<Double> {
   @Override
   public CellValue apply(List<CellValue> vals) {
     Double outpt = 0.0;
-    for (CellValue v: vals) {
+    for (CellValue v : vals) {
       try {
         outpt += v.accept(this);
       } catch (IllegalStateException e) {

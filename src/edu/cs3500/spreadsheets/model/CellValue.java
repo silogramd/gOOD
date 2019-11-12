@@ -8,6 +8,13 @@ import java.util.Set;
  */
 public abstract class CellValue implements Formula {
 
+  /**
+   * <p>Visitor pattern method.</p>
+   *
+   * @param visitor the given {@link CellValueVisitor}.
+   * @param <R>     the return type of the {@link CellValueVisitor}.
+   * @return the output of the visitor.
+   */
   public abstract <R> R accept(CellValueVisitor<R> visitor);
 
   @Override

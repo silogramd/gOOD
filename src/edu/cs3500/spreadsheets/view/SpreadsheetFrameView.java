@@ -3,6 +3,7 @@ package edu.cs3500.spreadsheets.view;
 import edu.cs3500.spreadsheets.model.BasicSpreadsheetModel;
 import edu.cs3500.spreadsheets.model.Cell;
 import edu.cs3500.spreadsheets.model.Coord;
+import edu.cs3500.spreadsheets.model.ReadOnlyModel;
 import edu.cs3500.spreadsheets.model.SpreadsheetModel;
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -30,7 +31,7 @@ public class SpreadsheetFrameView extends JFrame implements SpreadsheetView<Cell
   private int colOffset;
   private static final Color BG = Color.DARK_GRAY;
   private JTextField[][] fieldGrid = new JTextField[HEIGHT][WIDTH];
-  private SpreadsheetModel<Cell> model;
+  private ReadOnlyModel model;
   private JPanel mainPanel;
   private JPanel rows;
   private JPanel cols;
@@ -39,7 +40,7 @@ public class SpreadsheetFrameView extends JFrame implements SpreadsheetView<Cell
 
   private List<ViewEvent> events = new ArrayList<>();
 
-  public SpreadsheetFrameView(SpreadsheetModel<Cell> model) {
+  public SpreadsheetFrameView(ReadOnlyModel model) {
     this.model = model;
     this.rowOffset = 0;
     this.colOffset = 0;
@@ -51,9 +52,8 @@ public class SpreadsheetFrameView extends JFrame implements SpreadsheetView<Cell
     this.cols = new JPanel(new GridLayout(1, WIDTH + 1));
     fillCoords(rows, cols);
 
-
-    this.xButtons = new JPanel(new GridLayout(1,3));
-    this.yButtons = new JPanel(new GridLayout(3,1));
+    this.xButtons = new JPanel(new GridLayout(1, 3));
+    this.yButtons = new JPanel(new GridLayout(3, 1));
     createXButtons(xButtons);
     createYButtons(yButtons);
 
@@ -62,7 +62,6 @@ public class SpreadsheetFrameView extends JFrame implements SpreadsheetView<Cell
     this.add(mainPanel, BorderLayout.CENTER);
     this.add(xButtons, BorderLayout.SOUTH);
     this.add(yButtons, BorderLayout.EAST);
-
 
     this.addKeyListener(new ScrollHandler());
     this.pack();
@@ -90,8 +89,6 @@ public class SpreadsheetFrameView extends JFrame implements SpreadsheetView<Cell
     JButton down = new JButton("Down");
     JButton save = new JButton("Save");
 
-
-
     up.addActionListener(e -> scroll("up"));
     down.addActionListener(e -> scroll("down"));
     save.addActionListener(e -> saveHelp());
@@ -108,7 +105,7 @@ public class SpreadsheetFrameView extends JFrame implements SpreadsheetView<Cell
     File file = new File(this.model.toString() + ".txt");
     try {
       file.createNewFile();
-      pw = new PrintWriter(new FileOutputStream(file,true));
+      pw = new PrintWriter(new FileOutputStream(file, true));
     } catch (Exception ex) {
       throw new IllegalStateException("Cant open or make file");
     }
@@ -127,7 +124,6 @@ public class SpreadsheetFrameView extends JFrame implements SpreadsheetView<Cell
 
   /**
    * Fills the Coordinate headers with the row and column values.
-   *
    */
   private void fillCoords(JPanel rows, JPanel cols) {
     rows.removeAll();

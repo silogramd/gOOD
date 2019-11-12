@@ -3,12 +3,13 @@ package edu.cs3500.spreadsheets.model;
 import java.util.Map;
 
 /**
- *  Interface for the model of spreadsheets.
+ * Interface for the model of spreadsheets.
  */
 public interface SpreadsheetModel<K> {
 
   /**
    * Gets the cell value at the given coordinate.
+   *
    * @param coord the coordinates of the desired cell
    * @return The cell at the given coordinate.
    */
@@ -24,13 +25,15 @@ public interface SpreadsheetModel<K> {
 
   /**
    * Updates or adds a cell at the desired coordinates.
-   * @param coord spot to add or update the cell.
+   *
+   * @param coord  spot to add or update the cell.
    * @param string new value of the cell.
    */
   void editCell(Coord coord, String string);
 
   /**
    * Gets the map of coordinates and their associated Cells.
+   *
    * @return
    */
   Map<Coord, K> getAllCells();

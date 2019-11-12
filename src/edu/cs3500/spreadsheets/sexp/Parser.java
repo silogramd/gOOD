@@ -6,10 +6,10 @@ import java.util.Scanner;
 import java.util.regex.Pattern;
 
 /**
- * A simple parser for {@link Sexp}s.  The details of how this class
- * works are not critical.
+ * A simple parser for {@link Sexp}s.  The details of how this class works are not critical.
  */
 public class Parser {
+
   /**
    * Parses the given string as an s-expression.  The expected syntax is
    *
@@ -35,12 +35,11 @@ public class Parser {
       Sexp parsed = parse(s);
       if (s.hasNext()) {
         throw new IllegalArgumentException(
-                "The string contains leftover input after the first s-expression");
+            "The string contains leftover input after the first s-expression");
       } else {
         return parsed;
       }
-    }
-    catch (IllegalArgumentException a) {
+    } catch (IllegalArgumentException a) {
       throw new IllegalArgumentException("Badly formatted sexp: " + in + "\n" + a);
     }
   }

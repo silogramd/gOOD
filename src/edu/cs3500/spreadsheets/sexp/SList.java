@@ -12,6 +12,7 @@ import java.util.stream.Collectors;
  * Represents a list s-expression (i.e. <code>({@link Sexp} ...)</code>).
  */
 public class SList implements Sexp {
+
   private final List<Sexp> contents;
 
   public SList(Sexp... contents) {

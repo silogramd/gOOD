@@ -18,8 +18,8 @@ public class Reference implements Formula {
   /**
    * Constructor for box references.
    *
-   * @param first The first corner.
-   * @param last The opposite corner.
+   * @param first    The first corner.
+   * @param last     The opposite corner.
    * @param position The position of this reference cell.
    * @throws IllegalArgumentException if there is a cycle.
    */
@@ -36,7 +36,7 @@ public class Reference implements Formula {
     this.model = model;
     for (int i = colStart; i <= colEnd; i++) {
       for (int j = rowStart; j <= rowEnd; j++) {
-        Coord coord = new Coord(i,j);
+        Coord coord = new Coord(i, j);
         if (noCycles(coord)) {
           reference.add(coord);
         } else {
@@ -50,7 +50,7 @@ public class Reference implements Formula {
   /**
    * Constructor for a single cell reference.
    *
-   * @param c the cell to reference.
+   * @param c        the cell to reference.
    * @param position of this cell.
    * @throws IllegalArgumentException if there is a cycle
    */
@@ -69,7 +69,7 @@ public class Reference implements Formula {
   public CellValue getValue() {
     if (reference.size() == 1) {
       return model.coordMap
-          .getOrDefault(reference.get(0), new Cell(new Coord(1,1))).getValue();
+          .getOrDefault(reference.get(0), new Cell(new Coord(1, 1))).getValue();
     } else {
       return new CVError();
     }
@@ -78,7 +78,7 @@ public class Reference implements Formula {
 
   @Override
   public void flattenHelp(ArrayList<CellValue> acc) {
-    for (Coord c: this.reference) {
+    for (Coord c : this.reference) {
       if (model.coordMap.containsKey(c)) {
         acc.add(model.getCellAt(c).getValue());
       }
@@ -97,7 +97,7 @@ public class Reference implements Formula {
           return true;
         }
       } else {
-        for (Formula f: next.getEdges()) {
+        for (Formula f : next.getEdges()) {
           worklist.add(f);
         }
         seen.add(next);
@@ -115,7 +115,7 @@ public class Reference implements Formula {
   }
 
   private void addAllRefs(Collection<Formula> collection) {
-    for (Coord c: this.reference) {
+    for (Coord c : this.reference) {
       collection.add(model.getCellAt(c).getContents());
     }
   }
@@ -153,7 +153,7 @@ public class Reference implements Formula {
       return false;
     }
 
-    Reference o = (Reference)other;
+    Reference o = (Reference) other;
 
     boolean refSame = true;
     if (reference.size() == o.reference.size()) {

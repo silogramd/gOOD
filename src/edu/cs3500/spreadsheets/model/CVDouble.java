@@ -38,7 +38,7 @@ public class CVDouble extends CellValue {
       return false;
     }
 
-    CVDouble o = (CVDouble)other;
+    CVDouble o = (CVDouble) other;
 
     return (Math.abs(this.contents - o.contents) < 0.0001);
   }

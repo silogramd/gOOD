@@ -6,6 +6,7 @@ import java.util.Objects;
  * A numeric constant {@link Sexp}.
  */
 public class SNumber implements Sexp {
+
   double num;
 
   public SNumber(double num) {
