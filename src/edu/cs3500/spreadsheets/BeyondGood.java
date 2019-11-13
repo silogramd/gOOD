@@ -54,7 +54,7 @@ public class BeyondGood {
         }
         break;
       case "-gui":
-        guiHelp("");
+        guiHelp(null);
         break;
       default:
         throw new IllegalArgumentException("invalid syntax");
@@ -69,12 +69,16 @@ public class BeyondGood {
   private static void guiHelp(String fileName) {
     BasicSpreadsheetModel model;
 
-    try {
-      model = WorksheetReader
-          .read(new WorkSheetBuilderImpl(), new FileReader(fileName));
-    } catch (FileNotFoundException ex) {
-      System.out.println("File not found.");
+    if (fileName == null) {
       model = new BasicSpreadsheetModel();
+    } else {
+      try {
+        model = WorksheetReader
+            .read(new WorkSheetBuilderImpl(), new FileReader(fileName));
+      } catch (FileNotFoundException ex) {
+        System.out.println("File not found.");
+        model = new BasicSpreadsheetModel();
+      }
     }
 
     SpreadsheetView<Cell> gui = new SpreadsheetFrameView(new ReadOnlyModel(model));
