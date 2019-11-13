@@ -52,14 +52,14 @@ public class SpreadsheetFrameView extends JFrame implements SpreadsheetView<Cell
     this.rowOffset = 0;
     this.colOffset = 0;
 
+    fieldGrid = new JTextField[HEIGHT][WIDTH];
+
     this.mainPanel = new JPanel(new GridLayout(HEIGHT, WIDTH));
     fillGrid(mainPanel);
 
     this.rows = new JPanel(new GridLayout(HEIGHT, 1));
     this.cols = new JPanel(new GridLayout(1, WIDTH + 1));
     fillCoords(rows, cols);
-
-    fieldGrid = new JTextField[HEIGHT][WIDTH];
 
     JPanel xButtons = new JPanel(new GridLayout(1, 3));
     JPanel yButtons = new JPanel(new GridLayout(3, 1));
