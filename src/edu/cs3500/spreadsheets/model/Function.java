@@ -70,6 +70,7 @@ public class Function implements Formula {
     return false;
   }
 
+
   @Override
   public Set<Formula> getEdges() {
     Set<Formula> set = new HashSet<>();

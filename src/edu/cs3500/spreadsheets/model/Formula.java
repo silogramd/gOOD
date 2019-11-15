@@ -42,4 +42,5 @@ public interface Formula {
    * @return true if the Formula is flat.
    */
   boolean isFlat();
+
 }

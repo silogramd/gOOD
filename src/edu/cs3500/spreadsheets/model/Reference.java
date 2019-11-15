@@ -93,7 +93,9 @@ public class Reference implements Formula {
     while (!worklist.isEmpty()) {
       Formula next = worklist.pop();
       if (seen.contains(next)) {
-        return true;
+        if (!next.isFlat()) {
+          return true;
+        }
       } else {
         for (Formula f : next.getEdges()) {
           worklist.add(f);
