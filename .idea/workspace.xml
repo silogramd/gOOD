@@ -113,7 +113,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.BasicSpreadsheetModelTests.testEditCell">
+  <component name="RunManager" selected="JUnit.SpreadsheetTextualViewTest">
     <configuration name="BeyondGood 1" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="edu.cs3500.spreadsheets.BeyondGood" />
       <module name="gOOD" />
@@ -198,8 +198,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.BasicSpreadsheetModelTests.testEditCell" />
         <item itemvalue="JUnit.SpreadsheetTextualViewTest" />
+        <item itemvalue="JUnit.BasicSpreadsheetModelTests.testEditCell" />
         <item itemvalue="JAR Application.gOOD.jar" />
         <item itemvalue="JUnit.SpreadsheetTextualViewTest.testFileIO" />
         <item itemvalue="Application.SpreadsheetFrameView" />

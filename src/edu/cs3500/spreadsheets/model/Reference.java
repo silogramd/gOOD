@@ -109,6 +109,9 @@ public class Reference implements Formula {
   @Override
   public boolean isFlat() {
     if (reference.size() == 1) {
+      if (!model.getCellAt(reference.get(0)).getContents().getEdges().isEmpty()) {
+        return false;
+      }
       return model.getCellAt(reference.get(0)).getContents().isFlat();
     }
     return false;
