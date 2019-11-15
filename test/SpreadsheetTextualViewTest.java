@@ -44,7 +44,7 @@ public class SpreadsheetTextualViewTest {
 
     try {
       file.createNewFile();
-      pw = new PrintWriter(new FileOutputStream(file.getAbsoluteFile(),true));
+      pw = new PrintWriter(new FileOutputStream(file.getAbsoluteFile(), true));
     } catch (Exception ex) {
       throw new IllegalStateException("file not found");
     }
@@ -82,12 +82,12 @@ public class SpreadsheetTextualViewTest {
     Map<Coord, Cell> map1 = model1.getAllCells();
     Map<Coord, Cell> map2 = model2.getAllCells();
 
-    for (Map.Entry<Coord,Cell> entry : map1.entrySet()) {
+    for (Map.Entry<Coord, Cell> entry : map1.entrySet()) {
       assertTrue(map2.containsKey(entry.getKey()));
       assertEquals(map2.get(entry.getKey()), entry.getValue());
     }
 
-    for (Map.Entry<Coord,Cell> entry : map2.entrySet()) {
+    for (Map.Entry<Coord, Cell> entry : map2.entrySet()) {
       assertTrue(map1.containsKey(entry.getKey()));
       assertEquals(map1.get(entry.getKey()), entry.getValue());
     }
@@ -116,7 +116,7 @@ public class SpreadsheetTextualViewTest {
 
     try {
       file.createNewFile();
-      pw = new PrintWriter(new FileOutputStream(file.getAbsoluteFile(),true));
+      pw = new PrintWriter(new FileOutputStream(file.getAbsoluteFile(), true));
     } catch (Exception ex) {
       throw new IllegalStateException("file not found");
     }
@@ -157,7 +157,7 @@ public class SpreadsheetTextualViewTest {
 
     try {
       file.createNewFile();
-      pw2 = new PrintWriter(new FileOutputStream(file2.getAbsoluteFile(),true));
+      pw2 = new PrintWriter(new FileOutputStream(file2.getAbsoluteFile(), true));
     } catch (Exception ex) {
       throw new IllegalStateException("file not found");
     }

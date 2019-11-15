@@ -17,6 +17,7 @@ import static org.junit.Assert.assertFalse;
  * <p>Class representing AddObject tests.</p>
  */
 public class AddObjectTest {
+
   @Test
   public void applyTest() {
 

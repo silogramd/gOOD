@@ -17,6 +17,7 @@ import static org.junit.Assert.assertFalse;
  * <p>Class representing ConcatObject tests.</p>
  */
 public class ConcatObjectTest {
+
   @Test
   public void applyTest() {
 
