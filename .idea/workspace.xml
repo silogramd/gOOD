@@ -7,14 +7,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4ef46782-5e33-4721-8a2f-343cfa9a918c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/Screen Shot 2019-11-14 at 7.23.51 PM.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/Screen Shot 2019-11-14 at 7.24.25 PM.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/Screen Shot 2019-11-14 at 8.39.15 PM.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/Screen Shot 2019-11-14 at 8.39.22 PM.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/gOOD.jar" beforeDir="false" afterPath="$PROJECT_DIR$/resources/gOOD.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/input1-textualview.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/input1-textualview.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/input2-textualview.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/input2-textualview.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/input3-textualview.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/input3-textualview.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/CellValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/CellValue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/Formula.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/Formula.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/Function.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/Function.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/input3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/input3.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/Reference.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/Reference.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -386,7 +387,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573778645138</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="final for turning in">
+      <created>1573782023044</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1573782023044</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -425,6 +433,7 @@
     <MESSAGE value="fix for -gui input" />
     <MESSAGE value="final changes" />
     <MESSAGE value="last bug fix to cycles" />
-    <option name="LAST_COMMIT_MESSAGE" value="last bug fix to cycles" />
+    <MESSAGE value="final for turning in" />
+    <option name="LAST_COMMIT_MESSAGE" value="final for turning in" />
   </component>
 </project>
