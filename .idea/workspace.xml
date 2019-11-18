@@ -7,21 +7,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4ef46782-5e33-4721-8a2f-343cfa9a918c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/input4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/SpreadsheetEditableView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/SpreadsheetGUIView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/ViewEventListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/Screen Shot 2019-11-14 at 7.23.51 PM.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/Screen Shot 2019-11-14 at 7.24.25 PM.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/Screen Shot 2019-11-14 at 8.39.15 PM.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/Screen Shot 2019-11-14 at 8.39.22 PM.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/gOOD.jar" beforeDir="false" afterPath="$PROJECT_DIR$/resources/gOOD.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/input1-textualview.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/input1-textualview.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/input2-textualview.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/input2-textualview.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/input3-textualview.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/input3-textualview.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/input3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/input3.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/BasicSpreadsheetModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/BasicSpreadsheetModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/SpreadsheetModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/SpreadsheetModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/WorkSheetBuilderImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/WorkSheetBuilderImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/SpreadsheetFrameView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/SpreadsheetFrameView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/SpreadsheetTextualView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/SpreadsheetTextualView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/SpreadsheetView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/SpreadsheetView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/Reference.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/Reference.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,9 +31,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Arquillian JUnit Test Class" />
+        <option value="Interface" />
         <option value="JUnit4 Test Class" />
         <option value="Class" />
-        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -119,7 +114,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JAR Application.gOOD.jar">
+  <component name="RunManager" selected="JUnit.SpreadsheetTextualViewTest">
     <configuration name="BeyondGood 1" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="edu.cs3500.spreadsheets.BeyondGood" />
       <module name="gOOD" />
@@ -188,7 +183,7 @@
     </configuration>
     <configuration name="gOOD.jar" type="JarApplication" temporary="true">
       <option name="JAR_PATH" value="$PROJECT_DIR$/resources/gOOD.jar" />
-      <option name="PROGRAM_PARAMETERS" value="-in resources/input3.txt -gui" />
+      <option name="PROGRAM_PARAMETERS" value="-in resources/inputError.txt -gui" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2" />
     </configuration>
@@ -204,9 +199,9 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JAR Application.gOOD.jar" />
         <item itemvalue="JUnit.SpreadsheetTextualViewTest" />
         <item itemvalue="JUnit.BasicSpreadsheetModelTests.testEditCell" />
+        <item itemvalue="JAR Application.gOOD.jar" />
         <item itemvalue="JUnit.SpreadsheetTextualViewTest.testFileIO" />
         <item itemvalue="Application.SpreadsheetFrameView" />
       </list>
@@ -237,7 +232,6 @@
       <workItem from="1573660587593" duration="248000" />
       <workItem from="1573709831149" duration="83000" />
       <workItem from="1573771860628" duration="4758000" />
-      <workItem from="1574093472845" duration="1649000" />
     </task>
     <task id="LOCAL-00001" summary="main method, bug fixes, test1.txt">
       <created>1572209255057</created>
@@ -393,7 +387,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573778645138</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="final for turning in">
+      <created>1573782023044</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1573782023044</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -432,6 +433,7 @@
     <MESSAGE value="fix for -gui input" />
     <MESSAGE value="final changes" />
     <MESSAGE value="last bug fix to cycles" />
-    <option name="LAST_COMMIT_MESSAGE" value="last bug fix to cycles" />
+    <MESSAGE value="final for turning in" />
+    <option name="LAST_COMMIT_MESSAGE" value="final for turning in" />
   </component>
 </project>

@@ -1,9 +1,12 @@
 B2 5
-A5 =(SUM A1:B4)
-A1 =(SUM A2:A3)
-B1 =A1
-A4 =A1
-B4 7
+A9 =A9
 A3 =B1
 B3 6
+A7 =A8
+A4 =A1
+B4 7
+A1 =(SUM A2:A3)
+B1 =A1
+A8 =A7
+A5 =(SUM A1:B4)
 A2 2
