@@ -23,7 +23,7 @@ import javax.swing.JTextField;
 /**
  * Frame view for a spreadsheet model.
  */
-public class SpreadsheetFrameView extends JFrame implements SpreadsheetView<Cell> {
+public class SpreadsheetFrameView extends JFrame implements SpreadsheetGUIView {
 
   private static int WIDTH = 15;
   private static int HEIGHT = 30;
@@ -31,16 +31,11 @@ public class SpreadsheetFrameView extends JFrame implements SpreadsheetView<Cell
   private int rowOffset;
   private int colOffset;
   private static final Color BG = Color.DARK_GRAY;
-  private JTextField[][] fieldGrid;
+  JTextField[][] fieldGrid;
   private ReadOnlyModel model;
   private JPanel mainPanel;
   private JPanel rows;
   private JPanel cols;
-  // uncommented for handins java style.
-  //private JPanel xButtons;
-  //private JPanel yButtons;
-
-  private List<ViewEvent> events = new ArrayList<>();
 
   /**
    * Constructor that takes a read only model.
@@ -55,10 +50,17 @@ public class SpreadsheetFrameView extends JFrame implements SpreadsheetView<Cell
     fieldGrid = new JTextField[HEIGHT][WIDTH];
 
     this.mainPanel = new JPanel(new GridLayout(HEIGHT, WIDTH));
-    fillGrid(mainPanel);
-
     this.rows = new JPanel(new GridLayout(HEIGHT, 1));
     this.cols = new JPanel(new GridLayout(1, WIDTH + 1));
+
+    build();
+  }
+
+  /**
+   * Builds the GUI.
+   */
+  private void build() {
+    fillGrid(mainPanel);
     fillCoords(rows, cols);
 
     JPanel xButtons = new JPanel(new GridLayout(1, 3));
@@ -71,8 +73,6 @@ public class SpreadsheetFrameView extends JFrame implements SpreadsheetView<Cell
     this.add(mainPanel, BorderLayout.CENTER);
     this.add(xButtons, BorderLayout.SOUTH);
     this.add(yButtons, BorderLayout.EAST);
-
-    this.addKeyListener(new ScrollHandler());
     this.pack();
   }
 
@@ -119,7 +119,7 @@ public class SpreadsheetFrameView extends JFrame implements SpreadsheetView<Cell
       throw new IllegalStateException("Cant open or make file");
     }
 
-    SpreadsheetView<Cell> textView = new SpreadsheetTextualView(pw, model);
+    SpreadsheetView textView = new SpreadsheetTextualView(pw, model);
 
     try {
       textView.render();
@@ -173,12 +173,12 @@ public class SpreadsheetFrameView extends JFrame implements SpreadsheetView<Cell
         curText = curCell.getValue().toString();
 
         field = new JTextField(curText, 6);
-
         //fieldGrid[i][j].setEditable(false);
         fieldGrid[i][j] = field;
         panel.add(fieldGrid[i][j]);
       }
     }
+
   }
 
   private void scroll(String direction) {
@@ -226,41 +226,15 @@ public class SpreadsheetFrameView extends JFrame implements SpreadsheetView<Cell
     this.repaint();
   }
 
-  private class ScrollHandler implements KeyListener {
-
-    private HashMap<Integer, Runnable> typedMap = new HashMap<>();
-
-    ScrollHandler() {
-      typedMap.put(KeyEvent.VK_DOWN, () -> {
-        scroll("down");
-      });
-      typedMap.put(KeyEvent.VK_UP, () -> {
-        scroll("up");
-      });
-      typedMap.put(KeyEvent.VK_RIGHT, () -> {
-        scroll("right");
-      });
-      typedMap.put(KeyEvent.VK_LEFT, () -> {
-        scroll("left");
-      });
-    }
-
-    @Override
-    public void keyTyped(KeyEvent e) {
-      if (typedMap.containsKey(e)) {
-        typedMap.get(e).run();
-      }
-    }
-
-    @Override
-    public void keyPressed(KeyEvent e) {
-      // Do not want to handle key presses.
-    }
-
-    @Override
-    public void keyReleased(KeyEvent e) {
-      // Do not want to handle key releases.
-    }
+  @Override
+  public int getHeight() {
+    return this.HEIGHT;
   }
+
+  @Override
+  public int getWidth() {
+    return this.WIDTH;
+  }
+
 }
 

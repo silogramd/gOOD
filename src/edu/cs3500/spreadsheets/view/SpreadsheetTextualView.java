@@ -9,10 +9,10 @@ import java.util.Map;
 /**
  * <p>Textual View for a {@link SpreadsheetModel}.</p>
  */
-public class SpreadsheetTextualView implements SpreadsheetView<Cell> {
+public class SpreadsheetTextualView implements SpreadsheetView {
 
   private Appendable ap;
-  private SpreadsheetModel<Cell> model;
+  private SpreadsheetModel model;
 
   /**
    * <p>Constructor for the TextualView.</p>
@@ -20,7 +20,7 @@ public class SpreadsheetTextualView implements SpreadsheetView<Cell> {
    * @param ap    the {@link Appendable} where the view is written.
    * @param model the {@link SpreadsheetModel}.
    */
-  public SpreadsheetTextualView(Appendable ap, SpreadsheetModel<Cell> model) {
+  public SpreadsheetTextualView(Appendable ap, SpreadsheetModel model) {
     this.ap = ap;
     this.model = model;
   }

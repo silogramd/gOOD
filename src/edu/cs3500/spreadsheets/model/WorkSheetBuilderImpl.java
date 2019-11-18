@@ -8,22 +8,16 @@ import java.util.ArrayList;
  */
 public class WorkSheetBuilderImpl implements WorksheetBuilder<BasicSpreadsheetModel> {
 
-  static ArrayList<ICell> cells = new ArrayList<>();
   BasicSpreadsheetModel model = new BasicSpreadsheetModel();
 
   @Override
   public WorksheetBuilder<BasicSpreadsheetModel> createCell(int row, int col, String contents) {
-    ICell cell = new Cell(row, col, contents, model);
-    cells.add(cell);
+    model.editCell(new Coord(col, row), contents);
     return this;
   }
 
   @Override
   public BasicSpreadsheetModel createWorksheet() {
-    for (ICell c : cells) {
-      model.editCell(c.getCoord(), c.getRawValue());
-    }
-
     return model;
   }
 }
