@@ -72,6 +72,9 @@ public class SpreadsheetFrameView extends JFrame implements SpreadsheetGUIView {
     this.repaint();
   }
 
+
+
+  // IF WE NEED THESE LATER WE NEED TO RENAME THEM BECAUSE THEY BREAK THE PANEL!!!
   /*
   @Override
   public int getHeight() {
