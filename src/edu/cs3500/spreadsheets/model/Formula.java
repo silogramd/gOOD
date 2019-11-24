@@ -18,9 +18,9 @@ public interface Formula {
   /**
    * <p>Helper function for the {@link Function} flatten method.</p>
    *
-   * @param acc the accumulated flatten list.
+   * @return a list of the cell values from this formula
    */
-  void flattenHelp(ArrayList<CellValue> acc);
+  ArrayList<CellValue> flattenHelp();
 
   /**
    * <p>Checks if the given formula has a cycle in it's contents.</p>

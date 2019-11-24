@@ -7,10 +7,6 @@ import java.util.ArrayList;
  */
 public class CVError extends CellValue {
 
-  @Override
-  public void flattenHelp(ArrayList<CellValue> acc) {
-    acc.add(this);
-  }
 
   @Override
   public String toString() {

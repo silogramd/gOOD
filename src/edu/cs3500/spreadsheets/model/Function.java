@@ -1,6 +1,8 @@
 package edu.cs3500.spreadsheets.model;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.Stack;
@@ -12,6 +14,7 @@ public class Function implements Formula {
 
   final Operation operation;
   private ArrayList<Formula> rest;
+  private static HashMap<Formula, CellValue> evaluated = new HashMap<>();
 
   /**
    * Default constructor.
@@ -32,16 +35,21 @@ public class Function implements Formula {
    */
   private ArrayList<CellValue> flatten() {
     ArrayList<CellValue> values = new ArrayList<>();
+
     for (Formula f : this.rest) {
-      f.flattenHelp(values);
+
+      if (evaluated.containsKey(f)) {
+        values.add(evaluated.get(f));
+      } else {
+        values.addAll(f.flattenHelp());
+      }
     }
     return values;
   }
 
   @Override
-  public void flattenHelp(ArrayList<CellValue> acc) {
-    acc.add(getValue());
-
+  public ArrayList<CellValue> flattenHelp() {
+    return new ArrayList<CellValue>(Arrays.asList(this.getValue()));
   }
 
   @Override
@@ -84,12 +92,24 @@ public class Function implements Formula {
 
   @Override
   public CellValue getValue() {
-    return this.operation.apply(flatten());
+    CellValue val = this.operation.apply(flatten());
+    if (!evaluated.containsKey(this)) {
+      evaluated.put(this, val);
+    }
+    return val;
   }
 
   @Override
   public String toString() {
     return getValue().toString();
+  }
+
+  /**
+   * Used by the contents builder to clear the the evaluated map. This is necessary because
+   * the formula may change previous reference values so all formulas need to be recalculated.
+   */
+  public static void clearEval() {
+    evaluated.clear();
   }
 
   @Override

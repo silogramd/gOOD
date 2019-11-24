@@ -3,7 +3,8 @@ package edu.cs3500.spreadsheets.model;
 import java.util.Map;
 
 /**
- * Interface for the model of spreadsheets.
+ * Interface for the model of spreadsheets. Has methods to get a param K, get the raw value,
+ * edit a cell, get a copy of the whole model, and clear the sheet.
  */
 public interface SpreadsheetModel<K> {
 

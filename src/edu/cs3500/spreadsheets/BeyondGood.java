@@ -105,8 +105,23 @@ public class BeyondGood {
       throw new IllegalStateException("file not found");
     }
 
-    PrintWriter pw;
+
+    // clear the file
     File file = new File(newFileName);
+    PrintWriter clear;
+    try {
+      clear = new PrintWriter(file.getAbsoluteFile());
+    } catch (Exception ex) {
+      throw new IllegalStateException("file not found");
+    }
+
+    clear.print("");
+    clear.close();
+
+
+    // now write to the file
+    PrintWriter pw;
+
     try {
       file.createNewFile();
       pw = new PrintWriter(new FileOutputStream(file, true));

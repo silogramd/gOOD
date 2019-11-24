@@ -7,7 +7,7 @@ import java.util.Set;
 import java.util.Stack;
 
 /**
- * Represents a reference cell value.
+ * Represents a reference cell value. Can be a single or multi reference.
  */
 public class Reference implements Formula {
 
@@ -77,12 +77,15 @@ public class Reference implements Formula {
 
 
   @Override
-  public void flattenHelp(ArrayList<CellValue> acc) {
+  public ArrayList<CellValue> flattenHelp() {
+    ArrayList<CellValue> acc = new ArrayList<>();
     for (Coord c : this.reference) {
       if (model.coordMap.containsKey(c)) {
         acc.add(model.getCellAt(c).getValue());
       }
     }
+
+    return acc;
   }
 
   @Override

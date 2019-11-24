@@ -1,5 +1,7 @@
 package edu.cs3500.spreadsheets.model;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -37,6 +39,9 @@ public abstract class CellValue implements Formula {
     return new HashSet<Formula>();
   }
 
-
+  @Override
+  public ArrayList<CellValue> flattenHelp() {
+    return new ArrayList<CellValue>(Arrays.asList(getValue()));
+  }
 
 }

@@ -9,11 +9,6 @@ public class CVBlank extends CellValue {
 
 
   @Override
-  public void flattenHelp(ArrayList<CellValue> acc) {
-    //do nothing! if value is blank, there is nothing to flatten.
-  }
-
-  @Override
   public String toString() {
     return "";
   }

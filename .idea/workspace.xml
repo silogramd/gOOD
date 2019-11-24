@@ -7,21 +7,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4ef46782-5e33-4721-8a2f-343cfa9a918c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/SpreadsheetGUIViewPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/triangleinput.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/MakeTriangleRecurFile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/README.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/input1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/input1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/input2-textualview.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/input2-textualview.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/input3-textualview.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/input3-textualview.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/BasicSpreadsheetModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/BasicSpreadsheetModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/Cell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/Cell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/BeyondGood.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/BeyondGood.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/CVBlank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/CVBlank.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/CVBool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/CVBool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/CVDouble.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/CVDouble.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/CVError.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/CVError.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/CVString.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/CVString.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/CellValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/CellValue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/Formula.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/Formula.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/Function.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/Function.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/Reference.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/Reference.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/SpreadsheetModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/SpreadsheetModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/SpreadsheetEditableView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/SpreadsheetEditableView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/SpreadsheetFrameView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/SpreadsheetFrameView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/SpreadsheetGUIView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/SpreadsheetGUIView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/SpreadsheetTextualView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/SpreadsheetTextualView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/SpreadsheetView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/SpreadsheetView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/SpreadsheetTextualViewTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/SpreadsheetTextualViewTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/WorkSheetBuilderImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/WorkSheetBuilderImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/sexp/ContentsBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/sexp/ContentsBuilder.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -119,11 +120,32 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.guitest-input1">
+  <component name="RunManager" selected="Application.Unnamed">
     <configuration name="BeyondGood 1" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="edu.cs3500.spreadsheets.BeyondGood" />
       <module name="gOOD" />
       <option name="PROGRAM_PARAMETERS" value="-in test1.txt -eval D1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MakeTriangleRecurFile" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="edu.cs3500.spreadsheets.MakeTriangleRecurFile" />
+      <module name="gOOD" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.cs3500.spreadsheets.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="edu.cs3500.spreadsheets.BeyondGood" />
+      <module name="gOOD" />
+      <option name="PROGRAM_PARAMETERS" value="-in &quot;resources/triangleinput.txt&quot; -eval A50" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -181,16 +203,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SpreadsheetTextualViewTest.testFileIO" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="gOOD" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SpreadsheetTextualViewTest" />
-      <option name="METHOD_NAME" value="testFileIO" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="gOOD.jar" type="JarApplication" temporary="true">
       <option name="JAR_PATH" value="$PROJECT_DIR$/resources/gOOD.jar" />
       <option name="PROGRAM_PARAMETERS" value="-in resources/inputError.txt -gui" />
@@ -202,19 +214,20 @@
       <item itemvalue="Application.testError" />
       <item itemvalue="Application.BeyondGood 1" />
       <item itemvalue="Application.guitest-input1" />
+      <item itemvalue="Application.Unnamed" />
+      <item itemvalue="Application.MakeTriangleRecurFile" />
       <item itemvalue="JAR Application.gOOD.jar" />
       <item itemvalue="JUnit.BasicSpreadsheetModelTests.testEditCell" />
-      <item itemvalue="JUnit.SpreadsheetTextualViewTest.testFileIO" />
       <item itemvalue="JUnit.SpreadsheetTextualViewTest" />
       <item itemvalue="JUnit.SpreadsheetTextualViewTest.createOtherTextViewFiles" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MakeTriangleRecurFile" />
         <item itemvalue="JUnit.SpreadsheetTextualViewTest.createOtherTextViewFiles" />
         <item itemvalue="JUnit.SpreadsheetTextualViewTest" />
         <item itemvalue="JUnit.BasicSpreadsheetModelTests.testEditCell" />
         <item itemvalue="JAR Application.gOOD.jar" />
-        <item itemvalue="JUnit.SpreadsheetTextualViewTest.testFileIO" />
       </list>
     </recent_temporary>
   </component>
@@ -245,7 +258,8 @@
       <workItem from="1573771860628" duration="4758000" />
       <workItem from="1574100966415" duration="13000" />
       <workItem from="1574102833542" duration="26000" />
-      <workItem from="1574545032209" duration="9056000" />
+      <workItem from="1574545032209" duration="9856000" />
+      <workItem from="1574619603520" duration="2352000" />
     </task>
     <task id="LOCAL-00001" summary="main method, bug fixes, test1.txt">
       <created>1572209255057</created>
@@ -415,7 +429,28 @@
       <option name="project" value="LOCAL" />
       <updated>1573782061974</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="moving all the graphics into a jpanel">
+      <created>1574555201626</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1574555201626</updated>
+    </task>
+    <task id="LOCAL-00026" summary="adding warning">
+      <created>1574555258423</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1574555258423</updated>
+    </task>
+    <task id="LOCAL-00027" summary="fixing editable">
+      <created>1574574152691</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1574574152691</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -456,6 +491,9 @@
     <MESSAGE value="last bug fix to cycles" />
     <MESSAGE value="final for turning in" />
     <MESSAGE value="final for turning in, cycles broken lowkey" />
-    <option name="LAST_COMMIT_MESSAGE" value="final for turning in, cycles broken lowkey" />
+    <MESSAGE value="moving all the graphics into a jpanel" />
+    <MESSAGE value="adding warning" />
+    <MESSAGE value="fixing editable" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixing editable" />
   </component>
 </project>

@@ -18,10 +18,6 @@ public class CVBool extends CellValue {
     this.content = b;
   }
 
-  @Override
-  public void flattenHelp(ArrayList<CellValue> acc) {
-    acc.add(this);
-  }
 
   @Override
   public String toString() {

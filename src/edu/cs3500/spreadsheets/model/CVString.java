@@ -19,11 +19,6 @@ public class CVString extends CellValue {
   }
 
   @Override
-  public void flattenHelp(ArrayList<CellValue> acc) {
-    acc.add(this);
-  }
-
-  @Override
   public String toString() {
     return this.contents;
   }

@@ -4,7 +4,8 @@ import edu.cs3500.spreadsheets.model.WorksheetReader.WorksheetBuilder;
 import java.util.ArrayList;
 
 /**
- * Implementation of the Builder for the Worksheet Reader.
+ * Worksheet builder that makes a basic spreadsheet model by making a
+ * blank model, editing the cells, and returning the completed model.
  */
 public class WorkSheetBuilderImpl implements WorksheetBuilder<BasicSpreadsheetModel> {
 

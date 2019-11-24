@@ -103,6 +103,9 @@ public class ContentsBuilder implements SexpVisitor<Formula> {
       Formula f = l.get(i).accept(this);
       forms.add(f);
     }
+
+    Function.clearEval();
+
     return new Function(operations.get(symbol), forms);
   }
 
