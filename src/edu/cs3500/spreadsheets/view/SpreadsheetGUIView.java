@@ -1,6 +1,8 @@
 package edu.cs3500.spreadsheets.view;
 
-public interface SpreadsheetGUIView extends SpreadsheetView {
+import edu.cs3500.spreadsheets.model.Cell;
+
+public interface SpreadsheetGUIView extends SpreadsheetView<Cell> {
   int getHeight();
 
   int getWidth();

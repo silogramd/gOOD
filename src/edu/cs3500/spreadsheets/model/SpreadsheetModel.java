@@ -5,7 +5,7 @@ import java.util.Map;
 /**
  * Interface for the model of spreadsheets.
  */
-public interface SpreadsheetModel {
+public interface SpreadsheetModel<K> {
 
   /**
    * Gets the cell value at the given coordinate.
@@ -13,7 +13,7 @@ public interface SpreadsheetModel {
    * @param coord the coordinates of the desired cell
    * @return The cell at the given coordinate.
    */
-  Cell getCellAt(Coord coord);
+  K getCellAt(Coord coord);
 
   /**
    * <p>Gets the raw contents of the Cell at the given coordinate.</p>

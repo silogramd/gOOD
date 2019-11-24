@@ -14,11 +14,8 @@ Frame view:
 
 
 Changes:
-  - updates to main method to handle view interface arguments.
-    -> specified by the assignment
-  - bug fixes to model implementation to handle cyclic references.
-    -> changed from checking the raw string for references to using DFS (ensure that there are no
-        multi level/deep cycles)
+  - adding type parameters to the view and model interfaces
+      so that later on different types of cells may be used
 
 
 MODEL Interfaces and sub classes

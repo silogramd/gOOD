@@ -1,4 +1,5 @@
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertTrue;
 
 import edu.cs3500.spreadsheets.model.BasicSpreadsheetModel;
@@ -182,5 +183,6 @@ public class SpreadsheetTextualViewTest {
 
     pw2.close();
 
+    assertNotEquals(model1, model2);
   }
 }

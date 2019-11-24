@@ -1,14 +1,15 @@
 package edu.cs3500.spreadsheets.view;
 
+import edu.cs3500.spreadsheets.model.Cell;
 import edu.cs3500.spreadsheets.model.ReadOnlyModel;
 import edu.cs3500.spreadsheets.model.SpreadsheetModel;
 import java.io.IOException;
 import javax.swing.JFrame;
 import javax.swing.JTextField;
 
-public class SpreadsheetEditableView extends JFrame implements SpreadsheetGUIView{
+public class SpreadsheetEditableView extends JFrame implements SpreadsheetGUIView {
 
-  private final SpreadsheetModel model;
+  private final SpreadsheetModel<Cell> model;
   private final SpreadsheetFrameView sheet;
   private final JTextField[][] textGrid;
   private ViewEventListener listener;
@@ -18,7 +19,7 @@ public class SpreadsheetEditableView extends JFrame implements SpreadsheetGUIVie
    *
    * @param model to be displayed
    */
-  public SpreadsheetEditableView(SpreadsheetModel model, ViewEventListener v) {
+  public SpreadsheetEditableView(SpreadsheetModel<Cell> model, ViewEventListener v) {
     this.listener = listener;
     this.model = model;
     this.sheet = new SpreadsheetFrameView(new ReadOnlyModel(this.model));
