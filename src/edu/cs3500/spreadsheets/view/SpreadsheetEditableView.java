@@ -4,6 +4,7 @@ import edu.cs3500.spreadsheets.model.Cell;
 import edu.cs3500.spreadsheets.model.Coord;
 import edu.cs3500.spreadsheets.model.SpreadsheetModel;
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -76,14 +77,28 @@ public class SpreadsheetEditableView extends JFrame implements SpreadsheetGUIVie
   @Override
   public void refresh() throws IOException {
     this.panel.refresh();
+    setWhite();
     this.pack();
     this.repaint();
+  }
+
+  /**
+   * Sets all the textfields to have a white background.
+   */
+  private void setWhite() {
+    for (int i = 0; i < HEIGHT; i++) {
+      for (int k = 0; k < WIDTH; k++) {
+        textGrid[i][k].field.setBackground(Color.WHITE);
+      }
+    }
   }
 
   @Override
   public void focusGained(FocusEvent e) {
     //this is a safe cast. the only objects gaining focus will be textfields.
+    setWhite();
     JTextField field = (JTextField) e.getComponent();
+    field.setBackground(Color.CYAN);
     System.out.print(field.getText());
     ePanel.setEditableCell(getCoord(field));
   }

@@ -191,6 +191,7 @@ public class SpreadsheetGUIViewPanel extends JPanel {
         field = new JTextField(curText, 6);
         field.setEditable(false);
         field.setFocusable(true);
+        field.setBackground(Color.WHITE);
         fieldGrid[i][j] = field;
         panel.add(fieldGrid[i][j]);
       }
