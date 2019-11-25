@@ -3,6 +3,6 @@
     <option name="myName" value="Project Default" />
     <inspection_tool class="GroovyUncheckedAssignmentOfMemberOfRawType" enabled="true" level="ERROR" enabled_by_default="true" />
     <inspection_tool class="RawTypeCanBeGeneric" enabled="true" level="ERROR" enabled_by_default="true" />
-    <inspection_tool class="RawUseOfParameterizedType" enabled="true" level="ERROR" enabled_by_default="true" />
+    <inspection_tool class="RawUseOfParameterizedType" enabled="false" level="ERROR" enabled_by_default="false" />
   </profile>
 </component>

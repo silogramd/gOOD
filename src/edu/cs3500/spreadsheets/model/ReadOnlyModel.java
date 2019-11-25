@@ -5,16 +5,16 @@ import java.util.Map;
 /**
  * Read-only implementation of the {@link SpreadsheetModel} interface.
  */
-public class ReadOnlyModel implements SpreadsheetModel<Cell> {
+public class ReadOnlyModel implements SpreadsheetModel {
 
-  private final SpreadsheetModel<Cell> model;
+  private final SpreadsheetModel model;
 
   /**
    * Constructor for the read-only model.
    *
    * @param model the internal model through which all reads take place.
    */
-  public ReadOnlyModel(SpreadsheetModel<Cell> model) {
+  public ReadOnlyModel(SpreadsheetModel model) {
     this.model = model;
   }
 

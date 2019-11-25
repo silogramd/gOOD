@@ -1,12 +1,26 @@
 package edu.cs3500.spreadsheets.view;
 
+import edu.cs3500.spreadsheets.model.Cell;
+import edu.cs3500.spreadsheets.model.Coord;
 import javax.swing.JTextField;
 
 public interface ViewEventListener {
 
   /**
-   * Adds this as a ViewEvent listener to the given {@link javax.swing.JTextField}.
+   * Sets the coordinates of the cell being edited.
+   * @param coord the coordinate of the cell being edited.
    */
-  void addTextEvent(JTextField field);
+  void setEditableCoord(Coord coord);
 
+  /**
+   * Returns the currently editable cell.
+   * @return the editable cell.
+   */
+  Cell getEditableCell();
+
+  /**
+   * Confirm and pushes the edits to the editable cell to the model.
+   * @param val the new raw value for the cell.
+   */
+  void confirmEdits(String val);
 }

@@ -1,5 +1,6 @@
 package edu.cs3500.spreadsheets;
 
+import edu.cs3500.spreadsheets.controller.SpreadSheetController;
 import edu.cs3500.spreadsheets.model.BasicSpreadsheetModel;
 import edu.cs3500.spreadsheets.model.Cell;
 import edu.cs3500.spreadsheets.model.Coord;
@@ -89,7 +90,7 @@ public class BeyondGood {
       }
     }
 
-    SpreadsheetView<Cell> gui = new SpreadsheetFrameView(new ReadOnlyModel(model));
+    SpreadsheetView gui = new SpreadsheetFrameView(new ReadOnlyModel(model));
     try {
       gui.render();
     } catch (IOException ex) {
@@ -106,6 +107,7 @@ public class BeyondGood {
   private static void editHelp(String fileName) {
     //TODO: make this call the controller
     BasicSpreadsheetModel model;
+    SpreadSheetController controller;
 
     if (fileName == null) {
       model = new BasicSpreadsheetModel();
@@ -118,11 +120,9 @@ public class BeyondGood {
         model = new BasicSpreadsheetModel();
       }
     }
-
-    SpreadsheetView<Cell> gui = new SpreadsheetEditableView(new ReadOnlyModel(model),
-        null);
     try {
-      gui.render();
+      controller = new SpreadSheetController(model);
+      controller.start();
     } catch (IOException ex) {
       throw new IllegalStateException("it broke");
     }
@@ -166,7 +166,7 @@ public class BeyondGood {
       throw new IllegalStateException("Cant open or make file");
     }
 
-    SpreadsheetView<Cell> textView = new SpreadsheetTextualView(pw, model);
+    SpreadsheetView textView = new SpreadsheetTextualView(pw, model);
 
     try {
       textView.render();

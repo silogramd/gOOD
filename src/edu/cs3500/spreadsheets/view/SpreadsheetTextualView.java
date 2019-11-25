@@ -9,7 +9,7 @@ import java.util.Map;
 /**
  * <p>Textual View for a {@link SpreadsheetModel}.</p>
  */
-public class SpreadsheetTextualView implements SpreadsheetView<Cell> {
+public class SpreadsheetTextualView implements SpreadsheetView {
 
   private Appendable ap;
   private SpreadsheetModel model;

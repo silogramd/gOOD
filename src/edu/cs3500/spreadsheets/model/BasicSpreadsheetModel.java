@@ -6,7 +6,7 @@ import java.util.Map;
 /**
  * Represents a basic version of a spreadsheet model.
  */
-public class BasicSpreadsheetModel implements SpreadsheetModel<Cell> {
+public class BasicSpreadsheetModel implements SpreadsheetModel {
 
   protected HashMap<Coord, Cell> coordMap = new HashMap<>();
 

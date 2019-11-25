@@ -5,7 +5,7 @@ import java.io.IOException;
 /**
  * Interface for all spreadsheet views.
  */
-public interface SpreadsheetView<K> {
+public interface SpreadsheetView {
 
   /**
    * <p>Renders the spreadsheet view.</p>

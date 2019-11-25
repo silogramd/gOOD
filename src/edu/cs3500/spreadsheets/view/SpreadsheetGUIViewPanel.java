@@ -19,16 +19,16 @@ public class SpreadsheetGUIViewPanel extends JPanel {
   private static int WIDTH;
   private static int HEIGHT;
   private static int scrollLength = 10;
-  private int rowOffset;
-  private int colOffset;
+  int rowOffset;
+  int colOffset;
   private static final Color BG = Color.DARK_GRAY;
   JTextField[][] fieldGrid;
   private JPanel mainPanel;
   private JPanel rows;
   private JPanel cols;
-  private SpreadsheetModel<Cell> model;
+  private SpreadsheetModel model;
 
-  public SpreadsheetGUIViewPanel(SpreadsheetModel<Cell> model, int width, int height) {
+  public SpreadsheetGUIViewPanel(SpreadsheetModel model, int width, int height) {
     super(new BorderLayout());
 
     this.WIDTH = width;
@@ -48,7 +48,7 @@ public class SpreadsheetGUIViewPanel extends JPanel {
     this.build();
   }
 
-  public SpreadsheetGUIViewPanel(SpreadsheetModel<Cell> model, int width, int height,
+  public SpreadsheetGUIViewPanel(SpreadsheetModel model, int width, int height,
       JTextField[][] field) {
     super(new BorderLayout());
 
@@ -134,7 +134,7 @@ public class SpreadsheetGUIViewPanel extends JPanel {
       throw new IllegalStateException("Cant open or make file");
     }
 
-    SpreadsheetView<Cell> textView = new SpreadsheetTextualView(pw, model);
+    SpreadsheetView textView = new SpreadsheetTextualView(pw, model);
 
     try {
       textView.render();
@@ -189,6 +189,8 @@ public class SpreadsheetGUIViewPanel extends JPanel {
         curText = curCell.getValue().toString();
 
         field = new JTextField(curText, 6);
+        field.setEditable(false);
+        field.setFocusable(true);
         fieldGrid[i][j] = field;
         panel.add(fieldGrid[i][j]);
       }

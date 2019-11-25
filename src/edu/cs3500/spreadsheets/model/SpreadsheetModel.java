@@ -6,7 +6,7 @@ import java.util.Map;
  * Interface for the model of spreadsheets. Has methods to get a param K, get the raw value,
  * edit a cell, get a copy of the whole model, and clear the sheet.
  */
-public interface SpreadsheetModel<K> {
+public interface SpreadsheetModel {
 
   /**
    * Gets the cell value at the given coordinate.
@@ -14,7 +14,7 @@ public interface SpreadsheetModel<K> {
    * @param coord the coordinates of the desired cell
    * @return The cell at the given coordinate.
    */
-  K getCellAt(Coord coord);
+  Cell getCellAt(Coord coord);
 
   /**
    * <p>Gets the raw contents of the Cell at the given coordinate.</p>

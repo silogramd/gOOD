@@ -59,7 +59,7 @@ public class SpreadsheetTextualViewTest {
     clear.print("");
     clear.close();
     // create a new view using the cleared new file and old file model
-    SpreadsheetView<Cell> textView = new SpreadsheetTextualView(pw, model1);
+    SpreadsheetView textView = new SpreadsheetTextualView(pw, model1);
 
     // save to the new file
     try {
@@ -131,7 +131,7 @@ public class SpreadsheetTextualViewTest {
     clear.print("");
     clear.close();
     // create a new view using the cleared new file and old file model
-    SpreadsheetView<Cell> textView = new SpreadsheetTextualView(pw, model1);
+    SpreadsheetView textView = new SpreadsheetTextualView(pw, model1);
 
     // save to the new file
     try {
@@ -172,7 +172,7 @@ public class SpreadsheetTextualViewTest {
     clear2.print("");
     clear2.close();
     // create a new view using the cleared new file and old file model
-    SpreadsheetView<Cell> textView2 = new SpreadsheetTextualView(pw2, model2);
+    SpreadsheetView textView2 = new SpreadsheetTextualView(pw2, model2);
 
     // save to the new file
     try {
