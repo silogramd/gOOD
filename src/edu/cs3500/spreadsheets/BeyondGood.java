@@ -6,9 +6,11 @@ import edu.cs3500.spreadsheets.model.Coord;
 import edu.cs3500.spreadsheets.model.ReadOnlyModel;
 import edu.cs3500.spreadsheets.model.WorkSheetBuilderImpl;
 import edu.cs3500.spreadsheets.model.WorksheetReader;
+import edu.cs3500.spreadsheets.view.SpreadsheetEditableView;
 import edu.cs3500.spreadsheets.view.SpreadsheetFrameView;
 import edu.cs3500.spreadsheets.view.SpreadsheetTextualView;
 import edu.cs3500.spreadsheets.view.SpreadsheetView;
+import edu.cs3500.spreadsheets.view.ViewEvent;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -49,12 +51,18 @@ public class BeyondGood {
           case "-gui":
             guiHelp(args[1]);
             break;
+          case "-edit":
+            editHelp(args[1]);
+            break;
           default:
             throw new IllegalArgumentException("invalid syntax");
         }
         break;
       case "-gui":
         guiHelp(null);
+        break;
+      case "-edit":
+        editHelp(null);
         break;
       default:
         throw new IllegalArgumentException("invalid syntax");
@@ -90,6 +98,37 @@ public class BeyondGood {
   }
 
   /**
+   * <p>Helper that runs a {@link edu.cs3500.spreadsheets.view.SpreadsheetEditableView} from the
+   * file.</p>
+   *
+   * @param fileName the file being viewed.
+   */
+  private static void editHelp(String fileName) {
+    //TODO: make this call the controller
+    BasicSpreadsheetModel model;
+
+    if (fileName == null) {
+      model = new BasicSpreadsheetModel();
+    } else {
+      try {
+        model = WorksheetReader
+            .read(new WorkSheetBuilderImpl(), new FileReader(fileName));
+      } catch (FileNotFoundException ex) {
+        System.out.println("File not found.");
+        model = new BasicSpreadsheetModel();
+      }
+    }
+
+    SpreadsheetView<Cell> gui = new SpreadsheetEditableView(new ReadOnlyModel(model),
+        null);
+    try {
+      gui.render();
+    } catch (IOException ex) {
+      throw new IllegalStateException("it broke");
+    }
+  }
+
+  /**
    * <p>Saves the given file to a new file.</p>
    *
    * @param fileName    the file being saved.
@@ -105,7 +144,6 @@ public class BeyondGood {
       throw new IllegalStateException("file not found");
     }
 
-
     // clear the file
     File file = new File(newFileName);
     PrintWriter clear;
@@ -117,7 +155,6 @@ public class BeyondGood {
 
     clear.print("");
     clear.close();
-
 
     // now write to the file
     PrintWriter pw;

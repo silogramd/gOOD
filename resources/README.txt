@@ -16,6 +16,7 @@ Frame view:
 Changes:
   - adding type parameters to the view and model interfaces
       so that later on different types of cells may be used
+  - adding a hashmap function -> cell value to avoid re-evaluating cell values (efficiency)
 
 
 MODEL Interfaces and sub classes

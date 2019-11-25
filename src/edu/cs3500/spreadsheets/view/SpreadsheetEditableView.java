@@ -31,8 +31,10 @@ public class SpreadsheetEditableView extends JFrame implements SpreadsheetGUIVie
     this.setLayout(new BorderLayout());
 
     textGrid = new JTextField[HEIGHT][WIDTH];
+    setUpGrid(textGrid);
 
-    panel = new SpreadsheetGUIViewPanel(model, WIDTH, HEIGHT);
+    System.out.println(textGrid.toString());
+    panel = new SpreadsheetGUIViewPanel(model, WIDTH, HEIGHT, textGrid);
 
     this.add(panel, BorderLayout.CENTER);
     this.pack();
@@ -42,6 +44,15 @@ public class SpreadsheetEditableView extends JFrame implements SpreadsheetGUIVie
     addListeners();
   }
 
+  private void setUpGrid(JTextField[][] grid) {
+
+    for (int i = 0; i < HEIGHT; i++) {
+      for (int j = 0; j < WIDTH; j++) {
+        grid[i][j] = new JTextField("", 6);
+      }
+    }
+  }
+
   /**
    * Adds the {@link ViewEventListener} as a listener for the textgrid.
    */
@@ -49,6 +60,7 @@ public class SpreadsheetEditableView extends JFrame implements SpreadsheetGUIVie
     for (int i = 0; i < HEIGHT; i++) {
       for (int j = 0; j < WIDTH; j++) {
         listener.addTextEvent(textGrid[i][j]);
+        textGrid[i][j].setText("haslistener");
       }
     }
   }

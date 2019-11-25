@@ -44,6 +44,30 @@ public class SpreadsheetGUIViewPanel extends JPanel {
     this.rows = new JPanel(new GridLayout(HEIGHT, 1));
     this.cols = new JPanel(new GridLayout(1, WIDTH + 1));
 
+    fillGrid(mainPanel);
+    this.build();
+  }
+
+  public SpreadsheetGUIViewPanel(SpreadsheetModel<Cell> model, int width, int height,
+      JTextField[][] field) {
+    super(new BorderLayout());
+
+    this.WIDTH = width;
+    this.HEIGHT = height;
+
+    this.model = model;
+    this.colOffset = 0;
+    this.rowOffset = 0;
+
+    fieldGrid = field;
+    System.out.println(fieldGrid.toString());
+
+    this.mainPanel = new JPanel(new GridLayout(HEIGHT, WIDTH));
+    this.rows = new JPanel(new GridLayout(HEIGHT, 1));
+    this.cols = new JPanel(new GridLayout(1, WIDTH + 1));
+
+    setUpGrid(mainPanel);
+    updateGrid(mainPanel);
     this.build();
   }
 
@@ -51,7 +75,7 @@ public class SpreadsheetGUIViewPanel extends JPanel {
    * Builds the GUI.
    */
   private void build() {
-    fillGrid(mainPanel);
+
     fillCoords(rows, cols);
 
     JPanel xButtons = new JPanel(new GridLayout(1, 3));
@@ -65,7 +89,6 @@ public class SpreadsheetGUIViewPanel extends JPanel {
     this.add(xButtons, BorderLayout.SOUTH);
     this.add(yButtons, BorderLayout.EAST);
 
-   //this.refresh();
   }
 
 
@@ -161,10 +184,7 @@ public class SpreadsheetGUIViewPanel extends JPanel {
 
     for (int i = 0; i < HEIGHT; i++) {
       for (int j = 0; j < WIDTH; j++) {
-        System.out.println("i = " + i);
-        System.out.println("j = " + i);
-        System.out.println("coord = " + new Coord(j + colOffset + 1, i + rowOffset + 1).toString());
-        System.out.println("cell = " + model.getCellAt(new Coord(j + colOffset + 1, i + rowOffset + 1)));
+
         curCell = model.getCellAt(new Coord(j + colOffset + 1, i + rowOffset + 1));
         curText = curCell.getValue().toString();
 
@@ -174,6 +194,37 @@ public class SpreadsheetGUIViewPanel extends JPanel {
       }
     }
   }
+
+  private void setUpGrid(JPanel panel) {
+
+    for (int i = 0; i < HEIGHT; i++) {
+      for (int j = 0; j < WIDTH; j++) {
+        panel.add(fieldGrid[i][j]);
+      }
+    }
+  }
+
+  /**
+   * Fills the Grid with its Cells.
+   *
+   * @return JPanel the panel of Cells.
+   */
+  private void updateGrid(JPanel panel) {
+
+    Cell curCell;
+    String curText;
+
+    for (int i = 0; i < HEIGHT; i++) {
+      for (int j = 0; j < WIDTH; j++) {
+
+        curCell = model.getCellAt(new Coord(j + colOffset + 1, i + rowOffset + 1));
+        curText = curCell.getValue().toString();
+
+        fieldGrid[i][j].setText(curText);
+      }
+    }
+  }
+
 
   private void scroll(String direction) {
     switch (direction) {
@@ -198,13 +249,14 @@ public class SpreadsheetGUIViewPanel extends JPanel {
         rowOffset = 0;
         break;
     }
-    fillGrid(mainPanel);
+
     fillCoords(rows, cols);
     this.refresh();
   }
 
 
   public void refresh() {
+    updateGrid(mainPanel);
     this.revalidate();
     this.repaint();
   }
