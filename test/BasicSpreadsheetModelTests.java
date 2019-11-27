@@ -2,7 +2,6 @@ import static org.junit.Assert.assertEquals;
 
 import edu.cs3500.spreadsheets.model.BasicSpreadsheetModel;
 import edu.cs3500.spreadsheets.model.CVDouble;
-import edu.cs3500.spreadsheets.model.Cell;
 import edu.cs3500.spreadsheets.model.Coord;
 import edu.cs3500.spreadsheets.model.ICell;
 import edu.cs3500.spreadsheets.model.SpreadsheetModel;

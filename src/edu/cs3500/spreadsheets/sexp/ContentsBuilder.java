@@ -58,7 +58,6 @@ public class ContentsBuilder implements SexpVisitor<Formula> {
   @Override
   public Formula visitSList(List<Sexp> l) {
     return parseList(l);
-    //TODO: FIGURE OUT WHAT TO DO HERE
   }
 
   @Override

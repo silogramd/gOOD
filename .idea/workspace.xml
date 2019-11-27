@@ -7,10 +7,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4ef46782-5e33-4721-8a2f-343cfa9a918c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/trianglescreenshot.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/BeyondGood.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/BeyondGood.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/controller/SpreadSheetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/controller/SpreadSheetController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/Screen Shot 2019-11-14 at 7.23.51 PM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/Screen Shot 2019-11-14 at 7.24.25 PM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/Screen Shot 2019-11-14 at 8.39.15 PM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/Screen Shot 2019-11-14 at 8.39.22 PM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/gOOD.jar" beforeDir="false" afterPath="$PROJECT_DIR$/resources/gOOD.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/CVBlank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/CVBlank.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/CVBool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/CVBool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/CVDouble.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/CVDouble.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/CVError.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/CVError.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/CVString.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/CVString.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/Cell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/Cell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/Reference.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/Reference.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/WorkSheetBuilderImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/WorkSheetBuilderImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/sexp/ContentsBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/sexp/ContentsBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/CoordTextField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/CoordTextField.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/SpreadsheetEditableView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/SpreadsheetEditableView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/SpreadsheetGUIViewPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/SpreadsheetGUIViewPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/ViewEventListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/ViewEventListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/BasicSpreadsheetModelTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/BasicSpreadsheetModelTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/SpreadSheetControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/SpreadSheetControllerTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -110,7 +127,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.SpreadSheetControllerTest">
+  <component name="RunManager" selected="Application.run triange">
     <configuration name="BeyondGood 1" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="edu.cs3500.spreadsheets.BeyondGood" />
       <module name="gOOD" />
@@ -139,6 +156,14 @@
       <option name="MAIN_CLASS_NAME" value="edu.cs3500.spreadsheets.BeyondGood" />
       <module name="gOOD" />
       <option name="PROGRAM_PARAMETERS" value="-in &quot;resources/input1.txt&quot; -edit" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="run triange" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="edu.cs3500.spreadsheets.BeyondGood" />
+      <module name="gOOD" />
+      <option name="PROGRAM_PARAMETERS" value="-in &quot;resources/triangleinput.txt&quot; -edit" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -209,6 +234,7 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.run triange" />
       <item itemvalue="Application.test1" />
       <item itemvalue="Application.testError" />
       <item itemvalue="Application.BeyondGood 1" />
@@ -471,7 +497,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574815830854</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="javadocs pt2, handle null in controller.">
+      <created>1574816996897</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1574816996897</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -491,7 +524,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added BeyondGood class, cleaned up errors slightly" />
     <MESSAGE value="Worked on Cycle Detecting" />
     <MESSAGE value="Replaced instanceof checks, deleted unnecessary files, refactored some repeated code." />
     <MESSAGE value="Deleted println's for handins" />
@@ -516,6 +548,7 @@
     <MESSAGE value="reimplementing efficiency gain and adding test for triangular recursion. Fixed some javadoc." />
     <MESSAGE value="Added the controller, editing functionality" />
     <MESSAGE value="Controller test, Javadocs pt 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Controller test, Javadocs pt 1" />
+    <MESSAGE value="javadocs pt2, handle null in controller." />
+    <option name="LAST_COMMIT_MESSAGE" value="javadocs pt2, handle null in controller." />
   </component>
 </project>

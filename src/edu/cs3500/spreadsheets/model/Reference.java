@@ -117,6 +117,11 @@ public class Reference implements Formula {
     return false;
   }
 
+  /**
+   * Adds the forumulas of references from this cell.
+   *
+   * @param collection to add to.
+   */
   private void addAllRefs(Collection<Formula> collection) {
     for (Coord c : this.reference) {
       collection.add(model.getCellAt(c).getContents());
@@ -130,6 +135,12 @@ public class Reference implements Formula {
     return set;
   }
 
+  /**
+   * Ensures there is no cycle by parsing the raw value for a reference to this.
+   *
+   * @param coord of the other cell.
+   * @return if there is a one level cycle.
+   */
   private boolean noCycles(Coord coord) {
     String otherRaw = model.coordMap.getOrDefault(coord, new Cell(coord)).getRawValue();
     if (otherRaw.length() > 1) {

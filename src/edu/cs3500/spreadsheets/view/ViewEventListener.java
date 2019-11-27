@@ -2,7 +2,6 @@ package edu.cs3500.spreadsheets.view;
 
 import edu.cs3500.spreadsheets.model.Cell;
 import edu.cs3500.spreadsheets.model.Coord;
-import javax.swing.JTextField;
 
 /**
  * Interface for view event listeners. Has methods for changing the highlighted coord,

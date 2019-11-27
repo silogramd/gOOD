@@ -1,6 +1,5 @@
 package edu.cs3500.spreadsheets.model;
 
-import java.util.ArrayList;
 
 /**
  * <p>Class representing an error cell value.</p>

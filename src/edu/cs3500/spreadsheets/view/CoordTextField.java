@@ -7,7 +7,8 @@ import javax.swing.JTextField;
  */
 public class CoordTextField {
 
-  final int row, col;
+  final int row;
+  final int col;
   final JTextField field;
 
   /**

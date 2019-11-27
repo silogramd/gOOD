@@ -1,8 +1,12 @@
 package edu.cs3500.spreadsheets.view;
 
+import edu.cs3500.spreadsheets.controller.SpreadSheetController;
+import edu.cs3500.spreadsheets.model.BasicSpreadsheetModel;
 import edu.cs3500.spreadsheets.model.Cell;
 import edu.cs3500.spreadsheets.model.Coord;
 import edu.cs3500.spreadsheets.model.SpreadsheetModel;
+import edu.cs3500.spreadsheets.model.WorkSheetBuilderImpl;
+import edu.cs3500.spreadsheets.model.WorksheetReader;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.GridLayout;
@@ -10,24 +14,31 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.FileReader;
 import java.io.IOException;
+import java.io.PrintWriter;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 /**
- * Editable version of a gui view. Adds view event listeners and focus listeners to allow user
- * to edit cells in the model.
+ * Editable version of a gui view. Adds view event listeners and focus listeners to allow user to
+ * edit cells in the model.
  */
 public class SpreadsheetEditableView extends JFrame implements SpreadsheetView, FocusListener {
 
   private static int WIDTH = 15;
   private static int HEIGHT = 30;
   private SpreadsheetGUIViewPanel panel;
-  private final CoordTextField[][] textGrid;
+  private CoordTextField[][] textGrid;
   private ViewEventListener listener;
-  private editPanel ePanel = new editPanel();
+  private SpreadsheetModel model;
+  private EditPanel ePanel = new EditPanel();
+  private LoadPanel lPanel;
 
   /**
    * Constructor that takes a read only model.
@@ -37,16 +48,18 @@ public class SpreadsheetEditableView extends JFrame implements SpreadsheetView, 
   public SpreadsheetEditableView(SpreadsheetModel model, ViewEventListener v) {
     super();
     this.listener = v;
+    this.model = model;
+    this.lPanel = new LoadPanel();
 
     this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
     this.setLayout(new BorderLayout());
     panel = new SpreadsheetGUIViewPanel(model, WIDTH, HEIGHT);
     textGrid = fillGrid();
     this.add(ePanel, BorderLayout.NORTH);
-    this.add(panel, BorderLayout.SOUTH);
+    this.add(panel, BorderLayout.CENTER);
+    this.add(lPanel, BorderLayout.SOUTH);
     this.pack();
     this.setLocationByPlatform(true);
-
 
     addListeners();
   }
@@ -108,12 +121,12 @@ public class SpreadsheetEditableView extends JFrame implements SpreadsheetView, 
     setWhite();
     JTextField field = (JTextField) e.getComponent();
     field.setBackground(Color.CYAN);
-    System.out.print(field.getText());
     ePanel.setEditableCell(getCoord(field));
   }
 
-  /***
+  /**
    * Gets the coordinate of the cell being represented by the input textfield.
+   *
    * @param field the textfield whose contents' coordinates are being queried.
    * @return the coordinates of the cell.
    */
@@ -123,14 +136,14 @@ public class SpreadsheetEditableView extends JFrame implements SpreadsheetView, 
     boolean found = false;
     for (int i = 0; i < HEIGHT; i++) {
       if (!found) {
-      for (int k = 0; k < WIDTH; k++) {
-        if (textGrid[i][k].field.equals(field)) {
-          row = i;
-          col = k;
-          found = true;
-          break;
+        for (int k = 0; k < WIDTH; k++) {
+          if (textGrid[i][k].field.equals(field)) {
+            row = i;
+            col = k;
+            found = true;
+            break;
+          }
         }
-      }
       } else {
         break;
       }
@@ -138,7 +151,7 @@ public class SpreadsheetEditableView extends JFrame implements SpreadsheetView, 
     if (row == -1 || col == -1) {
       throw new IllegalStateException("Textfield is not in the grid.");
     }
-    return new Coord(col + panel.colOffset + 1,row + panel.rowOffset + 1);
+    return new Coord(col + panel.colOffset + 1, row + panel.rowOffset + 1);
   }
 
   @Override
@@ -149,7 +162,7 @@ public class SpreadsheetEditableView extends JFrame implements SpreadsheetView, 
   /**
    * Panel at the top of the UI that allows for editing of the contents of cells.
    */
-  private class editPanel extends JPanel implements ActionListener{
+  private class EditPanel extends JPanel implements ActionListener {
 
     JButton confirm = new JButton("Confirm");
     JTextField newText = new JTextField(30);
@@ -157,8 +170,8 @@ public class SpreadsheetEditableView extends JFrame implements SpreadsheetView, 
     /**
      * Default constructor for the edit panel bar.
      */
-    editPanel() {
-      super(new GridLayout(1,2));
+    EditPanel() {
+      super(new GridLayout(1, 2));
       this.add(confirm);
       confirm.addActionListener(this);
       this.add(newText);
@@ -177,6 +190,7 @@ public class SpreadsheetEditableView extends JFrame implements SpreadsheetView, 
 
     /**
      * Changes the current highlighted cell.
+     *
      * @param coord to highlight
      */
     void setEditableCell(Coord coord) {
@@ -185,5 +199,110 @@ public class SpreadsheetEditableView extends JFrame implements SpreadsheetView, 
       newText.setText(c.getRawValue());
     }
 
+  }
+
+  /**
+   * Panel class for a loading bar at the bottom of UI.
+   */
+  private class LoadPanel extends JPanel implements ActionListener {
+
+    JButton load = new JButton("Load file named");
+    JButton save = new JButton("Save file as");
+    JTextField fileName = new JTextField(30);
+
+    LoadPanel() {
+      super(new GridLayout(1, 3));
+
+      this.add(save);
+
+      save.addActionListener(new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+
+          // clear the file
+          File file = new File(fileName.getText());
+          PrintWriter clear;
+          try {
+            if (!file.createNewFile()) {
+              clear = new PrintWriter(file);
+
+              clear.print("");
+              clear.close();
+            }
+            PrintWriter pw;
+            pw = new PrintWriter(new FileOutputStream(file, true));
+
+            SpreadsheetView textView = new SpreadsheetTextualView(pw,
+                SpreadsheetEditableView.this.model);
+
+            textView.render();
+
+            pw.close();
+
+            fileName.setText("file saved as: " + file.getName());
+
+          } catch (Exception ex) {
+            fileName.setText("unable to save file");
+          }
+
+        }
+      });
+
+      this.add(load);
+      load.addActionListener(this);
+      this.add(fileName);
+      fileName.setEditable(true);
+    }
+
+    /**
+     * Invoked when an action occurs.
+     *
+     * @param e the event to be processed
+     */
+    @Override
+    public void actionPerformed(ActionEvent e) {
+      BasicSpreadsheetModel model;
+      try {
+        model = WorksheetReader
+            .read(new WorkSheetBuilderImpl(), new FileReader(fileName.getText()));
+        SpreadsheetEditableView.this.updateModel(model);
+        SpreadsheetEditableView.this.model = model;
+
+        fileName.setText("loaded file named: " + fileName.getText());
+      } catch (FileNotFoundException ex) {
+        fileName.setText("file not found");
+      }
+
+
+    }
+  }
+
+  /**
+   * For loading a file. Updates this view to contain the cells from the loaded model.
+   *
+   * @param model the model to use.
+   */
+  private void updateModel(BasicSpreadsheetModel model) {
+
+    this.listener = new SpreadSheetController(model, this);
+
+    this.getContentPane().removeAll();
+
+    panel = new SpreadsheetGUIViewPanel(model, WIDTH, HEIGHT);
+    textGrid = fillGrid();
+
+    this.add(ePanel, BorderLayout.NORTH);
+    this.add(panel, BorderLayout.CENTER);
+    this.add(lPanel, BorderLayout.SOUTH);
+
+    this.pack();
+
+    addListeners();
+
+    try {
+      refresh();
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
   }
 }

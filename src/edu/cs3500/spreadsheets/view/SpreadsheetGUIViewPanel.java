@@ -31,6 +31,12 @@ public class SpreadsheetGUIViewPanel extends JPanel {
   private JPanel cols;
   private SpreadsheetModel model;
 
+  /**
+   * Default constructor.
+   * @param model to be used.
+   * @param width of text fields.
+   * @param height of text fields.
+   */
   public SpreadsheetGUIViewPanel(SpreadsheetModel model, int width, int height) {
     super(new BorderLayout());
 
@@ -48,29 +54,6 @@ public class SpreadsheetGUIViewPanel extends JPanel {
     this.cols = new JPanel(new GridLayout(1, WIDTH + 1));
 
     fillGrid(mainPanel);
-    this.build();
-  }
-
-  public SpreadsheetGUIViewPanel(SpreadsheetModel model, int width, int height,
-      JTextField[][] field) {
-    super(new BorderLayout());
-
-    this.WIDTH = width;
-    this.HEIGHT = height;
-
-    this.model = model;
-    this.colOffset = 0;
-    this.rowOffset = 0;
-
-    fieldGrid = field;
-    System.out.println(fieldGrid.toString());
-
-    this.mainPanel = new JPanel(new GridLayout(HEIGHT, WIDTH));
-    this.rows = new JPanel(new GridLayout(HEIGHT, 1));
-    this.cols = new JPanel(new GridLayout(1, WIDTH + 1));
-
-    setUpGrid(mainPanel);
-    updateGrid(mainPanel);
     this.build();
   }
 
@@ -261,6 +244,9 @@ public class SpreadsheetGUIViewPanel extends JPanel {
   }
 
 
+  /**
+   * Refreshes the main panel with the text fields.
+   */
   public void refresh() {
     updateGrid(mainPanel);
     this.revalidate();

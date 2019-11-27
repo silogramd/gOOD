@@ -90,11 +90,11 @@ public class SpreadSheetControllerTest {
     controller.confirmEdits("dog");
     assertEquals(model.getRawCellAt(new Coord(1,1)), "dog");
 
-    Coord B2 = new Coord(2,2);
-    controller.setEditableCoord(B2);
+    Coord b2 = new Coord(2,2);
+    controller.setEditableCoord(b2);
     controller.confirmEdits("1");
-    assertEquals(model.getRawCellAt(B2), "1");
+    assertEquals(model.getRawCellAt(b2), "1");
     controller.confirmEdits("2");
-    assertEquals(model.getRawCellAt(B2), "2");
+    assertEquals(model.getRawCellAt(b2), "2");
   }
 }

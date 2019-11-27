@@ -103,18 +103,12 @@ public class Cell implements ICell {
 
     if (rawContents.charAt(0) == '=') {
       Formula f = p.parse(this.rawContents.substring(1)).accept(new ContentsBuilder(coord, model));
-      //if (f.hasCycle()) {
-        //return new CVError();
-     // }
       if (this.rawContents.contains(this.coord.toString())) {
         return new CVError();
       }
       return f;
     } else {
       Formula f = p.parse(this.rawContents).accept(new ContentsBuilder(coord, model));
-      //if (f.hasCycle()) {
-      //  return new CVError();
-     // }
       return f;
     }
   }
