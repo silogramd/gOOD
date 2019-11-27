@@ -53,7 +53,11 @@ public class SpreadSheetController implements IController, ViewEventListener {
 
   @Override
   public Cell getEditableCell() {
-    return model.getCellAt(editable);
+    if (editable != null) {
+      return model.getCellAt(editable);
+    } else {
+      return new Cell(new Coord(1,1));
+    }
   }
 
   @Override

@@ -28,7 +28,6 @@ public class BeyondGood {
    */
   public static void main(String[] args) {
     /*
-      TODO: For now, look in the args array to obtain a filename and a cell name,
       - read the file and build a model from it, 
       - evaluate all the cells, and
       - report any errors, or print the evaluated value of the requested cell.
@@ -102,7 +101,6 @@ public class BeyondGood {
    * @param fileName the file being viewed.
    */
   private static void editHelp(String fileName) {
-    //TODO: make this call the controller
     BasicSpreadsheetModel model;
     SpreadSheetController controller;
 

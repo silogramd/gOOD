@@ -64,6 +64,7 @@ public class SpreadSheetControllerTest {
 
     Cell cell1 = new Cell(1, 1, "1", model);
     Cell cell2 = new Cell(new Coord(2, 2));
+    Cell cell3 = new Cell(new Coord(1, 1));
 
     // default start editable cell is at coord 1,1
     model.editCell(new Coord(1, 1), "1");
@@ -71,6 +72,9 @@ public class SpreadSheetControllerTest {
 
     controller.setEditableCoord(new Coord(2, 2));
     assertEquals(controller.getEditableCell(), cell2);
+
+    controller.setEditableCoord(null);
+    assertEquals(controller.getEditableCell(), cell3);
   }
 
   /**

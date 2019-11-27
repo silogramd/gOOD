@@ -143,7 +143,7 @@ public class SpreadsheetEditableView extends JFrame implements SpreadsheetView, 
 
   @Override
   public void focusLost(FocusEvent e) {
-
+    // Do nothing, focus will be lost when user clicks into the editing bar.
   }
 
   /**
