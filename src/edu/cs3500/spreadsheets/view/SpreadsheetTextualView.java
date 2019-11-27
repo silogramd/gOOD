@@ -7,7 +7,8 @@ import java.io.IOException;
 import java.util.Map;
 
 /**
- * <p>Textual View for a {@link SpreadsheetModel}.</p>
+ * <p>Textual View for a {@link SpreadsheetModel}. Render appends to the readable, can be
+ * used for saving to a file with a FileWriter.</p>
  */
 public class SpreadsheetTextualView implements SpreadsheetView {
 

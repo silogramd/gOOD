@@ -8,7 +8,8 @@ import java.util.Set;
 import java.util.Stack;
 
 /**
- * <p>Class representing a Cell with a Function.</p>
+ * <p>Class representing a Cell with a Function. Stores the correct operation and Formulas
+ * to apply it to.</p>
  */
 public class Function implements Formula {
 

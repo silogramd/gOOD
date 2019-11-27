@@ -14,6 +14,9 @@ import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
+/**
+ * The main panel for all gui views. Sub class of JPanel, uses a border layout.
+ */
 public class SpreadsheetGUIViewPanel extends JPanel {
 
   private static int WIDTH;

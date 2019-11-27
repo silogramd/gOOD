@@ -4,6 +4,11 @@ import edu.cs3500.spreadsheets.model.Cell;
 import edu.cs3500.spreadsheets.model.Coord;
 import javax.swing.JTextField;
 
+/**
+ * Interface for view event listeners. Has methods for changing the highlighted coord,
+ * getting the highlighted cell, and pushing edits to the model.
+ *
+ */
 public interface ViewEventListener {
 
   /**

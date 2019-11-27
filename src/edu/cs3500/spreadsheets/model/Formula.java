@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Set;
 
 /**
- * General Interface for CellContents that are Formulas.
+ * General Interface for all Cell values, Functions and References.
  */
 public interface Formula {
 

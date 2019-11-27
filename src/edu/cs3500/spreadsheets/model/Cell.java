@@ -4,7 +4,8 @@ import edu.cs3500.spreadsheets.sexp.ContentsBuilder;
 import edu.cs3500.spreadsheets.sexp.Parser;
 
 /**
- * <p>Class representing a Cell.</p>
+ * <p>Wrapper class for a cell that implements ICell. Contains the raw and calculated contents
+ * as well as the coord. </p>
  */
 public class Cell implements ICell {
 
@@ -48,7 +49,12 @@ public class Cell implements ICell {
     this.coord = coord;
   }
 
-  Formula getContents() {
+  /**
+   * Gets the contents of this cell.
+   *
+   * @return the evaluated contents.
+   */
+  public Formula getContents() {
     return contents;
   }
 
@@ -83,6 +89,12 @@ public class Cell implements ICell {
     this.contents = createContents(model);
   }
 
+  /**
+   * Method used to parse the cell raw contents.
+   *
+   * @param model the model being used.
+   * @return The correct cell value.
+   */
   private Formula createContents(BasicSpreadsheetModel model) {
     Parser p = new Parser();
     if (rawContents.length() == 0) {

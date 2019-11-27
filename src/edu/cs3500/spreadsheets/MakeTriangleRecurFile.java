@@ -1,20 +1,18 @@
 package edu.cs3500.spreadsheets;
 
-import edu.cs3500.spreadsheets.model.BasicSpreadsheetModel;
-import edu.cs3500.spreadsheets.model.Cell;
-import edu.cs3500.spreadsheets.model.WorkSheetBuilderImpl;
-import edu.cs3500.spreadsheets.model.WorksheetReader;
-import edu.cs3500.spreadsheets.view.SpreadsheetTextualView;
-import edu.cs3500.spreadsheets.view.SpreadsheetView;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
-import java.io.FileReader;
-import java.io.IOException;
 import java.io.PrintWriter;
 
+/**
+ * Simple main class to make a triangular text file.
+ */
 public class MakeTriangleRecurFile {
 
+  /**
+   * Main method runs and creates a triangle input file.
+   * @param args passed from command line.
+   */
   public static void main(String[] args) {
 
     File file = new File("resources/triangleinput.txt");

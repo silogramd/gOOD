@@ -3,7 +3,7 @@ package edu.cs3500.spreadsheets.model;
 import java.util.List;
 
 /**
- * <p>Class representing Concat function.</p>
+ * <p>Class representing Concat function. Appends items as strings. </p>
  */
 public class ConcatObject implements Operation, CellValueVisitor<String> {
 

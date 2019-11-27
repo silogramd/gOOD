@@ -16,7 +16,11 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-public class SpreadsheetEditableView extends JFrame implements SpreadsheetGUIView, FocusListener {
+/**
+ * Editable version of a gui view. Adds view event listeners and focus listeners to allow user
+ * to edit cells in the model.
+ */
+public class SpreadsheetEditableView extends JFrame implements SpreadsheetView, FocusListener {
 
   private static int WIDTH = 15;
   private static int HEIGHT = 30;
@@ -47,6 +51,11 @@ public class SpreadsheetEditableView extends JFrame implements SpreadsheetGUIVie
     addListeners();
   }
 
+  /**
+   * Helper method to fill the grid of text fields.
+   *
+   * @return A 2d array of text fields.
+   */
   private CoordTextField[][] fillGrid() {
     CoordTextField[][] grid = new CoordTextField[HEIGHT][WIDTH];
     for (int i = 0; i < HEIGHT; i++) {
@@ -137,24 +146,17 @@ public class SpreadsheetEditableView extends JFrame implements SpreadsheetGUIVie
 
   }
 
-  /*
-  @Override
-  public int getHeight() {
-    return sheet.getHeight();
-  }
-
-  @Override
-  public int getWidth() {
-    return sheet.getWidth();
-  }
-  */
-
-
+  /**
+   * Panel at the top of the UI that allows for editing of the contents of cells.
+   */
   private class editPanel extends JPanel implements ActionListener{
 
     JButton confirm = new JButton("Confirm");
     JTextField newText = new JTextField(30);
 
+    /**
+     * Default constructor for the edit panel bar.
+     */
     editPanel() {
       super(new GridLayout(1,2));
       this.add(confirm);
@@ -173,6 +175,10 @@ public class SpreadsheetEditableView extends JFrame implements SpreadsheetGUIVie
       }
     }
 
+    /**
+     * Changes the current highlighted cell.
+     * @param coord to highlight
+     */
     void setEditableCell(Coord coord) {
       listener.setEditableCoord(coord);
       Cell c = listener.getEditableCell();

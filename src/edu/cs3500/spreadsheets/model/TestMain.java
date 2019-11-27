@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.util.Map;
 
 /**
- * Represents a simple main method to test building worksheets.
+ * Represents a simple main method to test building worksheets. Debugging purposes only.
  */
 public class TestMain {
 

@@ -3,7 +3,8 @@ package edu.cs3500.spreadsheets.model;
 import java.util.List;
 
 /**
- * <p>Class representing the Add function.</p>
+ * <p>Class representing the Add function, adds any CVDouble together. If
+ * cell val is not a CVDouble then treats its value as 0. </p>
  */
 public class AddObject implements Operation, CellValueVisitor<Double> {
 

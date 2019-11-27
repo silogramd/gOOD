@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Represents a basic version of a spreadsheet model.
+ * Represents a basic version of a spreadsheet model. Uses a map of Coord->Cell.
  */
 public class BasicSpreadsheetModel implements SpreadsheetModel {
 

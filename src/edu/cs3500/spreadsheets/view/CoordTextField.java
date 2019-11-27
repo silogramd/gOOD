@@ -10,6 +10,13 @@ public class CoordTextField {
   final int row, col;
   final JTextField field;
 
+  /**
+   * Default constructor.
+   *
+   * @param field of text fields.
+   * @param row number of rows.
+   * @param col number of cols.
+   */
   public CoordTextField(JTextField field, int row, int col) {
     this.row = row;
     this.col = col;

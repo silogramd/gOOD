@@ -3,7 +3,7 @@ package edu.cs3500.spreadsheets.model;
 import java.util.List;
 
 /**
- * <p>Class representing the Compare function.</p>
+ * <p>Class representing the Compare function. Throws errors if not a CVDouble.</p>
  */
 public class CompareObject implements Operation, CellValueVisitor<Double> {
 
