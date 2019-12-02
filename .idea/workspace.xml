@@ -7,28 +7,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4ef46782-5e33-4721-8a2f-343cfa9a918c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/trianglescreenshot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CS3500_CodeExchange/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CS3500_CodeExchange/controller/FeaturesMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CS3500_CodeExchange/controller/WorksheetController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CS3500_CodeExchange/model/ICell.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CS3500_CodeExchange/model/ViewWorksheet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CS3500_CodeExchange/model/Worksheet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CS3500_CodeExchange/triangleSpreadSheetView.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CS3500_CodeExchange/view/EditableView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CS3500_CodeExchange/view/ScrollableWorksheet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CS3500_CodeExchange/view/VisualWorksheetView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CS3500_CodeExchange/view/WorksheetPane.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CS3500_CodeExchange/view/WorksheetPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CS3500_CodeExchange/view/WorksheetView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/for other group/README.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/Screen Shot 2019-11-14 at 7.23.51 PM.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/Screen Shot 2019-11-14 at 7.24.25 PM.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/Screen Shot 2019-11-14 at 8.39.15 PM.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/Screen Shot 2019-11-14 at 8.39.22 PM.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/gOOD.jar" beforeDir="false" afterPath="$PROJECT_DIR$/resources/gOOD.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/CVBlank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/CVBlank.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/CVBool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/CVBool.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/CVDouble.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/CVDouble.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/CVError.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/CVError.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/CVString.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/CVString.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/Cell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/Cell.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/Reference.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/Reference.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/WorkSheetBuilderImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/WorkSheetBuilderImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/sexp/ContentsBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/sexp/ContentsBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/CoordTextField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/CoordTextField.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/SpreadsheetEditableView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/SpreadsheetEditableView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/SpreadsheetGUIViewPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/SpreadsheetGUIViewPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/ViewEventListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/ViewEventListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/BasicSpreadsheetModelTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/BasicSpreadsheetModelTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/SpreadSheetControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/SpreadSheetControllerTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

@@ -65,7 +65,7 @@ public class SpreadsheetGUIViewPanel extends JPanel {
     fillCoords(rows, cols);
 
     JPanel xButtons = new JPanel(new GridLayout(1, 3));
-    JPanel yButtons = new JPanel(new GridLayout(3, 1));
+    JPanel yButtons = new JPanel(new GridLayout(2, 1));
     createXButtons(xButtons);
     createYButtons(yButtons);
 
@@ -97,38 +97,13 @@ public class SpreadsheetGUIViewPanel extends JPanel {
   private void createYButtons(JPanel yButtons) {
     JButton up = new JButton("Up");
     JButton down = new JButton("Down");
-    JButton save = new JButton("Save");
 
     up.addActionListener(e -> scroll("up"));
     down.addActionListener(e -> scroll("down"));
-    save.addActionListener(e -> saveHelp());
 
-    yButtons.add(save);
     yButtons.add(up);
     yButtons.add(down);
 
-  }
-
-  private void saveHelp() {
-
-    PrintWriter pw;
-    File file = new File(this.model.toString() + ".txt");
-    try {
-      file.createNewFile();
-      pw = new PrintWriter(new FileOutputStream(file, true));
-    } catch (Exception ex) {
-      throw new IllegalStateException("Cant open or make file");
-    }
-
-    SpreadsheetView textView = new SpreadsheetTextualView(pw, model);
-
-    try {
-      textView.render();
-    } catch (IOException ex) {
-      throw new IllegalStateException("IOException");
-    }
-
-    pw.close();
   }
 
 
