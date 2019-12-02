@@ -7,23 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4ef46782-5e33-4721-8a2f-343cfa9a918c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/CS3500_CodeExchange/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CS3500_CodeExchange/controller/FeaturesMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CS3500_CodeExchange/controller/WorksheetController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CS3500_CodeExchange/model/ICell.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CS3500_CodeExchange/model/ViewWorksheet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CS3500_CodeExchange/model/Worksheet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CS3500_CodeExchange/triangleSpreadSheetView.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CS3500_CodeExchange/view/EditableView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CS3500_CodeExchange/view/ScrollableWorksheet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CS3500_CodeExchange/view/VisualWorksheetView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CS3500_CodeExchange/view/WorksheetPane.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CS3500_CodeExchange/view/WorksheetPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CS3500_CodeExchange/view/WorksheetView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/for other group/README.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/gOOD.jar" beforeDir="false" afterPath="$PROJECT_DIR$/resources/gOOD.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/SpreadsheetGUIViewPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/SpreadsheetGUIViewPanel.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -94,11 +78,11 @@
       <recent name="edu.cs3500.spreadsheets.model" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/view" />
       <recent name="$PROJECT_DIR$/resources" />
       <recent name="C:\Users\dargo\Desktop\Northeastern\Fall 2019-2020\OOD\gOOD\src\edu\cs3500\spreadsheets" />
       <recent name="C:\Users\dargo\Desktop\Northeastern\Fall 2019-2020\OOD\gOOD\src" />
       <recent name="$PROJECT_DIR$/.idea/artifacts" />
-      <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
@@ -499,7 +483,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574816996897</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="added their code">
+      <created>1575253311798</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1575253311798</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -519,7 +510,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Worked on Cycle Detecting" />
     <MESSAGE value="Replaced instanceof checks, deleted unnecessary files, refactored some repeated code." />
     <MESSAGE value="Deleted println's for handins" />
     <MESSAGE value="tests for cell, cellvalue, and operations. Sketchy solution to checking for cycles. bug fixes." />
@@ -544,6 +534,7 @@
     <MESSAGE value="Added the controller, editing functionality" />
     <MESSAGE value="Controller test, Javadocs pt 1" />
     <MESSAGE value="javadocs pt2, handle null in controller." />
-    <option name="LAST_COMMIT_MESSAGE" value="javadocs pt2, handle null in controller." />
+    <MESSAGE value="added their code" />
+    <option name="LAST_COMMIT_MESSAGE" value="added their code" />
   </component>
 </project>
