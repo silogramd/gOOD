@@ -1,5 +1,7 @@
 package edu.cs3500.spreadsheets.provider.model;
 
+import javax.naming.Reference;
+
 public interface ValueVisitor<R> {
 
   /**
