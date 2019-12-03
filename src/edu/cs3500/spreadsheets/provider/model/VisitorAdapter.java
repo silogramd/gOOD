@@ -34,7 +34,7 @@ public class VisitorAdapter<R> implements CellValueVisitor {
    */
   @Override
   public Object visitError(CVError cv) {
-    return visitor.visitErr(//TODO)
+    return visitor.visitErr();
   }
 
   /**

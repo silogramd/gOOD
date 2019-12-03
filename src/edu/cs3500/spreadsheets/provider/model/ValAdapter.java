@@ -23,6 +23,6 @@ public class ValAdapter implements IVal {
   @Override
   public <R> R accept(ValueVisitor<R> evalInstructions)
       throws IllegalStateException, IllegalArgumentException {
-    return val.accept(new VisitorAdapter<R> evalInstructions);
+    return (R) val.accept(new VisitorAdapter(evalInstructions));
   }
 }

@@ -267,6 +267,7 @@ public class WorksheetPanel extends JPanel implements AdjustmentListener, Worksh
         g2d.setClip(i * cellWidth, j * cellHeight, cellWidth, cellHeight);
         IVal val = this.values.getAllValues().getOrDefault(new Coord(i + topLeftCoord.col - 1,
                 j + topLeftCoord.row - 1), new ValAdapter());
+        //String res = val.accept(new RenderIVal());
         String res = val.toString();
         g2d.drawString(res, (i) * cellWidth, (j + 1) * cellHeight);
         g2d.setClip(curClip);
