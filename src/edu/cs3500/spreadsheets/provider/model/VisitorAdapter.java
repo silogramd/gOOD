@@ -22,7 +22,7 @@ public class VisitorAdapter<R> implements CellValueVisitor {
    * @return the output, parameterized by the class.
    */
   @Override
-  public Object visitDouble(CVDouble cv) {
+  public R visitDouble(CVDouble cv) {
     return visitor.visitValueDouble(Double.valueOf(cv.toString()));
   }
 
@@ -33,7 +33,7 @@ public class VisitorAdapter<R> implements CellValueVisitor {
    * @return the output, parameterized by the class.
    */
   @Override
-  public Object visitError(CVError cv) {
+  public R visitError(CVError cv) {
     return visitor.visitErr();
   }
 
@@ -44,7 +44,7 @@ public class VisitorAdapter<R> implements CellValueVisitor {
    * @return the output, parameterized by the class.
    */
   @Override
-  public Object visitBlank(CVBlank cv) {
+  public R visitBlank(CVBlank cv) {
     return visitor.visitBlankValue();
   }
 
@@ -55,7 +55,7 @@ public class VisitorAdapter<R> implements CellValueVisitor {
    * @return the output, parameterized by the class.
    */
   @Override
-  public Object visitBool(CVBool cv) {
+  public R visitBool(CVBool cv) {
     return visitor.visitValueBoolean(Boolean.valueOf(cv.toString()));
   }
 
@@ -66,7 +66,7 @@ public class VisitorAdapter<R> implements CellValueVisitor {
    * @return the output, parameterized by the class.
    */
   @Override
-  public Object visitString(CVString cv) {
+  public R visitString(CVString cv) {
     return visitor.visitValueString(cv.toString());
   }
 }
