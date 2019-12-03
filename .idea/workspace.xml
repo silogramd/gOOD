@@ -6,18 +6,11 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4ef46782-5e33-4721-8a2f-343cfa9a918c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/controller/ControllerAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/model/IException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/model/IVal.java" afterDir="false" />
+    <list default="true" id="4ef46782-5e33-4721-8a2f-343cfa9a918c" name="Default Changelist" comment="Model adapter, visitor adapter, value adapter">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/BeyondGood.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/BeyondGood.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/controller/FeaturesAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/controller/FeaturesAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/model/ModelAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/model/ModelAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/model/ValueVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/model/ValueVisitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/model/VisitorAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/model/VisitorAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/view/WorksheetPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/view/WorksheetPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/CellValueTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/CellValueTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/gOOD.jar" beforeDir="false" afterPath="$PROJECT_DIR$/resources/gOOD.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/controller/ControllerAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/controller/ControllerAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/controller/FeaturesAdapter.java" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -87,21 +80,21 @@
       <recent name="" />
       <recent name="edu.cs3500.spreadsheets.model" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources" />
+      <recent name="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider" />
+      <recent name="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/model" />
+      <recent name="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/view" />
+      <recent name="C:\Users\dargo\Desktop\Northeastern\Fall 2019-2020\OOD\gOOD\src\edu\cs3500\spreadsheets" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\dargo\Desktop\Northeastern\Fall 2019-2020\OOD\gOOD\src\edu\cs3500\spreadsheets\model" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider" />
-      <recent name="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/model" />
-      <recent name="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/view" />
-      <recent name="$PROJECT_DIR$/resources" />
-      <recent name="C:\Users\dargo\Desktop\Northeastern\Fall 2019-2020\OOD\gOOD\src\edu\cs3500\spreadsheets" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\dargo\Desktop\Northeastern\Fall 2019-2020\OOD\gOOD\src\edu\cs3500\spreadsheets\model" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -116,19 +109,17 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.run triange">
-    <configuration name="BeyondGood 1" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="edu.cs3500.spreadsheets.BeyondGood" />
-      <module name="gOOD" />
-      <option name="PROGRAM_PARAMETERS" value="-in test1.txt -eval D1" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.run provider">
     <configuration name="BeyondGood" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="edu.cs3500.spreadsheets.BeyondGood" />
       <module name="gOOD" />
       <option name="PROGRAM_PARAMETERS" value="-in &quot;resources/triangleinput.txt&quot; -edit A50" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Unnamed (1)" type="Application" factoryName="Application" nameIsGenerated="true">
+      <module name="gOOD" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -145,6 +136,14 @@
       <option name="MAIN_CLASS_NAME" value="edu.cs3500.spreadsheets.BeyondGood" />
       <module name="gOOD" />
       <option name="PROGRAM_PARAMETERS" value="-in &quot;resources/input1.txt&quot; -edit" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="run provider" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="edu.cs3500.spreadsheets.BeyondGood" />
+      <module name="gOOD" />
+      <option name="PROGRAM_PARAMETERS" value="-in test1.txt -provider" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -224,9 +223,10 @@
     </configuration>
     <list>
       <item itemvalue="Application.run triange" />
+      <item itemvalue="Application.Unnamed (1)" />
       <item itemvalue="Application.test1" />
       <item itemvalue="Application.testError" />
-      <item itemvalue="Application.BeyondGood 1" />
+      <item itemvalue="Application.run provider" />
       <item itemvalue="Application.guitest-input1" />
       <item itemvalue="Application.BeyondGood" />
       <item itemvalue="Application.Unnamed" />
