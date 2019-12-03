@@ -2,6 +2,7 @@ package edu.cs3500.spreadsheets.model;
 
 import edu.cs3500.spreadsheets.sexp.ContentsBuilder;
 import edu.cs3500.spreadsheets.sexp.Parser;
+import edu.cs3500.spreadsheets.view.SpreadsheetEditableView;
 
 /**
  * <p>Wrapper class for a cell that implements ICell. Contains the raw and calculated contents
@@ -84,7 +85,7 @@ public class Cell implements ICell {
 
 
   @Override
-  public void update(String contents, BasicSpreadsheetModel model) {
+  public void update(String contents, SpreadsheetModel model) {
     this.rawContents = contents;
     this.contents = createContents(model);
   }
@@ -95,7 +96,7 @@ public class Cell implements ICell {
    * @param model the model being used.
    * @return The correct cell value.
    */
-  private Formula createContents(BasicSpreadsheetModel model) {
+  private Formula createContents(SpreadsheetModel model) {
     Parser p = new Parser();
     if (rawContents.length() == 0) {
       return new CVBlank();

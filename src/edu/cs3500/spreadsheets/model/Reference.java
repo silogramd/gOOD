@@ -3,6 +3,7 @@ package edu.cs3500.spreadsheets.model;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 import java.util.Stack;
 
@@ -12,7 +13,7 @@ import java.util.Stack;
 public class Reference implements Formula {
 
   private final ArrayList<Coord> reference;
-  private final BasicSpreadsheetModel model;
+  private final SpreadsheetModel model;
   private final String position;
 
   /**
@@ -23,7 +24,7 @@ public class Reference implements Formula {
    * @param position The position of this reference cell.
    * @throws IllegalArgumentException if there is a cycle.
    */
-  public Reference(Coord first, Coord last, Coord position, BasicSpreadsheetModel model) {
+  public Reference(Coord first, Coord last, Coord position, SpreadsheetModel model) {
     this.reference = new ArrayList<>();
     this.position = position.toString();
 
@@ -54,7 +55,7 @@ public class Reference implements Formula {
    * @param position of this cell.
    * @throws IllegalArgumentException if there is a cycle
    */
-  public Reference(Coord c, Coord position, BasicSpreadsheetModel model) {
+  public Reference(Coord c, Coord position, SpreadsheetModel model) {
     this.position = position.toString();
     this.model = model;
     if (noCycles(c)) {
@@ -67,8 +68,10 @@ public class Reference implements Formula {
 
   @Override
   public CellValue getValue() {
+    Map<Coord, Cell> map = model.getAllCells();
+
     if (reference.size() == 1) {
-      return model.coordMap
+      return map
           .getOrDefault(reference.get(0), new Cell(new Coord(1, 1))).getValue();
     } else {
       return new CVError();
@@ -78,9 +81,11 @@ public class Reference implements Formula {
 
   @Override
   public ArrayList<CellValue> flattenHelp() {
+    Map<Coord, Cell> map = model.getAllCells();
     ArrayList<CellValue> acc = new ArrayList<>();
+
     for (Coord c : this.reference) {
-      if (model.coordMap.containsKey(c)) {
+      if (map.containsKey(c)) {
         acc.add(model.getCellAt(c).getValue());
       }
     }
@@ -142,7 +147,8 @@ public class Reference implements Formula {
    * @return if there is a one level cycle.
    */
   private boolean noCycles(Coord coord) {
-    String otherRaw = model.coordMap.getOrDefault(coord, new Cell(coord)).getRawValue();
+    Map<Coord, Cell> map = model.getAllCells();
+    String otherRaw = map.getOrDefault(coord, new Cell(coord)).getRawValue();
     if (otherRaw.length() > 1) {
       if ((otherRaw.charAt(0) == '=') && (otherRaw.contains(position))) {
         return false;

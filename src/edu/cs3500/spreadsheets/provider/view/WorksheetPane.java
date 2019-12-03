@@ -6,7 +6,8 @@ package edu.cs3500.spreadsheets.provider.view;
 
 import edu.cs3500.spreadsheets.controller.FeaturesMain;
 import edu.cs3500.spreadsheets.model.Coord;
-import edu.cs3500.spreadsheets.model.ViewWorksheet;
+
+import edu.cs3500.spreadsheets.provider.model.ViewWorksheet;
 
 public interface WorksheetPane {
   Coord getTopLeft();

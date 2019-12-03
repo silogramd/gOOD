@@ -1,0 +1,89 @@
+package edu.cs3500.spreadsheets.provider.model;
+
+import edu.cs3500.spreadsheets.model.BasicSpreadsheetModel;
+import edu.cs3500.spreadsheets.model.Coord;
+import edu.cs3500.spreadsheets.model.SpreadsheetModel;
+import java.util.Map;
+import java.util.Set;
+
+public class ModelAdapter implements Worksheet {
+
+  private SpreadsheetModel model;
+
+  public ModelAdapter() {
+    this.model = new BasicSpreadsheetModel();
+  }
+
+  public ModelAdapter(SpreadsheetModel model) {
+    this.model = model;
+  }
+
+
+
+
+  /**
+   * Adds a cell to the WorkSheet implementation given some instructions from rawData.
+   *
+   * @param pos     the position of the cell to be added
+   * @param rawData a string representing the value or formula of the cell being added
+   */
+  @Override
+  public void addCell(Coord pos, String rawData) {
+
+    this.model.editCell(pos, rawData);
+  }
+
+  /**
+   * Removes a cell from the worksheet's board.
+   *
+   * @param pos the position of the cell to be removed.
+   */
+  @Override
+  public void remove(Coord pos) {
+
+    this.model.editCell(pos, "");
+  }
+
+  /**
+   * evaluates a cell at a position having already visited some cells.
+   *
+   * @param c       the location of the cell to evaluate
+   * @param visited The cells already traversed
+   * @return the evaluated value of this cell
+   */
+  @Override
+  public IVal evaluateCell(Coord c, Set<Coord> visited) {
+    return null;
+  }
+
+  /**
+   * Returns the raw value of the cell at the Coord given.
+   *
+   * @param pos the position of the cell to be evaluated
+   * @return the raw string given to the cell at the given Coord when constructing
+   */
+  @Override
+  public String getRawVal(Coord pos) {
+    return model.getRawCellAt(pos);
+  }
+
+  /**
+   * Returns a map from location to value of every value in the WorkSheet.
+   *
+   * @return a Map of every value in the cell
+   */
+  @Override
+  public Map<Coord, IVal> getAllValues() {
+    return null;
+  }
+
+  /**
+   * Evaluates a single cell.
+   *
+   * @param c the coordinate of the cell
+   */
+  @Override
+  public IVal evaluateCell(Coord c) {
+    return null;
+  }
+}

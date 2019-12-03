@@ -1,47 +1,18 @@
 package edu.cs3500.spreadsheets.model;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
-
 /**
- * Interface for CellContents that are solely values.
+ * Interface for cell values, includes mainly the basic datatypes displayable in a cell
+ * (no references or functions).
  */
-public abstract class CellValue implements Formula {
+public interface CellValue {
 
   /**
-   * <p>Visitor pattern method.</p>
+   * For using {@link CellValueVisitor}.
    *
-   * @param visitor the given {@link CellValueVisitor}.
-   * @param <R>     the return type of the {@link CellValueVisitor}.
-   * @return the output of the visitor.
+   * @param visitor to accept
+   * @param <R> the parameterization for the visitor
+   * @return the output for the specific cell value.
    */
-  public abstract <R> R accept(CellValueVisitor<R> visitor);
-
-  @Override
-  public CellValue getValue() {
-    return this;
-  }
-
-  @Override
-  public boolean isFlat() {
-    return true;
-  }
-
-  @Override
-  public boolean hasCycle() {
-    return false;
-  }
-
-  @Override
-  public Set<Formula> getEdges() {
-    return new HashSet<Formula>();
-  }
-
-  @Override
-  public ArrayList<CellValue> flattenHelp() {
-    return new ArrayList<CellValue>(Arrays.asList(getValue()));
-  }
+  <R> R accept(CellValueVisitor<R> visitor);
 
 }

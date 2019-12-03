@@ -4,7 +4,7 @@ package edu.cs3500.spreadsheets.model;
 /**
  * <p>Class representing String Cell Value.</p>
  */
-public class CVString extends CellValue {
+public class CVString extends CellValueImp {
 
   private final String contents;
 

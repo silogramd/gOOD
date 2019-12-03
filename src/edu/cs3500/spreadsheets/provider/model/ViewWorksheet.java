@@ -1,7 +1,8 @@
-package edu.cs3500.spreadsheets.model;
+package edu.cs3500.spreadsheets.provider.model;
 
+import edu.cs3500.spreadsheets.model.Coord;
 import java.util.Map;
-import edu.cs3500.spreadsheets.model.datastructures.values.IVal;
+//import edu.cs3500.spreadsheets.model.datastructures.values.IVal;
 
 /**
  * Represents the worksheet model used in the visual views.

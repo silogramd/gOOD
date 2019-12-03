@@ -1,5 +1,7 @@
 package edu.cs3500.spreadsheets.model;
 
+import edu.cs3500.spreadsheets.view.SpreadsheetEditableView;
+
 /**
  * Represents an interface for all cells.
  */
@@ -31,6 +33,6 @@ public interface ICell {
    *
    * @param contents the new raw contents of this cell.
    */
-  void update(String contents, BasicSpreadsheetModel model);
+  void update(String contents, SpreadsheetModel model);
 
 }

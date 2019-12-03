@@ -1,9 +1,10 @@
-package edu.cs3500.spreadsheets.model;
+package edu.cs3500.spreadsheets.provider.model;
 
 
+import edu.cs3500.spreadsheets.model.Coord;
 import java.util.Set;
 
-import edu.cs3500.spreadsheets.model.datastructures.values.IVal;
+//import edu.cs3500.spreadsheets.model.datastructures.values.IVal;
 
 /**
  * A class representing some implementation of a cell that lives in a Worksheet. It is assumed to be

@@ -1,5 +1,6 @@
 package edu.cs3500.spreadsheets.provider.view;
 
+import edu.cs3500.spreadsheets.provider.model.ViewWorksheet;
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 //import java.awt.event.ActionListener;

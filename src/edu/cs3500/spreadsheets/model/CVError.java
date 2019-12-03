@@ -4,7 +4,7 @@ package edu.cs3500.spreadsheets.model;
 /**
  * <p>Class representing an error cell value.</p>
  */
-public class CVError extends CellValue {
+public class CVError extends CellValueImp {
 
 
   @Override

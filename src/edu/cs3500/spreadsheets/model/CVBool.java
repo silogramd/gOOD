@@ -4,7 +4,7 @@ package edu.cs3500.spreadsheets.model;
 /**
  * <p>Class representing a boolean Cell Value.</p>
  */
-public class CVBool extends CellValue {
+public class CVBool extends CellValueImp {
 
   private final boolean content;
 

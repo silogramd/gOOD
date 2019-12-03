@@ -1,8 +1,9 @@
-package edu.cs3500.spreadsheets.model;
+package edu.cs3500.spreadsheets.provider.model;
 
 
+import edu.cs3500.spreadsheets.model.Coord;
 import java.util.Set;
-import edu.cs3500.spreadsheets.model.datastructures.values.IVal;
+//import edu.cs3500.spreadsheets.model.datastructures.values.IVal;
 
 /**
  * Represents a Excel style spreadsheet - The Worksheet contains some number of cells that may or

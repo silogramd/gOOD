@@ -4,7 +4,7 @@ package edu.cs3500.spreadsheets.model;
 /**
  * <p>Class representing a blank CellValue. A cell with this value is empty.</p>
  */
-public class CVBlank extends CellValue {
+public class CVBlank extends CellValueImp {
 
 
   @Override

@@ -4,6 +4,7 @@ package edu.cs3500.spreadsheets.provider.view;
 //import java.awt.event.KeyListener;
 //import java.awt.event.MouseListener;
 //import java.io.File;
+import edu.cs3500.spreadsheets.provider.model.ViewWorksheet;
 import java.io.IOException;
 
 //import edu.cs3500.spreadsheets.controller.Features;

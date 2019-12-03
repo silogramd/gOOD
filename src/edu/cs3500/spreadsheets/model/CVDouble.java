@@ -4,7 +4,7 @@ package edu.cs3500.spreadsheets.model;
 /**
  * <p>Class representing a double cell value.</p>
  */
-public class CVDouble extends CellValue {
+public class CVDouble extends CellValueImp {
 
   private final double contents;
 

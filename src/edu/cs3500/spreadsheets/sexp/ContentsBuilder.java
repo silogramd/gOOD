@@ -14,6 +14,7 @@ import edu.cs3500.spreadsheets.model.Function;
 import edu.cs3500.spreadsheets.model.Operation;
 import edu.cs3500.spreadsheets.model.ProductObject;
 import edu.cs3500.spreadsheets.model.Reference;
+import edu.cs3500.spreadsheets.model.SpreadsheetModel;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -26,7 +27,7 @@ public class ContentsBuilder implements SexpVisitor<Formula> {
 
   Map<String, Operation> operations;
   Coord position;
-  BasicSpreadsheetModel model;
+  SpreadsheetModel model;
 
   /**
    * Default constructor.
@@ -34,7 +35,7 @@ public class ContentsBuilder implements SexpVisitor<Formula> {
    * @param position to put the new formula.
    * @param model to add the contents to.
    */
-  public ContentsBuilder(Coord position, BasicSpreadsheetModel model) {
+  public ContentsBuilder(Coord position, SpreadsheetModel model) {
     operations = new HashMap<String, Operation>();
     operations.put("SUM", new AddObject());
     operations.put("CONCAT", new ConcatObject());
