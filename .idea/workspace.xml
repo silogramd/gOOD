@@ -7,8 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4ef46782-5e33-4721-8a2f-343cfa9a918c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/model/ExceptionAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/model/IException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/model/IVal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/model/ValAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/model/ValAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/model/ValueVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/model/ValueVisitor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/model/VisitorAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/model/VisitorAdapter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/view/WorksheetPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/view/WorksheetPanel.java" afterDir="false" />
     </list>
@@ -514,7 +517,21 @@
       <option name="project" value="LOCAL" />
       <updated>1575351705398</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="changed back">
+      <created>1575392411983</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1575392411983</updated>
+    </task>
+    <task id="LOCAL-00037" summary="update visitor to return type r">
+      <created>1575392533366</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1575392533366</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -534,8 +551,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Broke cycles, but added CellValueVisitors and fixed instance of casting." />
-    <MESSAGE value="Textual view done i think" />
     <MESSAGE value="Scroll buttons, Textual test" />
     <MESSAGE value="JAR and README and inputs, bug fixes and saving" />
     <MESSAGE value="updates to testing, remake the jar if changes are made" />
@@ -559,6 +574,8 @@
     <MESSAGE value="undoing changes" />
     <MESSAGE value="making recommended changes to interfaces instead of implementations" />
     <MESSAGE value="Model adapter, visitor adapter, value adapter" />
-    <option name="LAST_COMMIT_MESSAGE" value="Model adapter, visitor adapter, value adapter" />
+    <MESSAGE value="changed back" />
+    <MESSAGE value="update visitor to return type r" />
+    <option name="LAST_COMMIT_MESSAGE" value="update visitor to return type r" />
   </component>
 </project>
