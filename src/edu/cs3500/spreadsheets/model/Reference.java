@@ -68,7 +68,7 @@ public class Reference implements Formula {
 
   @Override
   public CellValue getValue() {
-    Map<Coord, Cell> map = model.getAllCells();
+    Map<Coord, ICell> map = model.getAllCells();
 
     if (reference.size() == 1) {
       return map
@@ -81,7 +81,7 @@ public class Reference implements Formula {
 
   @Override
   public ArrayList<CellValue> flattenHelp() {
-    Map<Coord, Cell> map = model.getAllCells();
+    Map<Coord, ICell> map = model.getAllCells();
     ArrayList<CellValue> acc = new ArrayList<>();
 
     for (Coord c : this.reference) {
@@ -147,7 +147,7 @@ public class Reference implements Formula {
    * @return if there is a one level cycle.
    */
   private boolean noCycles(Coord coord) {
-    Map<Coord, Cell> map = model.getAllCells();
+    Map<Coord, ICell> map = model.getAllCells();
     String otherRaw = map.getOrDefault(coord, new Cell(coord)).getRawValue();
     if (otherRaw.length() > 1) {
       if ((otherRaw.charAt(0) == '=') && (otherRaw.contains(position))) {

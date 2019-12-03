@@ -3,9 +3,11 @@ package edu.cs3500.spreadsheets.provider.model;
 import edu.cs3500.spreadsheets.model.BasicSpreadsheetModel;
 import edu.cs3500.spreadsheets.model.Cell;
 import edu.cs3500.spreadsheets.model.Coord;
+import edu.cs3500.spreadsheets.model.ICell;
 import edu.cs3500.spreadsheets.model.SpreadsheetModel;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Set;
 
 public class ModelAdapter implements Worksheet, SpreadsheetModel {
@@ -75,10 +77,10 @@ public class ModelAdapter implements Worksheet, SpreadsheetModel {
    */
   @Override
   public Map<Coord, IVal> getAllValues() {
-    Map<Coord, Cell> map = model.getAllCells();
+    Map<Coord, ICell> map = model.getAllCells();
     Map<Coord, IVal> map2 = new HashMap<>();
 
-    for (Map.Entry<Coord, Cell> entry : map.entrySet()) {
+    for (Entry<Coord, ICell> entry : map.entrySet()) {
       map2.put(entry.getKey(), new ValAdapter(entry.getValue().getValue()));
     }
 
@@ -111,7 +113,7 @@ public class ModelAdapter implements Worksheet, SpreadsheetModel {
   }
 
   @Override
-  public Map<Coord, Cell> getAllCells() {
+  public Map<Coord, ICell> getAllCells() {
     return model.getAllCells();
   }
 

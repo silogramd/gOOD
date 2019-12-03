@@ -35,9 +35,9 @@ public class TestMain {
       throw new IllegalStateException("file not found");
     }
 
-    Map<Coord, Cell> result = model.getAllCells();
+    Map<Coord, ICell> result = model.getAllCells();
     ICell cur;
-    for (Map.Entry<Coord, Cell> e : result.entrySet()) {
+    for (Map.Entry<Coord, ICell> e : result.entrySet()) {
       cur = e.getValue();
       if (cur.getValue() instanceof CVError) {
         System.out.println("Error in cell " + cur.getCoord().toString());

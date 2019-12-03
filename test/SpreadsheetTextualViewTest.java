@@ -5,6 +5,7 @@ import static org.junit.Assert.assertTrue;
 import edu.cs3500.spreadsheets.model.BasicSpreadsheetModel;
 import edu.cs3500.spreadsheets.model.Cell;
 import edu.cs3500.spreadsheets.model.Coord;
+import edu.cs3500.spreadsheets.model.ICell;
 import edu.cs3500.spreadsheets.model.WorkSheetBuilderImpl;
 import edu.cs3500.spreadsheets.model.WorksheetReader;
 import edu.cs3500.spreadsheets.view.SpreadsheetTextualView;
@@ -80,15 +81,15 @@ public class SpreadsheetTextualViewTest {
     }
 
     // ensure the models are the same
-    Map<Coord, Cell> map1 = model1.getAllCells();
-    Map<Coord, Cell> map2 = model2.getAllCells();
+    Map<Coord, ICell> map1 = model1.getAllCells();
+    Map<Coord, ICell> map2 = model2.getAllCells();
 
-    for (Map.Entry<Coord, Cell> entry : map1.entrySet()) {
+    for (Map.Entry<Coord, ICell> entry : map1.entrySet()) {
       assertTrue(map2.containsKey(entry.getKey()));
       assertEquals(map2.get(entry.getKey()), entry.getValue());
     }
 
-    for (Map.Entry<Coord, Cell> entry : map2.entrySet()) {
+    for (Map.Entry<Coord, ICell> entry : map2.entrySet()) {
       assertTrue(map1.containsKey(entry.getKey()));
       assertEquals(map1.get(entry.getKey()), entry.getValue());
     }
