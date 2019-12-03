@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
-public class ModelAdapter implements Worksheet {
+public class ModelAdapter implements Worksheet, SpreadsheetModel {
 
   private SpreadsheetModel model;
 
@@ -93,5 +93,30 @@ public class ModelAdapter implements Worksheet {
   @Override
   public IVal evaluateCell(Coord c) {
     return new ValAdapter(model.getCellAt(c).getValue());
+  }
+
+  @Override
+  public Cell getCellAt(Coord coord) {
+    return model.getCellAt(coord);
+  }
+
+  @Override
+  public String getRawCellAt(Coord coord) {
+    return model.getRawCellAt(coord);
+  }
+
+  @Override
+  public void editCell(Coord coord, String string) {
+    model.editCell(coord, string);
+  }
+
+  @Override
+  public Map<Coord, Cell> getAllCells() {
+    return model.getAllCells();
+  }
+
+  @Override
+  public void clearSheet() {
+    model.clearSheet();
   }
 }

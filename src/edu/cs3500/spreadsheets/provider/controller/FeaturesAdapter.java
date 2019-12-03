@@ -1,12 +1,19 @@
 package edu.cs3500.spreadsheets.provider.controller;
 
 import edu.cs3500.spreadsheets.model.Coord;
+import edu.cs3500.spreadsheets.view.ViewEventListener;
 
 public class FeaturesAdapter implements FeaturesMain {
 
+  ViewEventListener viewEventListener;
+
+  FeaturesAdapter(ViewEventListener controller) {
+    this.viewEventListener = controller;
+  }
+
   @Override
   public void selectCell(Coord c) {
-//TODO
+    this.viewEventListener.setEditableCoord(c);
   }
 
   /**
@@ -14,7 +21,7 @@ public class FeaturesAdapter implements FeaturesMain {
    */
   @Override
   public void removeCell() {
-//TODO
+    this.viewEventListener.confirmEdits("");
   }
 
   @Override
@@ -49,7 +56,7 @@ public class FeaturesAdapter implements FeaturesMain {
 
   @Override
   public void putCell(String s) {
-
+    this.viewEventListener.confirmEdits(s);
   }
 
   @Override

@@ -6,6 +6,7 @@ import edu.cs3500.spreadsheets.model.Coord;
 import edu.cs3500.spreadsheets.model.ReadOnlyModel;
 import edu.cs3500.spreadsheets.model.WorkSheetBuilderImpl;
 import edu.cs3500.spreadsheets.model.WorksheetReader;
+import edu.cs3500.spreadsheets.provider.controller.ControllerAdapter;
 import edu.cs3500.spreadsheets.provider.model.ModelAdapter;
 import edu.cs3500.spreadsheets.view.SpreadsheetFrameView;
 import edu.cs3500.spreadsheets.view.SpreadsheetTextualView;
@@ -139,7 +140,6 @@ public class BeyondGood {
   private static void providerHelp(String fileName) {
     //TODO: controller and view
     BasicSpreadsheetModel model;
-    SpreadSheetController controller;
 
     if (fileName == null) {
       model = new BasicSpreadsheetModel();
@@ -152,12 +152,11 @@ public class BeyondGood {
         model = new BasicSpreadsheetModel();
       }
     }
-
+    SpreadSheetController controller = new SpreadSheetController(model);
     ModelAdapter newModel = new ModelAdapter(model);
-
+    ControllerAdapter controllerAdapter = new ControllerAdapter(newModel, controller);
     try {
-      controller = new ControllerAdapter(newModel);
-      controller.goRender();
+      controllerAdapter.goRender();
     } catch (IOException ex) {
       throw new IllegalStateException("it broke");
     }

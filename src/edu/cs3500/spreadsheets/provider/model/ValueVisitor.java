@@ -7,32 +7,32 @@ public interface ValueVisitor<R> {
    *
    * @param d the double value
    */
-  String visitValueDouble(Double d);
+  R visitValueDouble(Double d);
 
   /**
    * returns boolean as a string.
    *
    * @param b the boolean value
    */
-  String visitValueBoolean(Boolean b);
+  R visitValueBoolean(Boolean b);
 
   /**
    * returns string.
    *
    * @param s the string value
    */
-  String visitValueString(String s);
+  R visitValueString(String s);
 
   /**
    * returns blank value as a string.
    */
-  String visitBlankValue();
+  R visitBlankValue();
 
   /**
    * returns error as a string.
    *
    * @param e the error value
    */
-  String visitErr(IException e);
+  R visitErr(IException e);
 }
 

@@ -21,10 +21,10 @@ public class CellValueTest {
     CellValue errObj = new CVError();
     CellValue stringObj = new CVString("test");
 
-    assertEquals(addObj1.getValue().toString(), "1.000000");
-    assertEquals(blankObj.getValue().toString(), "");
-    assertEquals(boolObj.getValue().toString(), "false");
-    assertEquals(errObj.getValue().toString(), "#ERROR");
-    assertEquals(stringObj.getValue().toString(), "test");
+    assertEquals(addObj1.toString(), "1.000000");
+    assertEquals(blankObj.toString(), "");
+    assertEquals(boolObj.toString(), "false");
+    assertEquals(errObj.toString(), "#ERROR");
+    assertEquals(stringObj.toString(), "test");
   }
 }
