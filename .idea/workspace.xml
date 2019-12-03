@@ -7,7 +7,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4ef46782-5e33-4721-8a2f-343cfa9a918c" name="Default Changelist" comment="Model adapter, visitor adapter, value adapter">
-      <change afterPath="$PROJECT_DIR$/gOOD.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/BasicSpreadsheetModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/BasicSpreadsheetModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/ReadOnlyModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/ReadOnlyModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/Reference.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/Reference.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/SpreadsheetModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/SpreadsheetModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/TestMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/TestMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/model/ModelAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/model/ModelAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/SpreadsheetTextualView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/SpreadsheetTextualView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/SpreadsheetTextualViewTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/SpreadsheetTextualViewTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -77,21 +85,21 @@
       <recent name="" />
       <recent name="edu.cs3500.spreadsheets.model" />
     </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\dargo\Desktop\Northeastern\Fall 2019-2020\OOD\gOOD\src\edu\cs3500\spreadsheets\model" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/resources" />
       <recent name="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider" />
       <recent name="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/model" />
       <recent name="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/view" />
       <recent name="C:\Users\dargo\Desktop\Northeastern\Fall 2019-2020\OOD\gOOD\src\edu\cs3500\spreadsheets" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\dargo\Desktop\Northeastern\Fall 2019-2020\OOD\gOOD\src\edu\cs3500\spreadsheets\model" />
     </key>
   </component>
   <component name="RunDashboard">
