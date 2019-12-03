@@ -1,8 +1,10 @@
 package edu.cs3500.spreadsheets.provider.model;
 
 import edu.cs3500.spreadsheets.model.BasicSpreadsheetModel;
+import edu.cs3500.spreadsheets.model.Cell;
 import edu.cs3500.spreadsheets.model.Coord;
 import edu.cs3500.spreadsheets.model.SpreadsheetModel;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
@@ -17,8 +19,6 @@ public class ModelAdapter implements Worksheet {
   public ModelAdapter(SpreadsheetModel model) {
     this.model = model;
   }
-
-
 
 
   /**
@@ -53,7 +53,8 @@ public class ModelAdapter implements Worksheet {
    */
   @Override
   public IVal evaluateCell(Coord c, Set<Coord> visited) {
-    return null;
+
+    return new ValAdapter(model.getCellAt(c).getValue());
   }
 
   /**
@@ -74,7 +75,14 @@ public class ModelAdapter implements Worksheet {
    */
   @Override
   public Map<Coord, IVal> getAllValues() {
-    return null;
+    Map<Coord, Cell> map = model.getAllCells();
+    Map<Coord, IVal> map2 = new HashMap<>();
+
+    for (Map.Entry<Coord, Cell> entry : map.entrySet()) {
+      map2.put(entry.getKey(), new ValAdapter(entry.getValue().getValue()));
+    }
+
+    return map2;
   }
 
   /**
@@ -84,6 +92,6 @@ public class ModelAdapter implements Worksheet {
    */
   @Override
   public IVal evaluateCell(Coord c) {
-    return null;
+    return new ValAdapter(model.getCellAt(c).getValue());
   }
 }

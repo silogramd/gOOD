@@ -4,14 +4,13 @@ package edu.cs3500.spreadsheets.provider.view;
 //import java.awt.event.KeyListener;
 //import java.awt.event.MouseListener;
 //import java.io.File;
+import edu.cs3500.spreadsheets.provider.controller.FeaturesMain;
 import edu.cs3500.spreadsheets.provider.model.ViewWorksheet;
 import java.io.IOException;
 
 //import edu.cs3500.spreadsheets.controller.Features;
-import edu.cs3500.spreadsheets.controller.FeaturesMain;
 //import edu.cs3500.spreadsheets.controller.KeyboardListener;
 import edu.cs3500.spreadsheets.model.Coord;
-import edu.cs3500.spreadsheets.model.ViewWorksheet;
 
 /**
  * Interface for the visual worksheets with methods needed to create, update, and interact with the

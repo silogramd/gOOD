@@ -1,5 +1,6 @@
 package edu.cs3500.spreadsheets.provider.view;
 
+import edu.cs3500.spreadsheets.provider.model.ValAdapter;
 import java.awt.Dimension;
 //import java.awt.event.ActionListener;
 import java.awt.event.AdjustmentEvent;
@@ -14,14 +15,14 @@ import java.awt.Graphics2D;
 import java.awt.Adjustable;
 import java.util.Objects;
 
-import edu.cs3500.spreadsheets.controller.FeaturesMain;
+import edu.cs3500.spreadsheets.provider.controller.FeaturesMain;
 import edu.cs3500.spreadsheets.model.Coord;
-import edu.cs3500.spreadsheets.model.ViewWorksheet;
-import edu.cs3500.spreadsheets.model.Worksheet;
-import edu.cs3500.spreadsheets.model.datastructures.values.BlankVal;
-import edu.cs3500.spreadsheets.model.datastructures.values.IException;
-import edu.cs3500.spreadsheets.model.datastructures.values.IVal;
-import edu.cs3500.spreadsheets.model.datastructures.visitors.ValueVisitor;
+import edu.cs3500.spreadsheets.provider.model.ViewWorksheet;
+import edu.cs3500.spreadsheets.provider.model.Worksheet;
+//import edu.cs3500.spreadsheets.model.datastructures.values.BlankVal;
+//import edu.cs3500.spreadsheets.model.datastructures.values.IException;
+import edu.cs3500.spreadsheets.provider.model.IVal;
+//import edu.cs3500.spreadsheets.model.datastructures.visitors.ValueVisitor;
 
 /**
  * Worksheet panel constructs a Worksheet panel to be placed in the visual view with the models cell
@@ -265,8 +266,8 @@ public class WorksheetPanel extends JPanel implements AdjustmentListener, Worksh
         g2d.drawRect(i * cellWidth, j * cellHeight, cellWidth, cellHeight);
         g2d.setClip(i * cellWidth, j * cellHeight, cellWidth, cellHeight);
         IVal val = this.values.getAllValues().getOrDefault(new Coord(i + topLeftCoord.col - 1,
-                j + topLeftCoord.row - 1), new BlankVal());
-        String res = val.accept(new RenderIVal());
+                j + topLeftCoord.row - 1), new ValAdapter());
+        String res = val.toString();
         g2d.drawString(res, (i) * cellWidth, (j + 1) * cellHeight);
         g2d.setClip(curClip);
       }
@@ -313,58 +314,62 @@ public class WorksheetPanel extends JPanel implements AdjustmentListener, Worksh
   }
 
 
-  /**
+  //TODO: dont think we need this,just call toString instead.
+/*
+  *//**
    * Values visitor for the values in the map.
-   */
+   *//*
+
   static class RenderIVal implements ValueVisitor<String> {
 
-    /**
+    *//**
      * returns double as a string.
      *
      * @param d the double value
-     */
+     *//*
     @Override
     public String visitValueDouble(Double d) {
       return d.toString();
     }
 
-    /**
+    *//**
      * returns boolean as a string.
      *
      * @param b the boolean value
-     */
+     *//*
     @Override
     public String visitValueBoolean(Boolean b) {
       return b.toString();
     }
 
-    /**
+    *//**
      * returns string.
      *
      * @param s the string value
-     */
+     *//*
     @Override
     public String visitValueString(String s) {
       return s;
     }
 
-    /**
+    *//**
      * returns blank value as a string.
-     */
+     *//*
     @Override
     public String visitBlankValue() {
       return "";
     }
 
-    /**
+    *//**
      * returns error as a string.
      *
      * @param e the error value
-     */
+     *//*
     @Override
     public String visitErr(IException e) {
       return e.toString();
     }
-  }
+  }*/
+
 
 }

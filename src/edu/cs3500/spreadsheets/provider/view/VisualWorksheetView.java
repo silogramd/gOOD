@@ -1,6 +1,9 @@
 package edu.cs3500.spreadsheets.provider.view;
 
+import edu.cs3500.spreadsheets.model.BasicSpreadsheetModel;
+import edu.cs3500.spreadsheets.provider.model.ModelAdapter;
 import edu.cs3500.spreadsheets.provider.model.ViewWorksheet;
+import edu.cs3500.spreadsheets.provider.model.Worksheet;
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 //import java.awt.event.ActionListener;
@@ -14,11 +17,8 @@ import java.util.Map;
 
 import javax.swing.*;
 
-import edu.cs3500.spreadsheets.controller.FeaturesMain;
-import edu.cs3500.spreadsheets.model.BasicWorksheet;
+import edu.cs3500.spreadsheets.provider.controller.FeaturesMain;
 import edu.cs3500.spreadsheets.model.Coord;
-import edu.cs3500.spreadsheets.model.ViewWorksheet;
-import edu.cs3500.spreadsheets.model.Worksheet;
 
 /**
  * Visual Worksheet View that creates a visual grid representation of a worksheet.
@@ -47,7 +47,8 @@ public class VisualWorksheetView extends JFrame implements WorksheetView {
 
     super();
 
-    this.model = new BasicWorksheet.BasicWorksheetBuilder().createWorksheet();
+    //this.model = new BasicWorksheet.BasicWorksheetBuilder().createWorksheet();
+    this.model = new ModelAdapter(new BasicSpreadsheetModel());
     this.numCols = 30;
     this.numRows = 20;
 //    this.cellHeight = 20;

@@ -19,9 +19,9 @@ import java.awt.event.KeyListener;
 import javax.swing.*;
 
 //import edu.cs3500.spreadsheets.controller.Features;
-import edu.cs3500.spreadsheets.controller.FeaturesMain;
+import edu.cs3500.spreadsheets.provider.controller.FeaturesMain;
 import edu.cs3500.spreadsheets.model.Coord;
-import edu.cs3500.spreadsheets.model.ViewWorksheet;
+import edu.cs3500.spreadsheets.provider.model.ViewWorksheet;
 //import edu.cs3500.spreadsheets.model.datastructures.values.IVal;
 
 public class EditableView extends JPanel implements WorksheetPane{

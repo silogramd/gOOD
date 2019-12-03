@@ -6,9 +6,9 @@ import java.awt.*;
 
 import javax.swing.*;
 
-import edu.cs3500.spreadsheets.controller.FeaturesMain;
+import edu.cs3500.spreadsheets.provider.controller.FeaturesMain;
 import edu.cs3500.spreadsheets.model.Coord;
-import edu.cs3500.spreadsheets.model.ViewWorksheet;
+import edu.cs3500.spreadsheets.provider.model.ViewWorksheet;
 
 class ScrollableWorksheet extends JPanel implements WorksheetPane{
   private WorksheetPanel worksheetPanel;

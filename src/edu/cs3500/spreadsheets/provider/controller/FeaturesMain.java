@@ -1,4 +1,4 @@
-package edu.cs3500.spreadsheets.controller;
+package edu.cs3500.spreadsheets.provider.controller;
 
 import edu.cs3500.spreadsheets.model.Coord;
 

@@ -6,6 +6,7 @@ import edu.cs3500.spreadsheets.model.Coord;
 import edu.cs3500.spreadsheets.model.ReadOnlyModel;
 import edu.cs3500.spreadsheets.model.WorkSheetBuilderImpl;
 import edu.cs3500.spreadsheets.model.WorksheetReader;
+import edu.cs3500.spreadsheets.provider.model.ModelAdapter;
 import edu.cs3500.spreadsheets.view.SpreadsheetFrameView;
 import edu.cs3500.spreadsheets.view.SpreadsheetTextualView;
 import edu.cs3500.spreadsheets.view.SpreadsheetView;
@@ -51,6 +52,9 @@ public class BeyondGood {
           case "-edit":
             editHelp(args[1]);
             break;
+          case "-provider":
+            providerHelp(args[1]);
+            break;
           default:
             throw new IllegalArgumentException("invalid syntax");
         }
@@ -60,6 +64,9 @@ public class BeyondGood {
         break;
       case "-edit":
         editHelp(null);
+        break;
+      case "-provider":
+        providerHelp(null);
         break;
       default:
         throw new IllegalArgumentException("invalid syntax");
@@ -118,6 +125,39 @@ public class BeyondGood {
     try {
       controller = new SpreadSheetController(model);
       controller.start();
+    } catch (IOException ex) {
+      throw new IllegalStateException("it broke");
+    }
+  }
+
+  /**
+   * <p>Helper that runs a {@link edu.cs3500.spreadsheets.provider.view.VisualWorksheetView}
+   * from the file.</p>
+   *
+   * @param fileName the file being viewed.
+   */
+  private static void providerHelp(String fileName) {
+    //TODO: controller and view
+    BasicSpreadsheetModel model;
+    SpreadSheetController controller;
+
+    if (fileName == null) {
+      model = new BasicSpreadsheetModel();
+    } else {
+      try {
+        model = WorksheetReader
+            .read(new WorkSheetBuilderImpl(), new FileReader(fileName));
+      } catch (FileNotFoundException ex) {
+        System.out.println("File not found.");
+        model = new BasicSpreadsheetModel();
+      }
+    }
+
+    ModelAdapter newModel = new ModelAdapter(model);
+
+    try {
+      controller = new ControllerAdapter(newModel);
+      controller.goRender();
     } catch (IOException ex) {
       throw new IllegalStateException("it broke");
     }
