@@ -10,6 +10,10 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+/**
+ * Adapter from our model interface to their model interface. Includes overriding
+ * our own methods so that it can be used in both cases.
+ */
 public class ModelAdapter implements Worksheet, SpreadsheetModel {
 
   private SpreadsheetModel model;
@@ -60,6 +64,16 @@ public class ModelAdapter implements Worksheet, SpreadsheetModel {
   }
 
   /**
+   * Evaluates a single cell.
+   *
+   * @param c the coordinate of the cell
+   */
+  @Override
+  public IVal evaluateCell(Coord c) {
+    return new ValAdapter(model.getCellAt(c).getValue());
+  }
+
+  /**
    * Returns the raw value of the cell at the Coord given.
    *
    * @param pos the position of the cell to be evaluated
@@ -87,15 +101,6 @@ public class ModelAdapter implements Worksheet, SpreadsheetModel {
     return map2;
   }
 
-  /**
-   * Evaluates a single cell.
-   *
-   * @param c the coordinate of the cell
-   */
-  @Override
-  public IVal evaluateCell(Coord c) {
-    return new ValAdapter(model.getCellAt(c).getValue());
-  }
 
   @Override
   public Cell getCellAt(Coord coord) {

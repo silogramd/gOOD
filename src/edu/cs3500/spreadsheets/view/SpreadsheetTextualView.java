@@ -2,7 +2,6 @@ package edu.cs3500.spreadsheets.view;
 
 import edu.cs3500.spreadsheets.model.ICell;
 import edu.cs3500.spreadsheets.model.SpreadsheetModel;
-import edu.cs3500.spreadsheets.model.Cell;
 import edu.cs3500.spreadsheets.model.Coord;
 import java.io.IOException;
 import java.util.Map;

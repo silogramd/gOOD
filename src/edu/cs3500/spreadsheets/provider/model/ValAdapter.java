@@ -3,6 +3,9 @@ package edu.cs3500.spreadsheets.provider.model;
 import edu.cs3500.spreadsheets.model.CVBlank;
 import edu.cs3500.spreadsheets.model.CellValue;
 
+/**
+ * Adapter from our cell value to their IVal. Includes handling accepting visitors.
+ */
 public class ValAdapter implements IVal {
 
   private CellValue val;

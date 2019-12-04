@@ -3,7 +3,6 @@ import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertTrue;
 
 import edu.cs3500.spreadsheets.model.BasicSpreadsheetModel;
-import edu.cs3500.spreadsheets.model.Cell;
 import edu.cs3500.spreadsheets.model.Coord;
 import edu.cs3500.spreadsheets.model.ICell;
 import edu.cs3500.spreadsheets.model.WorkSheetBuilderImpl;

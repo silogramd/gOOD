@@ -1,15 +1,11 @@
 package edu.cs3500.spreadsheets.view;
 
-import edu.cs3500.spreadsheets.model.Cell;
+import edu.cs3500.spreadsheets.model.ICell;
 import edu.cs3500.spreadsheets.model.Coord;
 import edu.cs3500.spreadsheets.model.SpreadsheetModel;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.GridLayout;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.PrintWriter;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
@@ -139,7 +135,7 @@ public class SpreadsheetGUIViewPanel extends JPanel {
   private void fillGrid(JPanel panel) {
     panel.removeAll();
 
-    Cell curCell;
+    ICell curCell;
     String curText;
     JTextField field;
 
@@ -175,7 +171,7 @@ public class SpreadsheetGUIViewPanel extends JPanel {
    */
   private void updateGrid(JPanel panel) {
 
-    Cell curCell;
+    ICell curCell;
     String curText;
 
     for (int i = 0; i < HEIGHT; i++) {

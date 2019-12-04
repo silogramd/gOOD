@@ -31,6 +31,6 @@ public interface ICell {
    *
    * @param contents the new raw contents of this cell.
    */
-  void update(String contents, BasicSpreadsheetModel model);
+  void update(String contents, SpreadsheetModel model);
 
 }

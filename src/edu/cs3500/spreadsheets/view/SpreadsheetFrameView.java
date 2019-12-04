@@ -1,6 +1,7 @@
 package edu.cs3500.spreadsheets.view;
 
-import edu.cs3500.spreadsheets.model.ReadOnlyModel;
+
+import edu.cs3500.spreadsheets.model.SpreadsheetModel;
 import java.awt.BorderLayout;
 import java.io.IOException;
 import javax.swing.JFrame;
@@ -21,7 +22,7 @@ public class SpreadsheetFrameView extends JFrame implements SpreadsheetView {
    *
    * @param model to be displayed
    */
-  public SpreadsheetFrameView(ReadOnlyModel model) {
+  public SpreadsheetFrameView(SpreadsheetModel model) {
     super();
     this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
     this.setLayout(new BorderLayout());

@@ -2,6 +2,10 @@ package edu.cs3500.spreadsheets.provider.model;
 
 import edu.cs3500.spreadsheets.model.CVError;
 
+/**
+ * Adapts our cell value error to their IException in the event that a visitor needs
+ * an adapted version or methods from their interface are called in their view.
+ */
 public class ExceptionAdapter implements IException {
 
   private CVError err;

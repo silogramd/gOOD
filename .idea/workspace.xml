@@ -6,15 +6,46 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4ef46782-5e33-4721-8a2f-343cfa9a918c" name="Default Changelist" comment="Model adapter, visitor adapter, value adapter">
+    <list default="true" id="4ef46782-5e33-4721-8a2f-343cfa9a918c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/for other group/Self-Eval.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/for other group/model/CellValue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/ExperienceReview.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/ProvidedCodeReview.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/BasicSpreadsheetModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/BasicSpreadsheetModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/ReadOnlyModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/ReadOnlyModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/Reference.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/Reference.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/SpreadsheetModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/SpreadsheetModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/TestMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/TestMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/for other group.zip" beforeDir="false" afterPath="$PROJECT_DIR$/for other group.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/for other group/IController.java" beforeDir="false" afterPath="$PROJECT_DIR$/for other group/IController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/for other group/model/ICell.java" beforeDir="false" afterPath="$PROJECT_DIR$/for other group/model/ICell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/for other group/model/SpreadsheetModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/for other group/model/SpreadsheetModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/for other group/view/SpreadsheetEditableView.java" beforeDir="false" afterPath="$PROJECT_DIR$/for other group/view/SpreadsheetEditableView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/for other group/view/SpreadsheetFrameView.java" beforeDir="false" afterPath="$PROJECT_DIR$/for other group/view/SpreadsheetFrameView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/for other group/view/SpreadsheetGUIViewPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/for other group/view/SpreadsheetGUIViewPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/for other group/view/SpreadsheetTextualView.java" beforeDir="false" afterPath="$PROJECT_DIR$/for other group/view/SpreadsheetTextualView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/for other group/view/ViewEventListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/for other group/view/ViewEventListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/README.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/controller/IController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/controller/IController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/controller/SpreadSheetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/controller/SpreadSheetController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/Cell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/Cell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/ICell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/ICell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/controller/ControllerAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/controller/ControllerAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/controller/FeaturesMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/controller/FeaturesMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/model/ExceptionAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/model/ExceptionAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/model/ICell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/model/ICell.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/model/ModelAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/model/ModelAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/model/ValAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/model/ValAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/model/ValueVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/model/ValueVisitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/model/VisitorAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/model/VisitorAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/view/EditableView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/view/EditableView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/view/ScrollableWorksheet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/view/ScrollableWorksheet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/view/VisualWorksheetView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/view/VisualWorksheetView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/view/WorksheetPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/view/WorksheetPane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/view/WorksheetPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/view/WorksheetPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/view/WorksheetView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/view/WorksheetView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/sexp/ContentsBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/sexp/ContentsBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/SpreadsheetEditableView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/SpreadsheetEditableView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/SpreadsheetFrameView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/SpreadsheetFrameView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/SpreadsheetGUIViewPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/SpreadsheetGUIViewPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/SpreadsheetTextualView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/SpreadsheetTextualView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/ViewEventListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/ViewEventListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/SpreadsheetTextualViewTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/SpreadsheetTextualViewTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -65,7 +96,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/for other group" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -73,7 +104,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
@@ -99,6 +130,9 @@
       <recent name="" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/for other group" />
+      <recent name="$PROJECT_DIR$/for other group/model" />
+      <recent name="$PROJECT_DIR$/for other group/view" />
       <recent name="C:\Users\dargo\Desktop\Northeastern\Fall 2019-2020\OOD\gOOD\src\edu\cs3500\spreadsheets\model" />
     </key>
   </component>
@@ -526,7 +560,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575351705398</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="changing map&lt;coord, cell&gt; to map&lt;coord, ICell&gt;">
+      <created>1575403037000</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1575403037000</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -546,7 +587,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Broke cycles, but added CellValueVisitors and fixed instance of casting." />
     <MESSAGE value="Textual view done i think" />
     <MESSAGE value="Scroll buttons, Textual test" />
     <MESSAGE value="JAR and README and inputs, bug fixes and saving" />
@@ -571,6 +611,7 @@
     <MESSAGE value="undoing changes" />
     <MESSAGE value="making recommended changes to interfaces instead of implementations" />
     <MESSAGE value="Model adapter, visitor adapter, value adapter" />
-    <option name="LAST_COMMIT_MESSAGE" value="Model adapter, visitor adapter, value adapter" />
+    <MESSAGE value="changing map&lt;coord, cell&gt; to map&lt;coord, ICell&gt;" />
+    <option name="LAST_COMMIT_MESSAGE" value="changing map&lt;coord, cell&gt; to map&lt;coord, ICell&gt;" />
   </component>
 </project>

@@ -1,15 +1,8 @@
 package edu.cs3500.spreadsheets.provider.view;
-//
-//import java.awt.event.ActionListener;
-//import java.awt.event.KeyListener;
-//import java.awt.event.MouseListener;
-//import java.io.File;
+
 import edu.cs3500.spreadsheets.provider.controller.FeaturesMain;
 import edu.cs3500.spreadsheets.provider.model.ViewWorksheet;
 import java.io.IOException;
-
-//import edu.cs3500.spreadsheets.controller.Features;
-//import edu.cs3500.spreadsheets.controller.KeyboardListener;
 import edu.cs3500.spreadsheets.model.Coord;
 
 /**
@@ -17,6 +10,7 @@ import edu.cs3500.spreadsheets.model.Coord;
  * view.
  */
 public interface WorksheetView {
+
   /**
    * Opens the visual view so it is visual to the user.
    */
@@ -32,11 +26,6 @@ public interface WorksheetView {
    */
   void addFeatures(FeaturesMain featuresMainListener);
 
-//  void addMouseListener(MouseListener ml);
-//
-//  void addActionListener(ActionListener actionListener);
-//
-//  void addKeyListener(KeyListener kl);
 
   /**
    * Highlights a certain given cell.

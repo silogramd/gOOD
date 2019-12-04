@@ -15,7 +15,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 
-import javax.swing.*;
+import javax.swing.JFrame;
+import javax.swing.JFileChooser;
 
 import edu.cs3500.spreadsheets.provider.controller.FeaturesMain;
 import edu.cs3500.spreadsheets.model.Coord;
@@ -24,6 +25,7 @@ import edu.cs3500.spreadsheets.model.Coord;
  * Visual Worksheet View that creates a visual grid representation of a worksheet.
  */
 public class VisualWorksheetView extends JFrame implements WorksheetView {
+
   private ViewWorksheet model;
   private JFileChooser jfc = new JFileChooser();
   private EditableView editablePanel;
@@ -33,11 +35,6 @@ public class VisualWorksheetView extends JFrame implements WorksheetView {
   private Map<Character, Runnable> keyTypes = new HashMap<>();
   private Map<Integer, Runnable> keyPresses = new HashMap<>();
   private Map<Integer, Runnable> keyReleases = new HashMap<>();
-
-
-//  private int cellHeight;
-//  private int cellLength;
-//  private JPanel mainPanel;
 
 
   /**
@@ -51,8 +48,6 @@ public class VisualWorksheetView extends JFrame implements WorksheetView {
     this.model = new ModelAdapter(new BasicSpreadsheetModel());
     this.numCols = 30;
     this.numRows = 20;
-//    this.cellHeight = 20;
-//    this.cellLength = 40;
 
     //spreadsheetPanel = new ScrollableWorksheet(model);
     BorderLayout bl = new BorderLayout();
@@ -77,15 +72,13 @@ public class VisualWorksheetView extends JFrame implements WorksheetView {
    * @param cellLength length of the cells in the view
    */
   public VisualWorksheetView(Worksheet model, int numCols, int numRows,
-                             int cellHeight, int cellLength) {
+      int cellHeight, int cellLength) {
     super();
 
     this.model = model;//new BasicWorksheet.BasicWorksheetBuilder().createWorksheet();
 
     this.numCols = numCols;
     this.numRows = numRows;
-//    this.cellHeight = cellHeight;
-//    this.cellLength = cellLength;
 
     //spreadsheetPanel = new ScrollableWorksheet(model);
 
@@ -94,11 +87,10 @@ public class VisualWorksheetView extends JFrame implements WorksheetView {
 
     this.add(editablePanel);
 
-
     this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     this.setTitle("Spreadsheet Visual View");
     this.setPreferredSize(new Dimension(this.numCols * cellLength,
-            this.numRows * cellHeight));
+        this.numRows * cellHeight));
     this.setVisible(false);
     this.pack();
   }
@@ -144,8 +136,6 @@ public class VisualWorksheetView extends JFrame implements WorksheetView {
     this.model = model;//new BasicWorksheet.BasicWorksheetBuilder().createWorksheet();
     this.numCols = 30;
     this.numRows = 20;
-//    this.cellHeight = 20;
-//    this.cellLength = 40;
 
     editablePanel = new EditableView(model);
     BorderLayout bl = new BorderLayout();
@@ -254,7 +244,7 @@ public class VisualWorksheetView extends JFrame implements WorksheetView {
    * Opens the visual view so it is visual to the user.
    */
   @Override
-  public void render(){
+  public void render() {
     this.setVisible(true);
   }
 
@@ -266,7 +256,8 @@ public class VisualWorksheetView extends JFrame implements WorksheetView {
     this.repaint();
     this.editablePanel.repaint();
   }
-//
+
+
   /**
    * Sets the action listeners for the visual view.
    *
@@ -278,14 +269,14 @@ public class VisualWorksheetView extends JFrame implements WorksheetView {
     this.f = flocal;
     keyPresses.put(KeyEvent.VK_LEFT, () -> f.moveSelectedLeft());
     keyPresses.put(KeyEvent.VK_DOWN, () -> f.moveSelectedDown());
-    keyPresses.put(KeyEvent.VK_RIGHT, ()-> f.moveSelectedRight());
-    keyPresses.put(KeyEvent.VK_UP, ()-> f.moveSelectedUp());
-    keyPresses.put(KeyEvent.VK_BACK_SPACE, ()-> f.removeCell());
+    keyPresses.put(KeyEvent.VK_RIGHT, () -> f.moveSelectedRight());
+    keyPresses.put(KeyEvent.VK_UP, () -> f.moveSelectedUp());
+    keyPresses.put(KeyEvent.VK_BACK_SPACE, () -> f.removeCell());
 
     this.addKeyListener(new KeyListener() {
       @Override
       public void keyTyped(KeyEvent keyEvent) {
-        if(keyTypes.containsKey(keyEvent.getKeyChar())) {
+        if (keyTypes.containsKey(keyEvent.getKeyChar())) {
           System.out.println("hello");
           keyTypes.get(keyEvent.getKeyChar()).run();
         }
@@ -293,14 +284,14 @@ public class VisualWorksheetView extends JFrame implements WorksheetView {
 
       @Override
       public void keyPressed(KeyEvent keyEvent) {
-        if(keyPresses.containsKey(keyEvent.getKeyCode())) {
+        if (keyPresses.containsKey(keyEvent.getKeyCode())) {
           keyPresses.get(keyEvent.getKeyCode()).run();
         }
       }
 
       @Override
       public void keyReleased(KeyEvent keyEvent) {
-        if(keyReleases.containsKey(keyEvent.getKeyCode())) {
+        if (keyReleases.containsKey(keyEvent.getKeyCode())) {
           keyReleases.get(keyEvent.getKeyCode()).run();
         }
       }
@@ -320,26 +311,6 @@ public class VisualWorksheetView extends JFrame implements WorksheetView {
     });
     //this.editablePanel.addFeatures(featuresListener);
   }
-
-//  /**
-//   * Sets the action listeners for the visual view.
-//   *
-//   * @param featuresListener
-//   */
-//  @Override
-//  public void addFeatures(Features featuresListener) {
-//    this.editablePanel.addFeatures(featuresListener);
-//  }
-
-//  @Override
-//  public void addActionListener(ActionListener actionListener) {
-//    editablePanel.addActionListener(actionListener);
-//  }
-
-//  @Override
-//  public void addKeyListener(KeyListener kl) {
-//    this.editablePanel.addKeyListener(kl);
-//  }
 
   /**
    * Highlights a certain given cell.
@@ -372,13 +343,8 @@ public class VisualWorksheetView extends JFrame implements WorksheetView {
 
   @Override
   public Coord selectCell(int x, int y) {
-    return this.editablePanel.selectCell(x,y);
+    return this.editablePanel.selectCell(x, y);
   }
-
-//  @Override
-//  public String getInput() {
-//    return this.editablePanel.getInput();
-//  }
 
   @Override
   public void setText(String s) {
@@ -394,7 +360,7 @@ public class VisualWorksheetView extends JFrame implements WorksheetView {
   @Override
   public String getOpenFile() {
     int rv = this.jfc.showOpenDialog(this.editablePanel);
-    if(rv == JFileChooser.APPROVE_OPTION) {
+    if (rv == JFileChooser.APPROVE_OPTION) {
       return jfc.getSelectedFile().getPath();
     } else {
       return "";
@@ -403,21 +369,11 @@ public class VisualWorksheetView extends JFrame implements WorksheetView {
 
   @Override
   public String getSaveFile() {
-    if(this.jfc.showSaveDialog(this.editablePanel) ==
-            JFileChooser.APPROVE_OPTION) {
+    if (this.jfc.showSaveDialog(this.editablePanel)
+        == JFileChooser.APPROVE_OPTION) {
       return jfc.getSelectedFile().getPath();
     } else {
       return "";
     }
   }
-
-//  @Override
-//  public File getOpenFile() {
-//    int rv = this.jfc.showSaveDialog(this);
-//    if(rv == JFileChooser.APPROVE_OPTION) {
-//      return jfc.getSelectedFile();
-//    } else {
-//      return null;
-//    }
-//  }
 }
