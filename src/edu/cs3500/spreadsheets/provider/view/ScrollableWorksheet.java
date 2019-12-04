@@ -1,20 +1,22 @@
 package edu.cs3500.spreadsheets.provider.view;
 
 import edu.cs3500.spreadsheets.provider.model.ViewWorksheet;
-import java.awt.*;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
 //import java.awt.event.ActionListener;
 
-import javax.swing.*;
+import javax.swing.JScrollBar;
+import javax.swing.JPanel;
 
 import edu.cs3500.spreadsheets.provider.controller.FeaturesMain;
 import edu.cs3500.spreadsheets.model.Coord;
-import edu.cs3500.spreadsheets.provider.model.ViewWorksheet;
 
-class ScrollableWorksheet extends JPanel implements WorksheetPane{
+class ScrollableWorksheet extends JPanel implements WorksheetPane {
+
   private WorksheetPanel worksheetPanel;
 
 
-  ScrollableWorksheet(ViewWorksheet model){
+  ScrollableWorksheet(ViewWorksheet model) {
     WorksheetPanel.WorksheetPanelBuilder builder = new WorksheetPanel.WorksheetPanelBuilder();
     builder.setModel(model);
 
@@ -59,12 +61,12 @@ class ScrollableWorksheet extends JPanel implements WorksheetPane{
 
   @Override
   public void moveX(int x) {
-
+    // does nothing from provider
   }
 
   @Override
   public void moveY(int y) {
-
+    // does nothing from provider
   }
 
   @Override
@@ -74,28 +76,19 @@ class ScrollableWorksheet extends JPanel implements WorksheetPane{
 
   @Override
   public void addFeatures(FeaturesMain f) {
-
+    // does nothing from provider
   }
 
   @Override
   public Coord selectCell(int x, int y) {
-    return this.worksheetPanel.selectCell(x,y);
+    return this.worksheetPanel.selectCell(x, y);
   }
 
-//  @Override
-//  public void addActionListener(ActionListener actionListener) {
-//
-//  }
 
   @Override
   public void setModel(ViewWorksheet model) {
     this.worksheetPanel.setModel(model);
   }
-//
-//  @Override
-//  public void addKeyListener(KeyListener kl) {
-//    this.worksheetPanel.addKeyListener(kl);
-//  }
 
 
 }

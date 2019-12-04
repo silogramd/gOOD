@@ -1,3 +1,20 @@
+WHAT WORKS: All of the basic functions work. Clicking to select a cell, updating cell values
+through the text field at the top of the screen, updating the selected cell by clicking the check
+button, and clearing the cell by clicking the x button.
+
+WHAT DOESNT WORK: Because our view handled saving and loading, and we did not handle keys, we were
+unable to get all of the additional features such as using arrows to move, backspace to clear, and
+files to save and load.
+
+
+
+
+
+
+
+
+
+
 VIEW Interface:
   - Render: renders the view the first time
   - Refresh: updates the view after a change

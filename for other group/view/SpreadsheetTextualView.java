@@ -1,7 +1,7 @@
 package edu.cs3500.spreadsheets.view;
 
+import edu.cs3500.spreadsheets.model.ICell;
 import edu.cs3500.spreadsheets.model.SpreadsheetModel;
-import edu.cs3500.spreadsheets.model.Cell;
 import edu.cs3500.spreadsheets.model.Coord;
 import java.io.IOException;
 import java.util.Map;
@@ -31,9 +31,9 @@ public class SpreadsheetTextualView implements SpreadsheetView {
   public String toString() {
     StringBuilder s = new StringBuilder();
 
-    Map<Coord, Cell> cells = model.getAllCells();
+    Map<Coord, ICell> cells = model.getAllCells();
 
-    for (Map.Entry<Coord, Cell> entry : cells.entrySet()) {
+    for (Map.Entry<Coord, ICell> entry : cells.entrySet()) {
       s.append(entry.getKey().toString()).append(" ").append(entry.getValue().getRawValue())
           .append("\n");
 

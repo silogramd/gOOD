@@ -64,4 +64,14 @@ public class SpreadSheetController implements IController, ViewEventListener {
   public void confirmEdits(String val) {
     model.editCell(editable, val);
   }
+
+  /**
+   * Updates the model in this controller to a new model for loading files.
+   *
+   * @param model to be updated to.
+   */
+  @Override
+  public void updateModel(SpreadsheetModel model) {
+    this.model = model;
+  }
 }

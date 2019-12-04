@@ -1,0 +1,18 @@
+  The provided code was overall fairly easy to understand. It was easy to pick out which major
+functions did what, and which interfaces were necessary for different parts. The experience
+was good, and we feel that the code was just different enough from our implementation to make
+the assignment a nice challenge.
+
+  The interfaces that we were given were very flexible. Methods returned and relied on only other
+interfaces. The code was not tightly coupled at all, and was easy to make adapters for. They had
+clear interfaces for each major part of the project.
+
+  The only requests we had to make were for additional interfaces. We did not have to request
+for any changes in regards to the code, and we think that their design choices were well thought
+out and easy to adapt our code to. The view was very capable in displaying all the necessary
+material, but we did find it laggy in regards to handling mouse clicks.
+
+  The biggest thing lacking was proper documentation. It was sometimes difficult to understand
+exactly what methods did, and the difference between the view classes. In a few cases we had to
+read through the view implementation code for awhile to understand what methods did and what the
+different interfaces represented. This is a pretty easy fix, and likely just due to being rushed.

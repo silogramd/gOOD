@@ -30,7 +30,8 @@ import edu.cs3500.spreadsheets.provider.model.IVal;
  * Worksheet panel constructs a Worksheet panel to be placed in the visual view with the models cell
  * information.
  */
-public class WorksheetPanel extends JPanel implements AdjustmentListener, WorksheetPane{
+public class WorksheetPanel extends JPanel implements AdjustmentListener, WorksheetPane {
+
   private final int cellHeight;
   private final int cellWidth;
   private int numCellsHeight;
@@ -65,7 +66,7 @@ public class WorksheetPanel extends JPanel implements AdjustmentListener, Worksh
    * @param cellLength     number of cells length
    */
   private WorksheetPanel(ViewWorksheet model, Coord topLeft, int numCellsHeight, int numCellsLength,
-                         int cellHeight, int cellLength) {
+      int cellHeight, int cellLength) {
     super();
     this.topLeftCoord = topLeft;
     this.numCellsHeight = numCellsHeight;
@@ -74,13 +75,13 @@ public class WorksheetPanel extends JPanel implements AdjustmentListener, Worksh
     cellWidth = cellLength;
     this.values = model;
     setPreferredSize(new Dimension(numCellsHeight * numCellsLength,
-            (numCellsLength * numCellsHeight) / 2));
+        (numCellsLength * numCellsHeight) / 2));
   }
 
   @Override
   public Coord getTopLeft() {
     return new Coord(this.topLeftCoord.col,
-            this.topLeftCoord.row);
+        this.topLeftCoord.row);
   }
 
   @Override
@@ -95,7 +96,7 @@ public class WorksheetPanel extends JPanel implements AdjustmentListener, Worksh
 
   @Override
   public void highlightCell(Coord c) {
-    if(c.equals(selectedCell)) {
+    if (c.equals(selectedCell)) {
       this.selectedCell = null;
     } else {
       this.selectedCell = c;
@@ -104,32 +105,22 @@ public class WorksheetPanel extends JPanel implements AdjustmentListener, Worksh
 
   @Override
   public void addFeatures(FeaturesMain f) {
-
+    // does nothing from provider
   }
-//
-//  @Override
-//  public void addFeatures(Features f) {
-//
-//  }
 
   @Override
   public Coord selectCell(int x, int y) {
-    int xPos = (int)((x - 1.2 * cellWidth)/this.cellWidth + this.topLeftCoord.col);
-    int yPos = (int)((y - 3.9*cellHeight)/this.cellHeight) + this.topLeftCoord.row;
+    int xPos = (int) ((x - 1.2 * cellWidth) / this.cellWidth + this.topLeftCoord.col);
+    int yPos = (int) ((y - 3.9 * cellHeight) / this.cellHeight) + this.topLeftCoord.row;
 
     Coord c;
     try {
-      c = new Coord(xPos,yPos);
+      c = new Coord(xPos, yPos);
     } catch (IllegalArgumentException e) {
-      c = new Coord(1,1);
+      c = new Coord(1, 1);
     }
     return c;
   }
-//
-//  @Override
-//  public void addActionListener(ActionListener actionListener) {
-//
-//  }
 
   @Override
   public void setModel(ViewWorksheet model) {
@@ -140,6 +131,7 @@ public class WorksheetPanel extends JPanel implements AdjustmentListener, Worksh
    * Builder for the worksheet panel that.
    */
   public static class WorksheetPanelBuilder {
+
     ViewWorksheet panel;
     private Coord topLeft = new Coord(1, 1);
     private int displayCellsHeight = 20;
@@ -208,8 +200,8 @@ public class WorksheetPanel extends JPanel implements AdjustmentListener, Worksh
      */
     WorksheetPanel buildWorksheet() {
       return new WorksheetPanel(this.panel,
-              this.topLeft, this.displayCellsHeight, this.displayCellsLength,
-              this.cellHeight, this.cellLength);
+          this.topLeft, this.displayCellsHeight, this.displayCellsLength,
+          this.cellHeight, this.cellLength);
     }
   }
   /*  void setTopLeftCoord(Coord c) {
@@ -244,8 +236,8 @@ public class WorksheetPanel extends JPanel implements AdjustmentListener, Worksh
       g2d.fillRect(cellWidth * i, 0, cellWidth, cellHeight);
       g.setColor(Color.BLACK);
       g2d.drawString(Coord.colIndexToName(topLeftCoord.col + i - 1),
-              (cellWidth * i) + cellWidth/5,
-              cellHeight / 2);
+          (cellWidth * i) + cellWidth / 5,
+          cellHeight / 2);
       g2d.setClip(curClip);
     }
 
@@ -268,18 +260,18 @@ public class WorksheetPanel extends JPanel implements AdjustmentListener, Worksh
         g2d.drawRect(i * cellWidth, j * cellHeight, cellWidth, cellHeight);
         g2d.setClip(i * cellWidth, j * cellHeight, cellWidth, cellHeight);
         IVal val = this.values.getAllValues().getOrDefault(new Coord(i + topLeftCoord.col - 1,
-                j + topLeftCoord.row - 1), new ValAdapter());
+            j + topLeftCoord.row - 1), new ValAdapter());
         String res = val.accept(new RenderIVal());
         g2d.drawString(res, (i) * cellWidth, (j + 1) * cellHeight);
         g2d.setClip(curClip);
       }
     }
 
-    if(Objects.nonNull(this.selectedCell)) {
+    if (Objects.nonNull(this.selectedCell)) {
       g.setColor(Color.RED);
       g2d.drawRect((selectedCell.col - topLeftCoord.col + 1) * cellWidth,
-              (selectedCell.row  - topLeftCoord.row + 1)* cellHeight,
-              cellWidth, cellHeight);
+          (selectedCell.row - topLeftCoord.row + 1) * cellHeight,
+          cellWidth, cellHeight);
     }
   }
 
@@ -296,12 +288,12 @@ public class WorksheetPanel extends JPanel implements AdjustmentListener, Worksh
 
     if (orientation == Adjustable.VERTICAL) {
       if (adj.getValue() > adj.getMaximum() * .8 && adj.getMaximum() + 100 > 0
-              && topLeftCoord.row < adj.getValue()) {
+          && topLeftCoord.row < adj.getValue()) {
         adj.setMaximum(adj.getMaximum() + 50);
       }
     } else {
       if (adj.getValue() > adj.getMaximum() * .8 && adj.getMaximum() + 100 > 0
-              && topLeftCoord.col < adj.getValue()) {
+          && topLeftCoord.col < adj.getValue()) {
         adj.setMaximum(adj.getMaximum() + 50);
       }
     }
@@ -314,9 +306,6 @@ public class WorksheetPanel extends JPanel implements AdjustmentListener, Worksh
     repaint();
 
   }
-
-
-  //TODO: dont think we need this,just call toString instead.
 
   /**
    * Values visitor for the values in the map.

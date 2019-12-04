@@ -59,7 +59,7 @@ public interface ICell {
    */
   String getRawVal();
 
-  /**Sets the value field of the cell to null
+  /**Sets the value field of the cell to null.
    *
    */
   void clear();

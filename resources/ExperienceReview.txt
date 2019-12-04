@@ -1,0 +1,13 @@
+  The experience with our providers was very good. They sent us the necessary code early,
+and were quick to respond if we needed changes or other interfaces. When they realized that
+most groups had done a features interface, they quickly adapted their implementation to include
+features without us even asking for the interface.
+
+  As far as our own design, we wish we had been more general and focused more on interfaces
+rather than implementations. Getting too caught up in implementations is what caused us
+to use implementation classes rather than interfaces in our methods. This includes not having
+a cell values interface, and not requiring interfaces in constructors. We would also change
+how much was handled by the view and how much was handled by the controller. Our view implementation
+is what dealt with saving and loading files, which made it difficult to update the model. If
+we had done what our providers had done and moved handling to the controller we would have likely
+had an easier time.

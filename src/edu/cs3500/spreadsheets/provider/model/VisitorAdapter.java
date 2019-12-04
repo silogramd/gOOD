@@ -7,10 +7,21 @@ import edu.cs3500.spreadsheets.model.CVError;
 import edu.cs3500.spreadsheets.model.CVString;
 import edu.cs3500.spreadsheets.model.CellValueVisitor;
 
+/**
+ * Adapts their VisitorAdapter to our CellValueVisitor to handle visiting our implementation of
+ * cell values instead of their IVal.
+ *
+ * @param <R> the return type for the methods.
+ */
 public class VisitorAdapter<R> implements CellValueVisitor {
 
   private ValueVisitor<R> visitor;
 
+  /**
+   * Default constructor. Takes a ValueVisitor of this param.
+   *
+   * @param visitor to be adapted.
+   */
   public VisitorAdapter(ValueVisitor<R> visitor) {
     this.visitor = visitor;
   }

@@ -1,7 +1,6 @@
 package edu.cs3500.spreadsheets.sexp;
 
 import edu.cs3500.spreadsheets.model.AddObject;
-import edu.cs3500.spreadsheets.model.BasicSpreadsheetModel;
 import edu.cs3500.spreadsheets.model.CVBool;
 import edu.cs3500.spreadsheets.model.CVDouble;
 import edu.cs3500.spreadsheets.model.CVError;

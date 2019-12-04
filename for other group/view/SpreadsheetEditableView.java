@@ -1,7 +1,5 @@
 package edu.cs3500.spreadsheets.view;
 
-import edu.cs3500.spreadsheets.controller.SpreadSheetController;
-import edu.cs3500.spreadsheets.model.BasicSpreadsheetModel;
 import edu.cs3500.spreadsheets.model.Cell;
 import edu.cs3500.spreadsheets.model.Coord;
 import edu.cs3500.spreadsheets.model.SpreadsheetModel;
@@ -261,7 +259,7 @@ public class SpreadsheetEditableView extends JFrame implements SpreadsheetView, 
      */
     @Override
     public void actionPerformed(ActionEvent e) {
-      BasicSpreadsheetModel model;
+      SpreadsheetModel model;
       try {
         model = WorksheetReader
             .read(new WorkSheetBuilderImpl(), new FileReader(fileName.getText()));
@@ -282,9 +280,9 @@ public class SpreadsheetEditableView extends JFrame implements SpreadsheetView, 
    *
    * @param model the model to use.
    */
-  private void updateModel(BasicSpreadsheetModel model) {
+  private void updateModel(SpreadsheetModel model) {
 
-    this.listener = new SpreadSheetController(model, this);
+    this.listener.updateModel(model);
 
     this.getContentPane().removeAll();
 

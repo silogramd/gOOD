@@ -2,6 +2,7 @@ package edu.cs3500.spreadsheets.view;
 
 import edu.cs3500.spreadsheets.model.Cell;
 import edu.cs3500.spreadsheets.model.Coord;
+import edu.cs3500.spreadsheets.model.SpreadsheetModel;
 
 /**
  * Interface for view event listeners. Has methods for changing the highlighted coord,
@@ -27,4 +28,13 @@ public interface ViewEventListener {
    * @param val the new raw value for the cell.
    */
   void confirmEdits(String val);
+
+
+  /**
+   * Updates the model in this controller to a new model for loading files.
+   *
+   * @param model to be updated to.
+   */
+  void updateModel(SpreadsheetModel model);
+
 }

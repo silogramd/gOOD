@@ -1,7 +1,9 @@
 package edu.cs3500.spreadsheets.provider.model;
 
-import javax.naming.Reference;
-
+/**
+ * For Java Style.
+ * @param <R> parameterization
+ */
 public interface ValueVisitor<R> {
 
   /**
