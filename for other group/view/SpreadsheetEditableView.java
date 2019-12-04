@@ -259,30 +259,19 @@ public class SpreadsheetEditableView extends JFrame implements SpreadsheetView, 
      */
     @Override
     public void actionPerformed(ActionEvent e) {
-      SpreadsheetModel model;
       try {
-        model = WorksheetReader
-            .read(new WorkSheetBuilderImpl(), new FileReader(fileName.getText()));
-        SpreadsheetEditableView.this.updateModel(model);
-        SpreadsheetEditableView.this.model = model;
-
-        fileName.setText("loaded file named: " + fileName.getText());
+        listener.loadFile(new FileReader(fileName.getText()));
+        fileName.setText("loaded file: " + fileName.getText());
       } catch (FileNotFoundException ex) {
         fileName.setText("file not found");
       }
 
-
     }
   }
 
-  /**
-   * For loading a file. Updates this view to contain the cells from the loaded model.
-   *
-   * @param model the model to use.
-   */
-  private void updateModel(SpreadsheetModel model) {
+  @Override
+  public void updateModel(SpreadsheetModel model) {
 
-    this.listener.updateModel(model);
 
     this.getContentPane().removeAll();
 

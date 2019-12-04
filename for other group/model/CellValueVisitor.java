@@ -13,7 +13,7 @@ public interface CellValueVisitor<R> {
    * @param cv the value being visited.
    * @return the output, parameterized by the class.
    */
-  R visitDouble(CVDouble cv);
+  R visitDouble(Double cv);
 
   /**
    * <p>Visit method for a {@link CVError}.</p>
@@ -21,7 +21,7 @@ public interface CellValueVisitor<R> {
    * @param cv the value being visited.
    * @return the output, parameterized by the class.
    */
-  R visitError(CVError cv);
+  R visitError(String s);
 
   /**
    * <p>Visit method for a {@link CVBlank}.</p>
@@ -29,7 +29,7 @@ public interface CellValueVisitor<R> {
    * @param cv the value being visited.
    * @return the output, parameterized by the class.
    */
-  R visitBlank(CVBlank cv);
+  R visitBlank(String s);
 
   /**
    * <p>Visit method for a {@link CVBool}.</p>
@@ -37,7 +37,7 @@ public interface CellValueVisitor<R> {
    * @param cv the value being visited.
    * @return the output, parameterized by the class.
    */
-  R visitBool(CVBool cv);
+  R visitBool(Boolean cv);
 
   /**
    * <p>Visit method for a {@link CVString}.</p>
@@ -45,6 +45,6 @@ public interface CellValueVisitor<R> {
    * @param cv the value being visited.
    * @return the output, parameterized by the class.
    */
-  R visitString(CVString cv);
+  R visitString(String cv);
 
 }
