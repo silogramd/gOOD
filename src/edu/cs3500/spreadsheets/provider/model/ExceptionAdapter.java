@@ -23,6 +23,6 @@ public class ExceptionAdapter implements IException {
   @Override
   public <R> R accept(ValueVisitor<R> evalInstructions)
       throws IllegalStateException, IllegalArgumentException {
-    return new VisitorAdapter<>(evalInstructions).visitError(this.err);
+    return new VisitorAdapter<>(evalInstructions).visitError("error");
   }
 }

@@ -29,6 +29,6 @@ public class CVBlank extends CellValueImp {
 
   @Override
   public <R> R accept(CellValueVisitor<R> visitor) {
-    return visitor.visitBlank(this);
+    return visitor.visitBlank("");
   }
 }

@@ -53,4 +53,14 @@ public class SpreadsheetTextualView implements SpreadsheetView {
   public void refresh() throws IOException {
     ap.append(this.toString());
   }
+
+  /**
+   * For loading a file. Updates this view to contain the cells from the loaded model.
+   *
+   * @param model the model to use.
+   */
+  @Override
+  public void updateModel(SpreadsheetModel model) {
+    this.model = model;
+  }
 }

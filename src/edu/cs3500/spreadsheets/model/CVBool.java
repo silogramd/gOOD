@@ -49,6 +49,6 @@ public class CVBool extends CellValueImp {
 
   @Override
   public <R> R accept(CellValueVisitor<R> visitor) {
-    return visitor.visitBool(this);
+    return visitor.visitBool(this.content);
   }
 }

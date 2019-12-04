@@ -44,6 +44,6 @@ public class CVString extends CellValueImp {
 
   @Override
   public <R> R accept(CellValueVisitor<R> visitor) {
-    return visitor.visitString(this);
+    return visitor.visitString(this.contents);
   }
 }

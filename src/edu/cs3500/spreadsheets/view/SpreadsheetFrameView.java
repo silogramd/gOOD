@@ -53,5 +53,24 @@ public class SpreadsheetFrameView extends JFrame implements SpreadsheetView {
     this.repaint();
   }
 
+  /**
+   * For loading a file. Updates this view to contain the cells from the loaded model.
+   *
+   * @param model the model to use.
+   */
+  @Override
+  public void updateModel(SpreadsheetModel model) {
+    this.getContentPane().removeAll();
+
+    panel = new SpreadsheetGUIViewPanel(model, WIDTH, HEIGHT);
+
+    this.add(panel, BorderLayout.CENTER);
+
+    this.pack();
+
+
+    refresh();
+  }
+
 }
 

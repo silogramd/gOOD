@@ -45,6 +45,6 @@ public class CVDouble extends CellValueImp {
 
   @Override
   public <R> R accept(CellValueVisitor<R> visitor) {
-    return visitor.visitDouble(this);
+    return visitor.visitDouble(this.contents);
   }
 }

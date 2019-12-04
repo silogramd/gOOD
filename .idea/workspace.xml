@@ -7,46 +7,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4ef46782-5e33-4721-8a2f-343cfa9a918c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/for other group/Self-Eval.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/for other group/model/CellValue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/ExperienceReview.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/ProvidedCodeReview.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/for other group.zip" beforeDir="false" afterPath="$PROJECT_DIR$/for other group.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/for other group/IController.java" beforeDir="false" afterPath="$PROJECT_DIR$/for other group/IController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/for other group/model/ICell.java" beforeDir="false" afterPath="$PROJECT_DIR$/for other group/model/ICell.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/for other group/model/SpreadsheetModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/for other group/model/SpreadsheetModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/for other group/view/SpreadsheetEditableView.java" beforeDir="false" afterPath="$PROJECT_DIR$/for other group/view/SpreadsheetEditableView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/for other group/view/SpreadsheetFrameView.java" beforeDir="false" afterPath="$PROJECT_DIR$/for other group/view/SpreadsheetFrameView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/for other group/view/SpreadsheetGUIViewPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/for other group/view/SpreadsheetGUIViewPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/for other group/view/SpreadsheetTextualView.java" beforeDir="false" afterPath="$PROJECT_DIR$/for other group/view/SpreadsheetTextualView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/for other group/view/ViewEventListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/for other group/view/ViewEventListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/README.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/controller/IController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/controller/IController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gOOD.jar" beforeDir="false" afterPath="$PROJECT_DIR$/gOOD.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/controller/SpreadSheetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/controller/SpreadSheetController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/Cell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/Cell.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/ICell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/ICell.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/controller/ControllerAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/controller/ControllerAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/controller/FeaturesMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/controller/FeaturesMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/AddObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/AddObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/CVBlank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/CVBlank.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/CVBool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/CVBool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/CVDouble.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/CVDouble.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/CVError.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/CVError.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/CVString.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/CVString.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/CellValueVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/CellValueVisitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/CompareObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/CompareObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/ConcatObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/ConcatObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/ProductObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/model/ProductObject.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/model/ExceptionAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/model/ExceptionAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/model/ICell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/model/ICell.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/model/ModelAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/model/ModelAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/model/ValAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/model/ValAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/model/ValueVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/model/ValueVisitor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/model/VisitorAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/model/VisitorAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/view/EditableView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/view/EditableView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/view/ScrollableWorksheet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/view/ScrollableWorksheet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/view/VisualWorksheetView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/view/VisualWorksheetView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/view/WorksheetPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/view/WorksheetPane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/view/WorksheetPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/view/WorksheetPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/view/WorksheetView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/provider/view/WorksheetView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/sexp/ContentsBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/sexp/ContentsBuilder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/SpreadsheetEditableView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/SpreadsheetEditableView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/SpreadsheetFrameView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/SpreadsheetFrameView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/SpreadsheetGUIViewPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/SpreadsheetGUIViewPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/SpreadsheetTextualView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/SpreadsheetTextualView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/SpreadsheetView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/SpreadsheetView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/ViewEventListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/cs3500/spreadsheets/view/ViewEventListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/SpreadsheetTextualViewTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/SpreadsheetTextualViewTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -96,7 +77,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/for other group" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/for other group/view" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -130,9 +111,9 @@
       <recent name="" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/for other group" />
-      <recent name="$PROJECT_DIR$/for other group/model" />
       <recent name="$PROJECT_DIR$/for other group/view" />
+      <recent name="$PROJECT_DIR$/for other group/model" />
+      <recent name="$PROJECT_DIR$/for other group" />
       <recent name="C:\Users\dargo\Desktop\Northeastern\Fall 2019-2020\OOD\gOOD\src\edu\cs3500\spreadsheets\model" />
     </key>
   </component>
@@ -148,7 +129,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.run provider">
+  <component name="RunManager" selected="Application.guitest-input1">
     <configuration name="BeyondGood" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="edu.cs3500.spreadsheets.BeyondGood" />
       <module name="gOOD" />
@@ -567,7 +548,21 @@
       <option name="project" value="LOCAL" />
       <updated>1575403037000</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="SO MUCH JAVASTYLE WAS FUCKED, fully submitted, you can go over the readme and reviews if you want">
+      <created>1575421777074</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1575421777074</updated>
+    </task>
+    <task id="LOCAL-00038" summary="patch bugs from client">
+      <created>1575502836660</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1575502836660</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -587,8 +582,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Textual view done i think" />
-    <MESSAGE value="Scroll buttons, Textual test" />
     <MESSAGE value="JAR and README and inputs, bug fixes and saving" />
     <MESSAGE value="updates to testing, remake the jar if changes are made" />
     <MESSAGE value="Java style" />
@@ -612,6 +605,8 @@
     <MESSAGE value="making recommended changes to interfaces instead of implementations" />
     <MESSAGE value="Model adapter, visitor adapter, value adapter" />
     <MESSAGE value="changing map&lt;coord, cell&gt; to map&lt;coord, ICell&gt;" />
-    <option name="LAST_COMMIT_MESSAGE" value="changing map&lt;coord, cell&gt; to map&lt;coord, ICell&gt;" />
+    <MESSAGE value="SO MUCH JAVASTYLE WAS FUCKED, fully submitted, you can go over the readme and reviews if you want" />
+    <MESSAGE value="patch bugs from client" />
+    <option name="LAST_COMMIT_MESSAGE" value="patch bugs from client" />
   </component>
 </project>

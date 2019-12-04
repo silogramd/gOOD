@@ -8,27 +8,27 @@ import java.util.List;
 public class CompareObject implements Operation, CellValueVisitor<Double> {
 
   @Override
-  public Double visitDouble(CVDouble cv) {
+  public Double visitDouble(Double cv) {
     return Double.valueOf(cv.toString());
   }
 
   @Override
-  public Double visitError(CVError cv) {
+  public Double visitError(String cv) {
     throw new IllegalStateException();
   }
 
   @Override
-  public Double visitBlank(CVBlank cv) {
+  public Double visitBlank(String cv) {
     throw new IllegalStateException();
   }
 
   @Override
-  public Double visitBool(CVBool cv) {
+  public Double visitBool(Boolean cv) {
     throw new IllegalStateException();
   }
 
   @Override
-  public Double visitString(CVString cv) {
+  public Double visitString(String cv) {
     throw new IllegalStateException();
   }
 

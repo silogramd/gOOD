@@ -37,4 +37,11 @@ public interface ViewEventListener {
    */
   void updateModel(SpreadsheetModel model);
 
+  /**
+   * Updates the model to mimic the one from the file.
+   *
+   * @param file to load.
+   */
+  void loadFile(Readable file);
+
 }

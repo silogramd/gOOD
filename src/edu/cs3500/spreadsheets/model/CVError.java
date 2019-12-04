@@ -28,6 +28,6 @@ public class CVError extends CellValueImp {
 
   @Override
   public <R> R accept(CellValueVisitor<R> visitor) {
-    return visitor.visitError(this);
+    return visitor.visitError(this.toString());
   }
 }

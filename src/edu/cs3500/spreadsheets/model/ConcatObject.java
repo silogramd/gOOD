@@ -9,27 +9,27 @@ public class ConcatObject implements Operation, CellValueVisitor<String> {
 
 
   @Override
-  public String visitDouble(CVDouble cv) {
+  public String visitDouble(Double cv) {
     return cv.toString();
   }
 
   @Override
-  public String visitError(CVError cv) {
+  public String visitError(String cv) {
     throw new IllegalStateException();
   }
 
   @Override
-  public String visitBlank(CVBlank cv) {
+  public String visitBlank(String cv) {
     return "";
   }
 
   @Override
-  public String visitBool(CVBool cv) {
+  public String visitBool(Boolean cv) {
     return cv.toString();
   }
 
   @Override
-  public String visitString(CVString cv) {
+  public String visitString(String cv) {
     return cv.toString();
   }
 

@@ -1,5 +1,6 @@
 package edu.cs3500.spreadsheets.view;
 
+import edu.cs3500.spreadsheets.model.SpreadsheetModel;
 import java.io.IOException;
 
 /**
@@ -18,5 +19,12 @@ public interface SpreadsheetView {
    * @throws IOException if fails to refresh.
    */
   void refresh() throws IOException;
+
+  /**
+   * For loading a file. Updates this view to contain the cells from the loaded model.
+   *
+   * @param model the model to use.
+   */
+  void updateModel(SpreadsheetModel model);
 
 }
