@@ -16,3 +16,6 @@ material, but we did find it laggy in regards to handling mouse clicks.
 exactly what methods did, and the difference between the view classes. In a few cases we had to
 read through the view implementation code for awhile to understand what methods did and what the
 different interfaces represented. This is a pretty easy fix, and likely just due to being rushed.
+Another error that likely arose out of time constraints was the messiness of the code. There were
+huge swaths of code commented out without reason, in some case entire methods. Without documentation
+of the comments it was hard to know what was going on.
